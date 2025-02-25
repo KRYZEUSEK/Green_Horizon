@@ -26,12 +26,16 @@ namespace Cards {
             get { return cardsLinks[currentCardNumber]; }
         }
 
+        private void Awake() {
+            _instance = this;
+        }
+
         [ContextMenu("Read the cards in")]
         private void ReadInCards() {
             List<Card> cardsResources = Resources.LoadAll<Card>("Cards").ToList();
 
             if (cardsResources.Count == 0) {
-                Debug.LogError("No cards found in Resources/Cards");
+                Debug.LogWarning("No cards found in Resources/Cards!");
                 return;
             }
 
@@ -56,6 +60,10 @@ namespace Cards {
         public void DrawCard(int i) {
             currentCardNumber = i;
             CurrentCard.DrawCard();
+        }
+
+        public void EndCardEffect(int i) {
+            cardsLinks[i].EndCardEffect();
         }
 
         public void ChooseDecision(int i) {
