@@ -46,6 +46,13 @@ namespace Cards {
             get { return _environment; }
             private set { _environment = value; }
         }
+
+        [SerializeField] private int _effectsDuration = 1;
+
+        public int EffectsDuration {
+            get { return _effectsDuration; }
+            private set { _effectsDuration = value; }
+        }
     }
 
     [System.Serializable]
