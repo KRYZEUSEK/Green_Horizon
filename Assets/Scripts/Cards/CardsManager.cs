@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,7 +46,7 @@ namespace Cards {
                         cards.Add(card);
                         GameObject missingLink = new GameObject(card.Title);
                         missingLink.transform.SetParent(transform);
-                        missingLink.AddComponent<CardLink>().card = card;
+                        missingLink.AddComponent<CardLink>().AssignCard(card);
                     }
                 }
             }
@@ -57,17 +58,41 @@ namespace Cards {
             }
         }
 
-        public void DrawCard(int i) {
-            currentCardNumber = i;
+        public void DrawCard(int cardNumber) {
+            currentCardNumber = cardNumber;
             CurrentCard.DrawCard();
         }
 
-        public void EndCardEffect(int i) {
-            cardsLinks[i].EndCardEffect();
+        public void EndCardEffect(int cardNumber) {
+            cardsLinks[cardNumber].EndCardEffect();
         }
 
-        public void ChooseDecision(int i) {
-            CurrentCard.ChooseDecision(i);
+        public void ChooseDecision(int decisionNumber) {
+            CurrentCard.ChooseDecision(decisionNumber);
+        }
+
+        public void EndDecisionEffect(int cardNumber) {
+            cardsLinks[cardNumber].EndDecisionEffect();
+        }
+
+        public int GetEffectsMagnitude(int cardNumber) {
+            if (cardNumber < 0 || cardNumber >= cards.Count) { return 0; }
+
+            List<int> effects = new List<int>();
+
+            foreach(CardDecision decision in cards[cardNumber].Decisions) {
+                effects.Add(decision.Budget);
+                effects.Add(decision.Satisfaction);
+                effects.Add(decision.Infrastructure);
+                effects.Add(decision.Order);
+                effects.Add(decision.Environment);
+            }
+
+            int magnitude = 0;
+
+            effects.ForEach(effect => magnitude += Math.Abs(effect));
+
+            return magnitude;
         }
     }
 }
