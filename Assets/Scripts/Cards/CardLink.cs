@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 namespace Cards {
     public class CardLink : MonoBehaviour {
-        [SerializeField] private Card card;
+        [SerializeField] internal Card card;
 
         public UnityEvent onAppearEvent;
         public UnityEvent EndCardEffectEvent;

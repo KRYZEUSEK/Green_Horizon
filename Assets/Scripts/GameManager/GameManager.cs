@@ -43,12 +43,12 @@ public class GameManager : MonoBehaviour {
     bool wasPressed;
 
     private void Update() {
-        if (Input.GetKeyDown(KeyCode.Y) && wasPressed == false) {
+        if (Input.GetKeyDown(KeyCode.C) && wasPressed == false) {
             wasPressed = true;
             DrawNextCard();
         }
 
-        if (Input.GetKeyUp(KeyCode.Y)) {
+        if (Input.GetKeyUp(KeyCode.C)) {
             wasPressed = false;
         }
 
@@ -135,6 +135,7 @@ public class GameManager : MonoBehaviour {
         Order += currentCard.GetDecisionOrder(decisionNumber);
         Environment += currentCard.GetDecisionEnvironment(decisionNumber);
 
+        Debug.Log($"Stats after update");
         Debug.Log($"Budget: {Budget}, Satisfaction: {Satisfaction}, Infrastructure: {Infrastructure}, Order: {Order}, Environment: {Environment}");
     }
 }

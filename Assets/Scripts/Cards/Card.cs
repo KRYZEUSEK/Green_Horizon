@@ -9,49 +9,49 @@ namespace Cards {
         
         public string Description {
             get { return _description; }
-            private set { _description = value; }
+            internal set { _description = value; }
         }
 
         [SerializeField] private int _budget = 0;
 
         public int Budget {
             get { return _budget; }
-            private set { _budget = value; }
+            internal set { _budget = value; }
         }
 
         [SerializeField] private int _satisfaction = 0;
 
         public int Satisfaction {
             get { return _satisfaction; }
-            private set { _satisfaction = value; }
+            internal set { _satisfaction = value; }
         }
 
         [SerializeField] private int _infrastructure = 0;
 
         public int Infrastructure {
             get { return _infrastructure; }
-            private set { _infrastructure = value; }
+            internal set { _infrastructure = value; }
         }
 
         [SerializeField] private int _order = 0;
 
         public int Order {
             get { return _order; }
-            private set { _order = value; }
+            internal set { _order = value; }
         }
 
         [SerializeField] private int _environment = 0;
 
         public int Environment {
             get { return _environment; }
-            private set { _environment = value; }
+            internal set { _environment = value; }
         }
 
         [SerializeField] private int _effectsDuration = 1;
 
         public int EffectsDuration {
             get { return _effectsDuration; }
-            private set { _effectsDuration = value; }
+            internal set { _effectsDuration = value; }
         }
     }
 
@@ -62,28 +62,28 @@ namespace Cards {
 
         public string Title {
             get { return _title; }
-            private set { _title = value; }
+            internal set { _title = value; }
         }
 
         [SerializeField] private string _description = "";
 
         public string Description {
             get { return _description; }
-            private set { _description = value; }
+            internal set { _description = value; }
         }
 
         [SerializeField] private Sprite _image = null;
 
         public Sprite Image {
             get { return _image; }
-            private set { _image = value; }
+            internal set { _image = value; }
         }
 
         [SerializeField] private CardDecision[] _decisions = new CardDecision[3];
 
         public CardDecision[] Decisions {
             get { return _decisions; }
-            private set { _decisions = value; }
+            internal set { _decisions = value; }
         }
     }
 }

@@ -40,13 +40,14 @@ namespace Cards {
                 SerializedProperty decisionInfrastructure = decision.FindPropertyRelative("_infrastructure");
                 SerializedProperty decisionOrder = decision.FindPropertyRelative("_order");
                 SerializedProperty decisionEnvironment = decision.FindPropertyRelative("_environment");
+                SerializedProperty decisionEffectsDuration = decision.FindPropertyRelative("_effectsDuration");
 
                 LabelField($"Decision {i + 1}.");
 
                 decisionDescription.stringValue = TextArea(
                     decisionDescription.stringValue,
-                    GUILayout.Height(30), // Set initial height
-                    GUILayout.ExpandHeight(true) // Allow resizing
+                    GUILayout.Height(30),
+                    GUILayout.ExpandHeight(true)
                 );
 
                 decisionBudget.intValue = IntField(
@@ -72,6 +73,11 @@ namespace Cards {
                 decisionEnvironment.intValue = IntField(
                     new GUIContent("ENV"),
                     decisionEnvironment.intValue
+                );
+
+                decisionEffectsDuration.intValue = IntField(
+                    new GUIContent("Effects duration"),
+                    decisionEffectsDuration.intValue
                 );
             }
 
