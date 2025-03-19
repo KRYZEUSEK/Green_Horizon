@@ -51,7 +51,7 @@ namespace Cards {
 
             // Przepatrz, czy wszystkie karty maj¹ linki.
             foreach (Card card in cards) {
-                if (cardsLinks.Find(cardLink => cardLink.card == card) == null) {
+                if (cardsLinks.Find(cardLink => cardLink.name.Equals(card.Title)) == null) {
                     GameObject cardLinkObject = new GameObject(card.Title);
 
                     cardLinkObject.transform.SetParent(transform);
@@ -65,7 +65,7 @@ namespace Cards {
             // Przepatrz, czy wszystkie pozosta³e linki maj¹ przypisane karty.
             foreach (CardLink cardLink in cardsLinks.Except(linksToIgnore)) {
                 if (cardLink.card == null) {
-                    Card card = cards.Find(c => c.Title == cardLink.name);
+                    Card card = cards.Find(c => c.Title.Equals(cardLink.name));
 
                     if (card == null) {
                         DestroyImmediate(cardLink.gameObject);

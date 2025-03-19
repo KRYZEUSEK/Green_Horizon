@@ -383,16 +383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ff515c3972494a43add63a0e46315bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cards:
-  - {fileID: 11400000, guid: d02d5c0cce7a7e44b837e9e18827b6a3, type: 2}
-  - {fileID: 11400000, guid: f57c617ef7aaf9542b368c2ec43e5776, type: 2}
-  - {fileID: 11400000, guid: 6e3242545a6aba94e87829a21b9da67b, type: 2}
-  cardsLinks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  cards: []
+  cardsLinks: []
 --- !u!4 &2007391337
 Transform:
   m_ObjectHideFlags: 0
