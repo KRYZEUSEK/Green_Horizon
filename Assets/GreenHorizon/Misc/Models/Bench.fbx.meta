@@ -7,6 +7,11 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Light_metal
+    second: {fileID: 2100000, guid: d86af1d55230e2f4a89ccf5800c1bc96, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Metal
     second: {fileID: -1795213135617096166, guid: cf99e1f2605aa9f478356e3f30ea6e70, type: 3}
   - first:
