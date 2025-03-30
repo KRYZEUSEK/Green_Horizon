@@ -58,6 +58,13 @@ namespace Cards {
     [System.Serializable]
     [CreateAssetMenu(fileName = "Card", menuName = "ScriptableObjects/Card", order = 1)]
     public class Card : ScriptableObject {
+        [SerializeField] private string _id = "";
+
+        public string Id {
+            get { return _id; }
+            internal set { _id = value; }
+        }
+
         [SerializeField] private string _title = "";
 
         public string Title {

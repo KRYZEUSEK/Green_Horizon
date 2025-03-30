@@ -10,10 +10,16 @@ namespace Cards {
         public override void OnInspectorGUI() {
             serializedObject.Update();
 
+            SerializedProperty cardId = serializedObject.FindProperty("_id");
             SerializedProperty cardTitle = serializedObject.FindProperty("_title");
             SerializedProperty cardDescription = serializedObject.FindProperty("_description");
             SerializedProperty cardImage = serializedObject.FindProperty("_image");
             SerializedProperty cardDecisions = serializedObject.FindProperty("_decisions");
+
+            cardId.stringValue = TextField(
+                new GUIContent("ID"),
+                cardId.stringValue
+            );
 
             cardTitle.stringValue = TextField(
                 new GUIContent("Title"),

@@ -6,6 +6,7 @@ using UnityEngine.Events;
 namespace Cards {
     public class CardLink : MonoBehaviour {
         [SerializeField] internal Card card;
+        [SerializeField] internal string cardId;
 
         public UnityEvent onAppearEvent;
         public UnityEvent EndCardEffectEvent;
@@ -33,6 +34,7 @@ namespace Cards {
 
         public void AssignCard(Card card) {
             this.card = card;
+            this.cardId = card.Id;
         }
 
         public int GetDecisionSatisfaction(int decisionNumber) {
