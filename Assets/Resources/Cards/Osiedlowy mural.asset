@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
+  m_Name: Osiedlowy mural
+  m_EditorClassIdentifier: 
+  _id: 10
+  _title: Osiedlowy mural
+  _description: "Lokalny artysta chcia\u0142by stworzy\u0107 mural na \u015Bcianie
+    jednego z wi\u0119kszych budynk\xF3w. Jest jednak szansa, \u017Ce b\u0119dzie
+    mia\u0142 na\u015Bladowc\xF3w i nast\u0119pne murale powstan\u0105 bez zgody. "
+  _image: {fileID: 0}
+  _decisions:
+  - _description: "Zg\xF3d\u017A si\u0119, \u015Bwietna inicjatywa!"
+    _budget: 0
+    _satisfaction: 10
+    _infrastructure: 0
+    _order: -10
+    _environment: 0
+    _effectsDuration: 0
+  - _description: 'Zaproponuj mniej widoczne miejsce na mural '
+    _budget: 0
+    _satisfaction: 5
+    _infrastructure: 0
+    _order: 0
+    _environment: 0
+    _effectsDuration: 0
+  - _description: "Odm\xF3w, mural kojarzy si\u0119 z wandalizmem"
+    _budget: 0
+    _satisfaction: -10
+    _infrastructure: 0
+    _order: 5
+    _environment: 0
+    _effectsDuration: 0

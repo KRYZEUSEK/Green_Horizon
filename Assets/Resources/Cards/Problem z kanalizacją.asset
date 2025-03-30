@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
+  m_Name: "Problem z kanalizacj\u0105"
+  m_EditorClassIdentifier: 
+  _id: 13
+  _title: "Problem z kanalizacj\u0105"
+  _description: "Na twoim osiedlu wybi\u0142a kanalizacja."
+  _image: {fileID: 0}
+  _decisions:
+  - _description: "Op\u0142a\u0107 specjalist\xF3w, kt\xF3rzy pomog\u0105."
+    _budget: -10
+    _satisfaction: 5
+    _infrastructure: 0
+    _order: 0
+    _environment: 5
+    _effectsDuration: 0
+  - _description: "Zatrudnij pana Wiesia, osiedlow\u0105 z\u0142ot\u0105 r\u0105czk\u0119."
+    _budget: -5
+    _satisfaction: 5
+    _infrastructure: 0
+    _order: 0
+    _environment: 0
+    _effectsDuration: 0
+  - _description: "I tak cz\u0119sto pada deszcz, sytuacja sama si\u0119 rozwi\u0105\u017Ce."
+    _budget: 10
+    _satisfaction: -5
+    _infrastructure: 0
+    _order: 0
+    _environment: -10
+    _effectsDuration: 0

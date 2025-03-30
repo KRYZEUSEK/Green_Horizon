@@ -73,12 +73,18 @@ public class DragDrop : MonoBehaviour
             transform.position = closestDropArea.transform.position;
 
             SpriteRenderer hitRenderer = closestDropArea.GetComponent<SpriteRenderer>(); // pobranie renderera z miejsca upuszczenia piecz¹tki 
+            
             if (hitRenderer != null)
             {
                 hitRenderer.sprite = Stamped; // podmiana na sprite podbitego 
-                DecisionEvent.Invoke();
+                
                 isDropped = true; // Ustaw flagê, aby zablokowaæ dalsze przeci¹ganie
                 Debug.Log("Stamp zosta³ upuszczony na DropArea.");
+            }
+
+            if (closestDropArea.TryGetComponent(out DropArea dropArea)) 
+            {
+                dropArea.onDropEvent?.Invoke();
             }
         }
 

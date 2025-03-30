@@ -6,38 +6,51 @@ using UnityEngine.UI;
 public class BarsController : MonoBehaviour
 {
     [Header("Infrastructure")]
-    [SerializeField] private Infrastructure playerInfrastructure; 
     [SerializeField] private Image totalInfrastructure; // obraz będący tłem dla wskaźnika 
     [SerializeField] private Image currentInfrastructure; // obraz który jest zmieniany w tej klasie 
     [SerializeField] private float maxInfrastructure = 100f; // Maksymalna wartość infrastruktury
 
-
     [Header("Budget")]
-    [SerializeField] private Budget playerBudget;
     [SerializeField] private Image totalBudget; // obraz będący tłem dla wskaźnika
     [SerializeField] private Image currentBudget; // obraz który jest zmieniany w tej klasie 
     [SerializeField] private float maxBudget = 100f; // Maksymalna wartość budżetu
-    Color defaultColor;
 
     [Header("LifeQuality")]
-    [SerializeField] private LifeQuality playerLifeQuality;
     [SerializeField] private Image totalLifeQuality; // obraz będący tłem dla wskaźnika
     [SerializeField] private Image currentLifeQuality; // obraz który jest zmieniany w tej klasie 
     [SerializeField] private float maxLifeQuality = 100f; // Maksymalna wartość budżetu
 
     [Header("Ecology")]
-    [SerializeField] private Ecology playerEcology;
     [SerializeField] private Image totalEcology; // obraz będący tłem dla wskaźnika
     [SerializeField] private Image currentEcology; // obraz który jest zmieniany w tej klasie 
     [SerializeField] private float maxEcology = 100f; // Maksymalna wartość 
 
 
     [Header("Order")]
-    [SerializeField] private Order playerOrder;
     [SerializeField] private Image totalOrder; // obraz będący tłem dla wskaźnika
     [SerializeField] private Image currentOrder; // obraz który jest zmieniany w tej klasie 
     [SerializeField] private float maxOrder = 100f; // Maksymalna wartość 
 
+    public void UpdateBars() 
+    {
+        float infrastructure = (float)GameManager.Instance.Infrastructure;
+        float budget = (float)GameManager.Instance.Budget;
+        float satisfaction = (float)GameManager.Instance.Satisfaction;
+        float environment = (float)GameManager.Instance.Environment;
+        float order = (float)GameManager.Instance.Order;
+
+        currentInfrastructure.fillAmount = (infrastructure / 100f); //jeżeli zmienimy bazową max wartość wskaźnika tutaj należy przez nią podzielić
+        currentBudget.fillAmount = (budget / 100f);
+        currentLifeQuality.fillAmount = (satisfaction / 100f);
+        currentEcology.fillAmount = (environment / 100f);
+        currentOrder.fillAmount = (order / 100f);
+
+        UpdateBarColor(currentInfrastructure, infrastructure, maxInfrastructure);
+        UpdateBarColor(currentBudget, budget, maxBudget);
+        UpdateBarColor(currentLifeQuality, satisfaction, maxLifeQuality);
+        UpdateBarColor(currentEcology, environment, maxEcology);
+        UpdateBarColor(currentOrder, order, maxOrder);
+    }
 
     private void UpdateBarColor(Image bar, float currentValue, float maxValue)
         // funkcja zapewniającą dynamiczną zmianę koloru od zielonego do czerwonego w zależności od wypełnienia paska 
@@ -70,39 +83,4 @@ public class BarsController : MonoBehaviour
         // Ustawienie koloru i wypełnienia paska
         bar.color = interpolatedColor;
     }
-
-        void Update()
-        {
-
-        // tylko do sprawdzania czy działa 
-        if (Input.GetKeyDown(KeyCode.U))
-        {
-            playerInfrastructure.InfrastructureUp(10);
-            playerBudget.BudgetUp(10);
-            playerLifeQuality.LifeQualityUp(10);
-            playerEcology.EcologyUp(10);
-            playerOrder.OrderUp(10);
-        }
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            playerInfrastructure.InfrastructureDown(10);
-            playerBudget.BudgetDown(10);
-            playerLifeQuality.LifeQualityDown(10);
-            playerEcology.EcologyDown(10);
-            playerOrder.OrderDown(10);
-        }
-
-        currentInfrastructure.fillAmount = playerInfrastructure.currentInfrastructure / 100; //jeżeli zmienimy bazową max wartość wskaźnika tutaj należy przez nią podzielić
-        currentBudget.fillAmount = playerBudget.currentBudget / 100;
-        currentLifeQuality.fillAmount = playerLifeQuality.currentLifeQuality / 100;
-        currentEcology.fillAmount = playerEcology.currentEcology / 100;
-        currentOrder.fillAmount = playerOrder.currentOrder / 100;
-        UpdateBarColor(currentInfrastructure, playerInfrastructure.currentInfrastructure, maxInfrastructure);
-        UpdateBarColor(currentBudget, playerBudget.currentBudget, maxBudget);
-        UpdateBarColor(currentLifeQuality, playerLifeQuality.currentLifeQuality, maxLifeQuality);
-        UpdateBarColor(currentEcology, playerEcology.currentEcology, maxEcology);
-        UpdateBarColor(currentOrder, playerOrder.currentOrder, maxOrder);
-    }
-    }
-    
-
+}

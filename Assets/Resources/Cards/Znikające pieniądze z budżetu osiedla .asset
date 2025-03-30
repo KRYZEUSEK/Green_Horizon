@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
+  m_Name: "Znikaj\u0105ce pieni\u0105dze z bud\u017Cetu osiedla "
+  m_EditorClassIdentifier: 
+  _id: 22
+  _title: "Znikaj\u0105ce pieni\u0105dze z bud\u017Cetu osiedla "
+  _description: "Zauwa\u017Cono, \u017Ce z bud\u017Cetu co miesi\u0105c w niewyja\u015Bnionych
+    okoliczno\u015Bciach znikaj\u0105 pieni\u0105dze"
+  _image: {fileID: 0}
+  _decisions:
+  - _description: "Wynajmij znanego detektywa, kt\xF3ry rozwi\u0105\u017Ce spraw\u0119"
+    _budget: -5
+    _satisfaction: 0
+    _infrastructure: 0
+    _order: 10
+    _environment: 0
+    _effectsDuration: 0
+  - _description: "Pewnie jest to zwi\u0105zane z b\u0142\u0119dami ksi\u0119gowych,
+      zwolnij ich i zatrudnij nowych"
+    _budget: 0
+    _satisfaction: -10
+    _infrastructure: 0
+    _order: -10
+    _environment: 0
+    _effectsDuration: 0
+  - _description: "Damy rad\u0119 rozwi\u0105za\u0107 to samemu "
+    _budget: 0
+    _satisfaction: 0
+    _infrastructure: 0
+    _order: -10
+    _environment: 0
+    _effectsDuration: 0
