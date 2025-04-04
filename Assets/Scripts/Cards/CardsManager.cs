@@ -51,7 +51,7 @@ namespace Cards {
 
             // Przepatrz, czy wszystkie karty maj¹ linki.
             foreach (Card card in cards) {
-                if (cardsLinks.Find(cardLink => cardLink.name.Equals(card.Title)) == null) {
+                if (cardsLinks.Find(cardLink => cardLink.cardId.Equals(card.Id)) == null) {
                     GameObject cardLinkObject = new GameObject(card.Title);
 
                     cardLinkObject.transform.SetParent(transform);
@@ -65,7 +65,7 @@ namespace Cards {
             // Przepatrz, czy wszystkie pozosta³e linki maj¹ przypisane karty.
             foreach (CardLink cardLink in cardsLinks.Except(linksToIgnore)) {
                 if (cardLink.card == null) {
-                    Card card = cards.Find(c => c.Title.Equals(cardLink.name));
+                    Card card = cards.Find(c => c.Id.Equals(cardLink.cardId));
 
                     if (card == null) {
                         DestroyImmediate(cardLink.gameObject);
@@ -74,9 +74,12 @@ namespace Cards {
                         cardLink.AssignCard(card);
                     }
                 }
+
+                cardLink.name = cardLink.card.Title;
             }
         }
 
+        // DODAÆ ID DO KART
         [ContextMenu("Reload cards from .tsv")]
         private void ReloadCardsFromTSV() {
             // Usuniêcie wszystkich kart z Resources/Cards.
@@ -103,19 +106,20 @@ namespace Cards {
 
                 Card card = ScriptableObject.CreateInstance<Card>();
 
-                card.Title = fields[0];
-                card.Description = fields[1];
+                card.Id = fields[0];
+                card.Title = fields[1];
+                card.Description = fields[2];
                 card.Decisions = new CardDecision[3];
 
                 for (int i = 0; i < 3; i++) {
                     card.Decisions[i] = new CardDecision();
-                    card.Decisions[i].Description = fields[i * 7 + 2];
-                    card.Decisions[i].Budget = int.Parse(fields[i * 7 + 3]);
-                    card.Decisions[i].Satisfaction = int.Parse(fields[i * 7 + 4]);
-                    card.Decisions[i].Infrastructure = int.Parse(fields[i * 7 + 5]);
-                    card.Decisions[i].Order = int.Parse(fields[i * 7 + 6]);
-                    card.Decisions[i].Environment = int.Parse(fields[i * 7 + 7]);
-                    card.Decisions[i].EffectsDuration = int.Parse(fields[i * 7 + 8]);
+                    card.Decisions[i].Description = fields[i * 7 + 3];
+                    card.Decisions[i].Budget = int.Parse(fields[i * 7 + 4]);
+                    card.Decisions[i].Satisfaction = int.Parse(fields[i * 7 + 5]);
+                    card.Decisions[i].Infrastructure = int.Parse(fields[i * 7 + 6]);
+                    card.Decisions[i].Order = int.Parse(fields[i * 7 + 7]);
+                    card.Decisions[i].Environment = int.Parse(fields[i * 7 + 8]);
+                    card.Decisions[i].EffectsDuration = int.Parse(fields[i * 7 + 9]);
                 }
 
                 string name = AssetDatabase.GenerateUniqueAssetPath($"Assets/Resources/Cards/{card.Title}.asset");
