@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45022845, g: 0.49786085, b: 0.5624553, a: 1}
+  m_IndirectSpecularColor: {r: 0.45022815, g: 0.49786037, b: 0.5624546, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -115322,7 +115322,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 600, y: 750}
+  m_SizeDelta: {x: 750, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &709976145
 MonoBehaviour:
@@ -192788,8 +192788,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   riskFactor: 1
   pauseMenu: {fileID: 171845056}
-  articleSpawnDelay: 1
-  stampSpawnDelay: 1.5
+  articleSpawnDelay: 1.5
+  stampSpawnDelay: 1
   pauseKey: 27
   hideArticle: 104
 --- !u!4 &1234782371
@@ -238645,10 +238645,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 171845058}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: QuitToMenu
-        m_Mode: 1
+      - m_Target: {fileID: 1234782370}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: PauseGame
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -238656,7 +238656,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 0
+        m_CallState: 2
 --- !u!114 &1550238733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255682,7 +255682,7 @@ Transform:
   m_GameObject: {fileID: 1668746274}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 450, y: -450, z: 0}
+  m_LocalPosition: {x: -450, y: -400, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -255700,7 +255700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5947dd0ccd185814cb3314927a7ff839, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stampPrefab: {fileID: 86456353982287437, guid: cf4239b5af83fe044ad24e546154b70b, type: 3}
+  stampPrefab: {fileID: 4333380653537490419, guid: e21541557f5fb764da5169b83b901a6d, type: 3}
 --- !u!1001 &1670200547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -273845,7 +273845,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 75}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1791702285

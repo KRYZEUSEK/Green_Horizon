@@ -71,12 +71,12 @@ public class GameManager : MonoBehaviour {
     private void Update() {
         if (Input.GetKeyDown(pauseKey)) {
             PauseGame(!isPaused);
-            stampSpawner.gameObject.SetActive(!isPaused);
         }
 
         else if (Input.GetKeyDown(hideArticle)) {
             isArticleVisible = !isArticleVisible;
             articleSpawner.ToggleVisibility(isArticleVisible);
+            stampSpawner.gameObject.SetActive(isArticleVisible);
         }
     }
 
@@ -114,7 +114,6 @@ public class GameManager : MonoBehaviour {
 
         if (IsGameOver()) {
             Debug.Log("Game over!");
-            PauseGame(true);
             SceneManager.LoadScene("EndScene");
         }
 
@@ -173,6 +172,7 @@ public class GameManager : MonoBehaviour {
     public void PauseGame(bool pause) {
         isPaused = pause;
         Time.timeScale = pause ? 0 : 1;
+        stampSpawner.gameObject.SetActive(!isPaused && isArticleVisible);
         pauseMenu.SetActive(pause);
     }
 }
