@@ -1,17 +1,28 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using Unity.VisualScripting;
+using UnityEditor.Presets;
 using UnityEngine;
 using UnityEngine.UI;
+using Input = UnityEngine.Windows.Input;
 
 public class Camera_Behavior : MonoBehaviour
 {
     public CinemachineVirtualCamera virtual_camera;
     public CinemachineVirtualCamera next_camera;
+    public float timer;
+    public CinemachineDollyCart dolly_cart;
+    void OnEnable()
+    {
+        timer = 8.0f;
+        dolly_cart.m_Speed = 0.05f;
+    }
     void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A))
+        timer -= Time.deltaTime;
+        if (timer <= 0.0f)
         {
             Change_Camera();
         }
@@ -22,11 +33,6 @@ public class Camera_Behavior : MonoBehaviour
         {
             virtual_camera.gameObject.SetActive(false);
             next_camera.gameObject.SetActive(true);
-        }
-        else if (next_camera.isActiveAndEnabled)
-        {
-            next_camera.gameObject.SetActive(false);
-            virtual_camera.gameObject.SetActive(true);
         }
     }
 }
