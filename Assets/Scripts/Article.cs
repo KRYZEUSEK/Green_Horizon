@@ -6,8 +6,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
 public class Article : MonoBehaviour {
-    private Animator animator;
-
     [Header("Text fields")]
     public TMP_Text title;
     public TMP_Text description;
@@ -16,6 +14,8 @@ public class Article : MonoBehaviour {
     [Header("Settings")]
     [Tooltip("Time to wait after decision is made before hiding the article")]
     public float waitAfterDecision = 1f;
+
+    private Animator animator;
 
     private void Awake() {
         animator = GetComponent<Animator>();

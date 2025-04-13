@@ -1,4 +1,5 @@
 using Cards;
+using Minigames;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +37,9 @@ public class GameManager : MonoBehaviour {
     [Tooltip("Delay before spawning the stamp.")]
     public float stampSpawnDelay = 1.5f;
 
+    [Tooltip("Time limit to take a decision")]
+    public float autoDecisionTime = 30f;
+
     [Tooltip("Key to pause the game.")]
     public KeyCode pauseKey = KeyCode.Escape;
     [Tooltip("Key to hide the article.")]
@@ -47,6 +51,8 @@ public class GameManager : MonoBehaviour {
 
     private bool isPaused = false;
     private bool isArticleVisible = true;
+
+    private float autoDecisionTimer = 0f;
 
     private void Awake() {
         _instance = this;
@@ -72,11 +78,20 @@ public class GameManager : MonoBehaviour {
         if (Input.GetKeyDown(pauseKey)) {
             PauseGame(!isPaused);
         }
-
         else if (Input.GetKeyDown(hideArticle)) {
             isArticleVisible = !isArticleVisible;
             articleSpawner.ToggleVisibility(isArticleVisible);
             stampSpawner.gameObject.SetActive(isArticleVisible);
+        }
+        else if (Input.GetKeyDown(KeyCode.G)){
+            MinigamesManager.Instance.StartMinigame(0);
+        }
+        else if (Input.GetKeyDown(KeyCode.F)) {
+            MinigamesManager.Instance.EndMinigame();
+        }
+
+        if (!isPaused) {
+            HandleAutoDecision();
         }
     }
 
@@ -106,6 +121,8 @@ public class GameManager : MonoBehaviour {
         // Zastanowiæ siê nad elegancj¹ poni¿szych.
         articleSpawner.SpawnArticle(articleSpawnDelay);
         stampSpawner.SpawnStamp(stampSpawnDelay);
+
+        autoDecisionTimer = 0f;
     }
 
     public void ChooseDecision(int decisionNumber) {
@@ -163,6 +180,28 @@ public class GameManager : MonoBehaviour {
 
         Debug.Log($"Stats after update");
         Debug.Log($"Budget: {Budget}, Satisfaction: {Satisfaction}, Infrastructure: {Infrastructure}, Order: {Order}, Environment: {Environment}");
+    }
+
+    public void UpdateStats(int budget, int satisfaction, 
+        int infrastructure, int order, int environment) {
+        Budget += budget;
+        Satisfaction += satisfaction;
+        Infrastructure += infrastructure;
+        Order += order;
+        Environment += environment;
+
+        barsController.UpdateBars();
+
+        Debug.Log($"Stats after update");
+        Debug.Log($"Budget: {Budget}, Satisfaction: {Satisfaction}, Infrastructure: {Infrastructure}, Order: {Order}, Environment: {Environment}");
+    }
+
+    private void HandleAutoDecision() {
+        autoDecisionTimer += Time.deltaTime;
+
+        if (autoDecisionTimer >= autoDecisionTime) {
+            ChooseDecision(0);
+        }
     }
 
     private bool IsGameOver() {

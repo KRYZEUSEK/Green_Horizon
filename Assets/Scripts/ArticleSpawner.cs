@@ -5,7 +5,14 @@ using UnityEngine.UI;
 
 public class ArticleSpawner : MonoBehaviour {
     public GameObject articlePrefab;
+    public Article currentArticle {
+        get {
+            return currentArticleInstance;
+        }
+    }
+
     private bool isVisible = true;
+    private Article currentArticleInstance;
 
     public void ToggleVisibility(bool turnOn) {
         isVisible = turnOn;
@@ -29,6 +36,7 @@ public class ArticleSpawner : MonoBehaviour {
 
     private void InstantiateArticle() {
         GameObject newArticle = Instantiate(articlePrefab, transform);
+        currentArticleInstance = newArticle.GetComponent<Article>();
 
         foreach (Transform child in newArticle.transform) {
             child.gameObject.SetActive(isVisible);
