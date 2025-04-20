@@ -8,6 +8,7 @@ public class CarMovement : MonoBehaviour
     [Header("Patrol")]
     [SerializeField] private Transform wayPoints;
     private int currentWayPoint;
+    private Vector3 startingPosition;
 
     [Header("Components")]
     NavMeshAgent agent;
@@ -15,7 +16,9 @@ public class CarMovement : MonoBehaviour
     private void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        //agent.updateRotation = false;
+        agent.updateRotation = false;
+        startingPosition = transform.position;
+        agent.SetDestination(wayPoints.GetChild(0).position);
 
     }
     private void Update()
@@ -25,12 +28,28 @@ public class CarMovement : MonoBehaviour
             currentWayPoint++;
             if (currentWayPoint >= wayPoints.childCount)
             {
-                currentWayPoint = 0;
+                // Rozpocznij korutynê z opóŸnieniem
+                transform.rotation = Quaternion.Euler(0, 180, 90);
+                StartCoroutine(ReturnToStartAfterDelay(2f));
+                return;
             }
             agent.SetDestination(wayPoints.GetChild(currentWayPoint).position);
         }
         transform.rotation = Quaternion.Euler(0, 180, 90);
+    }
 
+    private IEnumerator ReturnToStartAfterDelay(float delay)
+    {
+        // Wstrzymaj wykonanie na okreœlony czas
+        yield return new WaitForSeconds(delay);
+
+        
+        // Przenieœ samochód do punktu pocz¹tkowego
+        transform.position = startingPosition;
+        currentWayPoint = 0;
+
+        // Ustaw nowy cel dla NavMeshAgent
+        agent.SetDestination(wayPoints.GetChild(currentWayPoint).position);
     }
 
 }
