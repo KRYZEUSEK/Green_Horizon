@@ -29,13 +29,13 @@ public class CarMovement : MonoBehaviour
             if (currentWayPoint >= wayPoints.childCount)
             {
                 // Rozpocznij korutynê z opóŸnieniem
-                transform.rotation = Quaternion.Euler(0, 180, 90);
+                //transform.rotation = Quaternion.Euler(0, 180, 90);
                 StartCoroutine(ReturnToStartAfterDelay(2f));
                 return;
             }
             agent.SetDestination(wayPoints.GetChild(currentWayPoint).position);
         }
-        transform.rotation = Quaternion.Euler(0, 180, 90);
+        ProperDirectionRotation();
     }
 
     private IEnumerator ReturnToStartAfterDelay(float delay)
@@ -50,6 +50,19 @@ public class CarMovement : MonoBehaviour
 
         // Ustaw nowy cel dla NavMeshAgent
         agent.SetDestination(wayPoints.GetChild(currentWayPoint).position);
+    }
+    private void ProperDirectionRotation()
+    {
+        if (agent.pathPending == false && agent.remainingDistance > 0.1f)
+        {
+            Vector3 direction = agent.steeringTarget - transform.position; // Direction to the next waypoint
+            direction.y = 0; // Ignore vertical rotation
+            if (direction != Vector3.zero)
+            {
+                transform.rotation = Quaternion.LookRotation(direction); // Rotate the car to face the waypoint
+            }
+        }
+            
     }
 
 }
