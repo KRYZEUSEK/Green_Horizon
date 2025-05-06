@@ -22,22 +22,21 @@ namespace Minigames.PapersGame {
         [SerializeField] private int maxPieces = 50;
         [Tooltip("Progression rate for the pieces number")]
         [SerializeField] private float progression = 1.5f;
+        [Tooltip("Starting time limit for the game in seconds (will increase with the given progression)")]
+        [SerializeField] private float startingTimeLimit = 7.5f;
         [Tooltip("Area where the papers will be spawned")]
         [SerializeField] private RectTransform papersSpawnArea;
         [Tooltip("Areas where the targets will be spawned")]
         [SerializeField] private RectTransform[] targetsSpawnArea;
 
-        private bool isGameStarted;
-
         private int round;
         private int numberOfPapers;
-
         private float timeLimit;
 
         public void StartGame() {
             if (isGameStarted) { return; }
 
-            timeLimit = 10f;
+            timeLimit = startingTimeLimit * round;
             isGameStarted = true;
             round++;
 
@@ -67,12 +66,12 @@ namespace Minigames.PapersGame {
         }
 
         private void Update() {
-            if (isGameStarted) {
-                timeLimit -= Time.deltaTime;
+            if (!isGameStarted) { return; }
+            
+            timeLimit -= Time.deltaTime;
 
-                if (timeLimit <= 0) {
-                    FailGame();
-                }
+            if (timeLimit <= 0) {
+                FailGame();
             }
         }
 
@@ -131,6 +130,16 @@ namespace Minigames.PapersGame {
             }
         }
 
+        public void FailGame() {
+            EndGame();
+            MinigamesManager.Instance.FailGame();
+        }
+
+        public void WinGame() {
+            EndGame();
+            MinigamesManager.Instance.WinGame();
+        }
+        
         public void EndGame() {
             isGameStarted = false;
 
@@ -146,16 +155,6 @@ namespace Minigames.PapersGame {
             }
 
             MinigamesManager.Instance.HideGameArea();
-        }
-
-        public void FailGame() {
-            EndGame();
-            MinigamesManager.Instance.FailGame();
-        }
-
-        public void WinGame() {
-            EndGame();
-            MinigamesManager.Instance.WinGame();
         }
     }
 }

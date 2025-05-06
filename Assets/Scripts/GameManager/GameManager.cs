@@ -29,21 +29,32 @@ public class GameManager : MonoBehaviour {
     public int Order { get; private set; } = 50;
     public int Environment { get; private set; } = 50;
 
-    [Tooltip("Reference to the pause menu game object.")]
-    public GameObject pauseMenu;
-
+    [Header("Game Settings")]
     [Tooltip("Delay before spawning the article.")]
-    public float articleSpawnDelay = 1f;
+    [SerializeField] private float articleSpawnDelay = 1f;
     [Tooltip("Delay before spawning the stamp.")]
-    public float stampSpawnDelay = 1.5f;
-
+    [SerializeField] private float stampSpawnDelay = 1.5f;
     [Tooltip("Time limit to take a decision")]
-    public float autoDecisionTime = 30f;
+    [SerializeField] private float autoDecisionTime = 30f;
+    [Tooltip("Time between minigames.")]
+    [SerializeField] private float minigameCycleTime = 5f;
+    [Tooltip("Chance of a minigame appearing after each cycle.")]
+    [SerializeField][Range(0,1)] private float minigameChance;
 
+    [Header("Penalties for each stat on minigame failure.")]
+    [SerializeField] private int budgetPenalty = 5;
+    [SerializeField] private int satisfactionPenalty = 5;
+    [SerializeField] private int infrastructurePenalty = 5;
+    [SerializeField] private int orderPenalty = 5;
+    [SerializeField] private int environmentPenalty = 5;
+
+    [Header("UI Settings")]
+    [Tooltip("Reference to the pause menu game object.")]
+    [SerializeField] private GameObject pauseMenu;
     [Tooltip("Key to pause the game.")]
-    public KeyCode pauseKey = KeyCode.Escape;
+    [SerializeField] private KeyCode pauseKey = KeyCode.Escape;
     [Tooltip("Key to hide the article.")]
-    public KeyCode hideArticle = KeyCode.H;
+    [SerializeField] private KeyCode hideArticle = KeyCode.H;
 
     private BarsController barsController;
     private ArticleSpawner articleSpawner;
@@ -53,6 +64,7 @@ public class GameManager : MonoBehaviour {
     private bool isArticleVisible = true;
 
     private float autoDecisionTimer = 0f;
+    private float minigamesCycleTimer = 0f;
 
     private void Awake() {
         _instance = this;
@@ -83,8 +95,8 @@ public class GameManager : MonoBehaviour {
             articleSpawner.ToggleVisibility(isArticleVisible);
             stampSpawner.gameObject.SetActive(isArticleVisible);
         }
-        else if (Input.GetKeyDown(KeyCode.G)){
-            MinigamesManager.Instance.StartMinigame(0);
+        else if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            StartRandomMinigame();
         }
         else if (Input.GetKeyDown(KeyCode.F)) {
             MinigamesManager.Instance.EndMinigame();
@@ -92,6 +104,37 @@ public class GameManager : MonoBehaviour {
 
         if (!isPaused) {
             HandleAutoDecision();
+        }
+
+        if (!isPaused) {
+            HandleMinigamesCycles();
+        }
+    }
+
+    public void StartRandomMinigame() {
+        int randomMinigame = Random.Range(0, MinigamesManager.Instance.MinigamesCount);
+
+        MinigamesManager.Instance.StartMinigame(randomMinigame, budgetPenalty, 
+            satisfactionPenalty, infrastructurePenalty, orderPenalty, environmentPenalty);
+    }
+
+    private void HandleAutoDecision() {
+        autoDecisionTimer += Time.deltaTime;
+
+        if (autoDecisionTimer >= autoDecisionTime) {
+            ChooseDecision(0);
+        }
+    }
+
+    private void HandleMinigamesCycles() {
+        minigamesCycleTimer += Time.deltaTime;
+
+        if (minigamesCycleTimer >= minigameCycleTime) {
+            minigamesCycleTimer = 0f;
+
+            if (Random.Range(0f, 1f) <= minigameChance) {
+                StartRandomMinigame();
+            }
         }
     }
 
@@ -194,13 +237,10 @@ public class GameManager : MonoBehaviour {
 
         Debug.Log($"Stats after update");
         Debug.Log($"Budget: {Budget}, Satisfaction: {Satisfaction}, Infrastructure: {Infrastructure}, Order: {Order}, Environment: {Environment}");
-    }
 
-    private void HandleAutoDecision() {
-        autoDecisionTimer += Time.deltaTime;
-
-        if (autoDecisionTimer >= autoDecisionTime) {
-            ChooseDecision(0);
+        if (IsGameOver()) {
+            Debug.Log("Game over!");
+            SceneManager.LoadScene("EndScene");
         }
     }
 

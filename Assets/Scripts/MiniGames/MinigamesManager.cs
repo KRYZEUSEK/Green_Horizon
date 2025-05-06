@@ -27,6 +27,7 @@ namespace Minigames {
         }
 
         private List<IMinigame> minigameManagers = new List<IMinigame>();
+        public int MinigamesCount { private set; get; }
         private IMinigame currentMinigame;
 
         private Animator animator;
@@ -38,6 +39,7 @@ namespace Minigames {
 
         private void Start() {
             minigameManagers = FindObjectsOfType<MonoBehaviour>(true).OfType<IMinigame>().ToList();
+            MinigamesCount = minigameManagers.Count;
             animator = GetComponent<Animator>();
         }
 
@@ -47,6 +49,9 @@ namespace Minigames {
             int infrastructurePenalty = 0,
             int orderPenalty = 0,
             int environmentPenalty = 0) {
+
+            if (currentMinigame != null) { return; }
+
             this.budgetPenalty = budgetPenalty;
             this.satisfactionPenalty = satisfactionPenalty;
             this.infrastructurePenalty = infrastructurePenalty;
@@ -59,6 +64,7 @@ namespace Minigames {
         }
 
         public void EndMinigame() {
+            currentMinigame = null;
             animator.Play("Disappear");
         }
 
@@ -68,12 +74,15 @@ namespace Minigames {
 
         public void FailGame() {
             GameManager.Instance.UpdateStats(
-                budgetPenalty, 
-                satisfactionPenalty, 
-                infrastructurePenalty, 
-                orderPenalty, 
-                environmentPenalty
+                -budgetPenalty, 
+                -satisfactionPenalty, 
+                -infrastructurePenalty, 
+                -orderPenalty, 
+                -environmentPenalty
             );
+
+            Debug.Log("Minigame failed!");
+
             EndMinigame();
         }
 
