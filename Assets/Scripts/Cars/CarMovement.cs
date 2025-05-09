@@ -55,14 +55,21 @@ public class CarMovement : MonoBehaviour
     {
         if (agent.pathPending == false && agent.remainingDistance > 0.1f)
         {
-            Vector3 direction = agent.steeringTarget - transform.position; // Direction to the next waypoint
-            direction.y = 0; // Ignore vertical rotation
+            Vector3 direction = agent.steeringTarget - transform.position; // Kierunek do nastêpnego waypointu
+            direction.y = 0; // Ignoruj rotacjê w osi Y (pionow¹)
             if (direction != Vector3.zero)
             {
-                transform.rotation = Quaternion.LookRotation(direction); // Rotate the car to face the waypoint
+                // Oblicz docelow¹ rotacjê
+                Quaternion targetRotation = Quaternion.LookRotation(direction);
+
+                // Interpoluj rotacjê obiektu w kierunku docelowej rotacji
+                transform.rotation = Quaternion.Slerp(
+                    transform.rotation, // Aktualna rotacja
+                    targetRotation,     // Docelowa rotacja
+                    Time.deltaTime * 5f // Prêdkoœæ rotacji (5f to przyk³adowa wartoœæ, mo¿esz j¹ dostosowaæ)
+                );
             }
         }
-            
     }
 
 }
