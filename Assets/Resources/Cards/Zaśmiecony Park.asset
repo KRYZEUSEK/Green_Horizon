@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
+  m_Name: "Za\u015Bmiecony Park"
+  m_EditorClassIdentifier: 
+  _id: 47
+  _title: "Za\u015Bmiecony Park"
+  _description: "Okaza\u0142o si\u0119, \u017Ce pod os\u0142on\u0105 nocy kto\u015B
+    zdewastowa\u0142 park rozrzucaj\u0105c \u015Bmieci. Trzeba podj\u0105\u0107 jakie\u015B
+    dzia\u0142anie."
+  _image: {fileID: 0}
+  _decisions:
+  - _description: "Poprosi\u0107 policj\u0119 o cz\u0119stsze patrole w godzinach
+      wieczornych, aby zapobiec kolejnym aktom wandalizmu."
+    _budget: -7
+    _satisfaction: -3
+    _infrastructure: 0
+    _order: 10
+    _environment: 0
+    _effectsDuration: 0
+  - _description: "Zorganizowa\u0107 akcj\u0119 sprz\u0105tania z pomoc\u0105 mieszka\u0144c\xF3w
+      \u2013 mo\u017Ce wsp\xF3lna inicjatywa zmotywuje spo\u0142eczno\u015B\u0107
+      do dbania o park?"
+    _budget: -10
+    _satisfaction: 0
+    _infrastructure: 0
+    _order: 5
+    _environment: 5
+    _effectsDuration: 0
+  - _description: "Wynaj\u0105\u0107 firm\u0119 sprz\u0105taj\u0105c\u0105, kt\xF3ra
+      b\u0119dzie regularnie dba\u0107 o czysto\u015B\u0107 i porz\u0105dek w parku."
+    _budget: -15
+    _satisfaction: 0
+    _infrastructure: 0
+    _order: 0
+    _environment: 10
+    _effectsDuration: 0

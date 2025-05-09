@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
+  m_Name: Osiedlowe Zielone Pustki
+  m_EditorClassIdentifier: 
+  _id: 48
+  _title: Osiedlowe Zielone Pustki
+  _description: "Mieszka\u0144cy skar\u017C\u0105 si\u0119, \u017Ce na osiedlu mamy
+    za ma\u0142o zielonej przestrzeni."
+  _image: {fileID: 0}
+  _decisions:
+  - _description: "Posad\u017Amy drzewa przy drodze."
+    _budget: -5
+    _satisfaction: 2
+    _infrastructure: 0
+    _order: 0
+    _environment: 5
+    _effectsDuration: 0
+  - _description: " Za\u0142\xF3\u017Cmy osiedlowy ogr\xF3d kwiatowy."
+    _budget: -5
+    _satisfaction: 5
+    _infrastructure: 0
+    _order: 0
+    _environment: 2
+    _effectsDuration: 0
+  - _description: Rozbudujmy park.
+    _budget: -10
+    _satisfaction: 5
+    _infrastructure: 0
+    _order: 0
+    _environment: 7
+    _effectsDuration: 0

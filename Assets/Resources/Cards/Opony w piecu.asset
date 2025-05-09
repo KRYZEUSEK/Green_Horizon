@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
+  m_Name: Opony w piecu
+  m_EditorClassIdentifier: 
+  _id: 34
+  _title: Opony w piecu
+  _description: "Wieczorami id\u0105c osiedlem, z paru komink\xF3w mo\u017Cna zauwa\u017Cy\u0107
+    g\u0119sty, czarny dym. Podejrzewa si\u0119, \u017Ce w tych domostwach ludzie
+    pal\u0105 opony w piecach."
+  _image: {fileID: 0}
+  _decisions:
+  - _description: "Trzeba natychmiast zaostrzy\u0107 kontrole spalania!"
+    _budget: 0
+    _satisfaction: -5
+    _infrastructure: 0
+    _order: -5
+    _environment: 10
+    _effectsDuration: 0
+  - _description: "Pare opon jeszcze nikogo nie zabi\u0142o, ale lepiej zagrozi\u0107,
+      \u017Ce je\u017Celi sytuacja b\u0119dzie si\u0119 powtarza\u0107 to pojawi\u0105
+      si\u0119 mandaty."
+    _budget: 0
+    _satisfaction: 5
+    _infrastructure: 0
+    _order: 0
+    _environment: -10
+    _effectsDuration: 0
+  - _description: "Osobi\u015Bcie porozmawiam z tymi lud\u017Ami, mo\u017Ce s\u0105
+      w ci\u0119\u017Ckiej sytuacji i musz\u0105?"
+    _budget: 0
+    _satisfaction: 5
+    _infrastructure: 0
+    _order: 5
+    _environment: -10
+    _effectsDuration: 0

@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
+  m_Name: Zaginiony skarb
+  m_EditorClassIdentifier: 
+  _id: 39
+  _title: Zaginiony skarb
+  _description: "Jeden z mieszka\u0144c\xF3w pochwali\u0142 si\u0119 na forum, \u017Ce
+    kopi\u0105c na swojej posesji znalaz\u0142 skrzynk\u0119 pe\u0142n\u0105 z\u0142ota.
+    Co powinni\u015Bmy zrobi\u0107?"
+  _image: {fileID: 0}
+  _decisions:
+  - _description: "Zostawi\u0107 go, skarb przecie\u017C by\u0142 na jego posesji."
+    _budget: -5
+    _satisfaction: 5
+    _infrastructure: 0
+    _order: 0
+    _environment: 0
+    _effectsDuration: 0
+  - _description: "W takich sytuacjach skarb jest w\u0142asno\u015Bcia osiedla, a
+      osobie kt\xF3ra znalaz\u0142a przypada 10% warto\u015Bci."
+    _budget: 15
+    _satisfaction: -7
+    _infrastructure: 0
+    _order: -7
+    _environment: 0
+    _effectsDuration: 0
+  - _description: "Skarb znaleziony by\u0142 na terenie osiedla ale mimo wszystko
+      po\u0142owa nale\u017Cy si\u0119 osobie, kt\xF3ra go znalaz\u0142a."
+    _budget: 10
+    _satisfaction: -5
+    _infrastructure: 0
+    _order: -3
+    _environment: 0
+    _effectsDuration: 0

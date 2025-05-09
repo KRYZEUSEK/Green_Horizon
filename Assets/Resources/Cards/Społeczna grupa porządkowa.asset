@@ -10,33 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
-  m_Name: "Tajemnicze znikni\u0119cie osiedlowej \u0142awki"
+  m_Name: "Spo\u0142eczna grupa porz\u0105dkowa"
   m_EditorClassIdentifier: 
-  _id: 9
-  _title: "Tajemnicze znikni\u0119cie osiedlowej \u0142awki"
-  _description: "Mieszka\u0144cy zauwa\u017Cyli, \u017Ce jedna z osiedlowych \u0142awek
-    nagle znikn\u0119\u0142a. Trudno ustali\u0107, kto jest za to odpowiedzialny."
+  _id: 33
+  _title: "Spo\u0142eczna grupa porz\u0105dkowa"
+  _description: "Grupka mieszka\u0144c\xF3w wpad\u0142a na pomys\u0142 obywatelskiego
+    patrolu osiedla. Jakie podejmiemy dzia\u0142anie?"
   _image: {fileID: 0}
   _decisions:
-  - _description: "Zle\u0107 \u015Bledztwo stra\u017Cy miejskiej."
+  - _description: "Pozw\xF3lmy im, to chyba ca\u0142kiem szczytny cel?"
     _budget: 0
-    _satisfaction: 0
+    _satisfaction: 10
     _infrastructure: 0
-    _order: 5
+    _order: -10
     _environment: 0
     _effectsDuration: 0
-  - _description: "Zaapeluj do mieszka\u0144c\xF3w o zg\u0142aszanie podejrzanych
-      dzia\u0142a\u0144."
+  - _description: "Pozw\xF3lmy, ale kontrolujmy ich dzia\u0142anie."
     _budget: 0
-    _satisfaction: 5
+    _satisfaction: -10
     _infrastructure: 0
-    _order: -5
+    _order: 10
     _environment: 0
     _effectsDuration: 0
-  - _description: "Zignoruj, przecie\u017C to tylko \u0142awka."
+  - _description: "Brzmi to podejrzanie, lepiej na wszelki wypadek zakaza\u0107."
     _budget: 0
     _satisfaction: -5
     _infrastructure: 0
     _order: 0
-    _environment: 0
+    _environment: -5
     _effectsDuration: 0

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
+  m_Name: Wybuch na osiedlowym komisariacie
+  m_EditorClassIdentifier: 
+  _id: 16
+  _title: Wybuch na osiedlowym komisariacie
+  _description: "Na osiedlowym komisariacie policji dosz\u0142o do niezidentyfikowanej
+    eksplozji."
+  _image: {fileID: 0}
+  _decisions:
+  - _description: "Zbadaj spraw\u0119, przecie\u017C to powa\u017Cna rzecz!"
+    _budget: -10
+    _satisfaction: 0
+    _infrastructure: 0
+    _order: 10
+    _environment: 0
+    _effectsDuration: 0
+  - _description: "Pono\u0107 dosz\u0142o do wybuchu g\u0142o\u015Bnika, nie sprawdzaj
+      wydaj takie o\u015Bwiadczenie."
+    _budget: 5
+    _satisfaction: 0
+    _infrastructure: 0
+    _order: -10
+    _environment: 0
+    _effectsDuration: 0
+  - _description: "Nie wydawaj o\u015Bwiadczenia odno\u015Bnie tej sytuacji."
+    _budget: 10
+    _satisfaction: -10
+    _infrastructure: 0
+    _order: 0
+    _environment: 0
+    _effectsDuration: 0

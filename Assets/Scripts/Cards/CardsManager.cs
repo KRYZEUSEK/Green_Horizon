@@ -106,6 +106,8 @@ namespace Cards {
 
                 Card card = ScriptableObject.CreateInstance<Card>();
 
+                Debug.Log($"Fields {fields[0]}: {fields.Length}");
+
                 card.Id = fields[0];
                 card.Title = fields[1];
                 card.Description = fields[2];

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
+  m_Name: Dziura w chodniku
+  m_EditorClassIdentifier: 
+  _id: 31
+  _title: Dziura w chodniku
+  _description: "W jednym z bardziej ucz\u0119szczanych chodnik\xF3w pojawi\u0142a
+    si\u0119 dziura."
+  _image: {fileID: 0}
+  _decisions:
+  - _description: "Zle\u0107 ca\u0142kowit\u0105 wymian\u0119 cz\u0119\u015Bci chodnika."
+    _budget: -10
+    _satisfaction: 0
+    _infrastructure: 10
+    _order: 0
+    _environment: 0
+    _effectsDuration: 0
+  - _description: "Zle\u0107 zalanie dziury betonem."
+    _budget: -5
+    _satisfaction: 0
+    _infrastructure: 5
+    _order: 0
+    _environment: 0
+    _effectsDuration: 0
+  - _description: "Zle\u0107 postawienie tabliczki ostrzegawczej."
+    _budget: 0
+    _satisfaction: 0
+    _infrastructure: -5
+    _order: 0
+    _environment: 0
+    _effectsDuration: 0

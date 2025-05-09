@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
+  m_Name: Wysokie zanieczyszczenie powietrza
+  m_EditorClassIdentifier: 
+  _id: 20
+  _title: Wysokie zanieczyszczenie powietrza
+  _description: "Trzeba zmierzy\u0107 si\u0119, z zanieczyszczeniem powietrza na
+    osiedlu."
+  _image: {fileID: 0}
+  _decisions:
+  - _description: "Zainwestuj w wypo\u017Cyczalnie rower\xF3w miejskich."
+    _budget: -20
+    _satisfaction: 10
+    _infrastructure: 0
+    _order: 0
+    _environment: 10
+    _effectsDuration: 0
+  - _description: "Sfinansuj kampanie, kt\xF3ra promuje zamian\u0119 samochodu na
+      rower."
+    _budget: -10
+    _satisfaction: 0
+    _infrastructure: 0
+    _order: 0
+    _environment: 10
+    _effectsDuration: 0
+  - _description: "Wystosuj powiadomienia o s\u0142abej jako\u015Bci powietrza."
+    _budget: 0
+    _satisfaction: 5
+    _infrastructure: 0
+    _order: 0
+    _environment: -10
+    _effectsDuration: 0
