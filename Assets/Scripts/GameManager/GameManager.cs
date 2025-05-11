@@ -1,8 +1,8 @@
 using Cards;
 using Minigames;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour {
     public int Environment { get; private set; } = 50;
 
     [Header("Game Settings")]
+    [Tooltip("Number of cards to win the game.")]
+    [SerializeField] private int cardsToWin = 10;
     [Tooltip("Delay before spawning the article.")]
     [SerializeField] private float articleSpawnDelay = 1f;
     [Tooltip("Delay before spawning the stamp.")]
@@ -48,7 +50,11 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private int orderPenalty = 5;
     [SerializeField] private int environmentPenalty = 5;
 
-    [Header("UI Settings")]
+    [Header("Other Settings")]
+    [Tooltip("Scene to load when the game is lost.")]
+    [SerializeField] private string failScene = "FailScene";
+    [Tooltip("Scene to load when the game is won.")]
+    [SerializeField] private string winScene = "WinScene";
     [Tooltip("Reference to the pause menu game object.")]
     [SerializeField] private GameObject pauseMenu;
     [Tooltip("Key to pause the game.")]
@@ -104,9 +110,6 @@ public class GameManager : MonoBehaviour {
 
         if (!isPaused) {
             HandleAutoDecision();
-        }
-
-        if (!isPaused) {
             HandleMinigamesCycles();
         }
     }
@@ -174,7 +177,10 @@ public class GameManager : MonoBehaviour {
 
         if (IsGameOver()) {
             Debug.Log("Game over!");
-            SceneManager.LoadScene("EndScene");
+            SceneManager.LoadScene(failScene);
+        }
+        else if (drawnCards.Count >= cardsToWin) {
+            SceneManager.LoadScene(winScene);
         }
 
         DrawNextCard();
