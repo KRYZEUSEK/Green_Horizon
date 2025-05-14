@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Rendering;
 using UnityEngine.UI;
 using Input = UnityEngine.Windows.Input;
 
