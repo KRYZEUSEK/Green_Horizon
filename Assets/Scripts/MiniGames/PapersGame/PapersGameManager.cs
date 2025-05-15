@@ -35,10 +35,10 @@ namespace Minigames.PapersGame {
 
         public void StartGame() {
             if (isGameStarted) { return; }
-
-            timeLimit = startingTimeLimit * round;
+            
             isGameStarted = true;
             round++;
+            timeLimit = startingTimeLimit * round;
 
             // Calculate the number of papers to spawn based on the round number and progression rate
             numberOfPapers = Mathf.FloorToInt(startingPieces * Mathf.Pow(progression, round));
