@@ -31,7 +31,8 @@ public class Article : MonoBehaviour {
 
     public void ChooseDecision(int i) {
         GameManager.Instance.ChooseDecision(i);
-        Invoke(nameof(HideArticle), waitAfterDecision);
+        //Invoke(nameof(HideArticle), waitAfterDecision);
+        Invoke(nameof(DestroyAfterHide), waitAfterDecision);
     }
 
     public void DrawArticle() {

@@ -66,7 +66,7 @@ public class GameManager : MonoBehaviour {
     private ArticleSpawner articleSpawner;
     private StampSpawner stampSpawner;
 
-    private bool isPaused = false;
+    private bool isPaused;
     private bool isArticleVisible = true;
 
     private float autoDecisionTimer = 0f;
@@ -87,9 +87,7 @@ public class GameManager : MonoBehaviour {
             cardsMagnitudes.Add(availableCard, CardsManager.Instance.GetEffectsMagnitude(availableCard));
         }
 
-        PauseGame(false);
-
-        DrawNextCard();
+        StartGame();
     }
 
     private void Update() {
@@ -112,6 +110,13 @@ public class GameManager : MonoBehaviour {
             HandleAutoDecision();
             HandleMinigamesCycles();
         }
+    }
+
+    public void StartGame() {
+        CardsManager.Instance.DrawCard(0);
+        articleSpawner.SpawnArticle(articleSpawnDelay);
+        stampSpawner.SpawnStamp(stampSpawnDelay);
+        isPaused = true;
     }
 
     public void StartRandomMinigame() {

@@ -20,7 +20,10 @@ namespace Cards {
             }
         }
 
+        [Header("Cards")]
         [SerializeField] private List<Card> cards = new List<Card>();
+
+        [Header("Card links")]
         [SerializeField] private List<CardLink> cardsLinks = new List<CardLink>();
 
         private int currentCardNumber;
@@ -134,7 +137,6 @@ namespace Cards {
             ReloadCards();
         }
 #endif
-
         public void DrawCard(int cardNumber) {
             currentCardNumber = cardNumber;
             CurrentCard.DrawCard();

@@ -2802,8 +2802,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   riskFactor: 1
-  articleSpawnDelay: 1
-  stampSpawnDelay: 1.5
+  cardsToWin: 10
+  articleSpawnDelay: 2
+  stampSpawnDelay: 2.5
   autoDecisionTime: 15
   minigameCycleTime: 20
   minigameChance: 0.66
@@ -2812,6 +2813,8 @@ MonoBehaviour:
   infrastructurePenalty: 10
   orderPenalty: 10
   environmentPenalty: 10
+  failScene: FailScene
+  winScene: WinScene
   pauseMenu: {fileID: 171845056}
   pauseKey: 27
   hideArticle: 104
@@ -3234,6 +3237,72 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1000, y: 10}
   m_EdgeRadius: 0
+--- !u!1 &1449713471
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1449713472}
+  - component: {fileID: 1449713473}
+  m_Layer: 0
+  m_Name: Wprowadzenie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1449713472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449713471}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2007391337}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1449713473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449713471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd60bb380380bb645bef75e050759204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  card: {fileID: 11400000, guid: b6711e8694bf3784d8c0b9b666ae46d8, type: 2}
+  cardId: 100
+  onAppearEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  EndCardEffectEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  onDecisionEvent:
+  - m_PersistentCalls:
+      m_Calls: []
+  - m_PersistentCalls:
+      m_Calls: []
+  - m_PersistentCalls:
+      m_Calls: []
+  onEndDecisionEvent:
+  - m_PersistentCalls:
+      m_Calls: []
+  - m_PersistentCalls:
+      m_Calls: []
+  - m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1468282339
 GameObject:
   m_ObjectHideFlags: 0
@@ -5420,7 +5489,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ff515c3972494a43add63a0e46315bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  introCard: {fileID: 0}
   cards:
+  - {fileID: 11400000, guid: b6711e8694bf3784d8c0b9b666ae46d8, type: 2}
   - {fileID: 11400000, guid: feedd06f6d343e348bd3e385838b44da, type: 2}
   - {fileID: 11400000, guid: aa0d2e37c85720e4992de1be2d161199, type: 2}
   - {fileID: 11400000, guid: dcee00ae0450c7f408082fa260fa8641, type: 2}
@@ -5442,6 +5513,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c61d2c26215200b40bf1be8d888f878a, type: 2}
   - {fileID: 11400000, guid: 316fa0d2319df684ba2fa19cbf6c8181, type: 2}
   cardsLinks:
+  - {fileID: 1449713473}
   - {fileID: 135187663}
   - {fileID: 1840906093}
   - {fileID: 1996143670}
@@ -5475,6 +5547,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1449713472}
   - {fileID: 135187664}
   - {fileID: 1840906094}
   - {fileID: 1996143671}
