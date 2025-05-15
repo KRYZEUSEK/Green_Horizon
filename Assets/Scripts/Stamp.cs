@@ -11,9 +11,21 @@ public class Stamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     public Sprite stampedSprite;
 
     private Sprite defaultSprite;
+    private bool isMovingBack;
 
     private void Start() {
         defaultSprite = GetComponent<Image>().sprite;
+    }
+
+    private void Update() {
+        if (isMovingBack) {
+            transform.localPosition = Vector3.Lerp(transform.localPosition, new Vector3(0, 0, 0), Time.deltaTime * 5f);
+
+            if (Vector3.Distance(transform.localPosition, new Vector3(0, 0, 0)) < 0.1f) {
+                isMovingBack = false;
+                CanBeMoved = true;
+            }
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData) {
@@ -21,7 +33,7 @@ public class Stamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     }
 
     public void OnDrag(PointerEventData eventData) {
-        if (CanBeMoved == false) { return; }
+        if (CanBeMoved == false || isMovingBack) { return; }
 
         transform.position = Input.mousePosition;
     }
@@ -60,7 +72,7 @@ public class Stamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     }
 
     public void ResetStamp() {
-        transform.localPosition = Vector3.zero;
+        isMovingBack = true;
 
         IsDragged = false;
         CanBeMoved = true;
