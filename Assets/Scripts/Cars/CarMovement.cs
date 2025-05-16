@@ -12,6 +12,7 @@ public class CarMovement : MonoBehaviour
 
     [Header("Components")]
     NavMeshAgent agent;
+    private Animator animator;
 
     private void Start()
     {
@@ -19,6 +20,8 @@ public class CarMovement : MonoBehaviour
         agent.updateRotation = false;
         startingPosition = transform.position;
         agent.SetDestination(wayPoints.GetChild(0).position);
+
+        animator = GetComponent<Animator>();
 
     }
     private void Update()
@@ -40,16 +43,24 @@ public class CarMovement : MonoBehaviour
 
     private IEnumerator ReturnToStartAfterDelay(float delay)
     {
+        if (animator != null)
+            animator.enabled = false;
         // Wstrzymaj wykonanie na okreœlony czas
         yield return new WaitForSeconds(delay);
 
-        
+
         // Przenieœ samochód do punktu pocz¹tkowego
         transform.position = startingPosition;
         currentWayPoint = 0;
 
+        // W³¹cz animacjê ponownie
+        if (animator != null)
+            animator.enabled = true;
+
         // Ustaw nowy cel dla NavMeshAgent
+        
         agent.SetDestination(wayPoints.GetChild(currentWayPoint).position);
+
     }
     private void ProperDirectionRotation()
     {
