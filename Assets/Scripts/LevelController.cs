@@ -7,6 +7,10 @@ public class LevelController : MonoBehaviour
 {
     public void StartGame()
     {
+        Invoke("StartScene", 16f);
+    }
+    private void StartScene()
+    {
         SceneManager.LoadScene("Alfa");
     }
     public void ExitGame()
