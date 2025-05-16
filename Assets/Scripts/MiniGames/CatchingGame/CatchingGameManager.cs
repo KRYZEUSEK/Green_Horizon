@@ -100,8 +100,8 @@ namespace Minigames.CatchingGame {
                 Destroy(item.gameObject);
             }
 
-            minigameArea.SetActive(false);
             MinigamesManager.Instance.HideGameArea();
+            minigameArea.SetActive(false);
         }
     }
 }

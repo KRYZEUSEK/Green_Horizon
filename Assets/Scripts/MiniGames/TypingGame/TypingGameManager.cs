@@ -84,13 +84,13 @@ namespace Minigames.TypingGame {
         }
 
         public void StartGame() {
+            minigameArea.SetActive(true);
             isGameStarted = true;
             timer = 0;
             currentWord = "";
             wordToTypeDisplay.text = "";
             typedWordDisplay.text = "";
 
-            minigameArea.SetActive(true);
             DisplayNextWord();
         }
 
@@ -105,9 +105,9 @@ namespace Minigames.TypingGame {
         }
         
         public void EndGame() {
-            isGameStarted = false;
-            minigameArea.SetActive(false);
+            isGameStarted = false;         
             MinigamesManager.Instance.HideGameArea();
+            minigameArea.SetActive(false);
         }
     }
 }

@@ -38,7 +38,9 @@ namespace Minigames.PapersGame {
         public void StartGame() {
             if (isGameStarted) { return; }
             
+            minigameArea.SetActive(true);
             isGameStarted = true;
+            
             round++;
             timeLimit = startingTimeLimit * round;
 
@@ -157,6 +159,7 @@ namespace Minigames.PapersGame {
             }
 
             MinigamesManager.Instance.HideGameArea();
+            minigameArea.SetActive(false);
         }
     }
 }
