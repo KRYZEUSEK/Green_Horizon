@@ -69,6 +69,7 @@ namespace Minigames {
         }
 
         public void WinGame() {
+            Debug.Log("Minigame won!");
             EndMinigame();
         }
 
@@ -82,7 +83,6 @@ namespace Minigames {
             );
 
             Debug.Log("Minigame failed!");
-
             EndMinigame();
         }
 

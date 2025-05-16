@@ -41826,6 +41826,7 @@ RectTransform:
   m_Children:
   - {fileID: 1873094724}
   - {fileID: 1336932155}
+  - {fileID: 1266224622}
   m_Father: {fileID: 958596450}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -41845,6 +41846,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccaafb34d8d88344c9e9dcecd8113944, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minigameArea: {fileID: 1266224621}
   papersPrefabs:
   - {fileID: 2867762065943695374, guid: 7cf17fea7ca415e4c8948d0879621f88, type: 3}
   - {fileID: 7460605414132506702, guid: d80669a3e43dab64a83c46a050c85037, type: 3}
@@ -77250,6 +77252,41 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &325763068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 325763069}
+  m_Layer: 5
+  m_Name: CatchingGameArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &325763069
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325763068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1289893981}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &326628283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116225,7 +116262,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 549536669}
   serializedVersion: 2
-  m_LocalRotation: {x: 7.225131e-16, y: 0.70971197, z: -7.2786663e-16, w: 0.704492}
+  m_LocalRotation: {x: -7.2251296e-16, y: 0.70971197, z: 7.278665e-16, w: 0.704492}
   m_LocalPosition: {x: -0.60772705, y: -11.23127, z: 9.416145}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -127958,7 +127995,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 632259822}
   serializedVersion: 2
-  m_LocalRotation: {x: 7.225131e-16, y: 0.70971197, z: -7.2786663e-16, w: 0.704492}
+  m_LocalRotation: {x: -7.2251296e-16, y: 0.70971197, z: 7.278665e-16, w: 0.704492}
   m_LocalPosition: {x: -170.1785, y: 70.92, z: 64.71382}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -236686,6 +236723,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 489384, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
   m_PrefabInstance: {fileID: 1265178327}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1266224621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1266224622}
+  m_Layer: 5
+  m_Name: DraggingGameArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1266224622
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266224621}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 179639825}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1266231176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -242075,6 +242147,7 @@ RectTransform:
   - {fileID: 158116501}
   - {fileID: 1560358844}
   - {fileID: 840955125}
+  - {fileID: 325763069}
   m_Father: {fileID: 958596450}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -242094,6 +242167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85ef373daee0b0c4098df4b1a1489bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minigameArea: {fileID: 325763068}
   playerPrefab: {fileID: 511387539660441476, guid: c43f1fa1c1e78e54286acf8dba6a1fdd, type: 3}
   playerSpawnArea: {fileID: 840955125}
   itemsPrefabs:
@@ -315448,6 +315522,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 489384, guid: 1ac8b9099f0c47e41a84ef1f2e41988c, type: 3}
   m_PrefabInstance: {fileID: 1703159898}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1704378425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1704378426}
+  m_Layer: 5
+  m_Name: TypingGameArea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1704378426
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704378425}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1904266435}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1704598172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -348792,6 +348901,7 @@ RectTransform:
   m_Children:
   - {fileID: 596344390}
   - {fileID: 1010432517}
+  - {fileID: 1704378426}
   m_Father: {fileID: 958596450}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -348817,6 +348927,7 @@ MonoBehaviour:
   - POZWOLENIE
   - DOFINANSOWANIE
   timeLimit: 10
+  minigameArea: {fileID: 1704378425}
   wordToTypeDisplay: {fileID: 596344391}
   typedWordDisplay: {fileID: 1010432518}
 --- !u!1001 &1904310487

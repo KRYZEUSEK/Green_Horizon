@@ -4,6 +4,8 @@ using UnityEngine;
 
 namespace Minigames.CatchingGame {
     internal class CatchingGameManager : MinigameManager<CatchingGameManager>, IMinigame {
+        [Tooltip("Parent of all graphic features of the minigame")]
+        [SerializeField] private GameObject minigameArea;
         [Tooltip("Prefab of the player")]
         [SerializeField] private GameObject playerPrefab;
         [Tooltip("Area where the player will be spawned")]
@@ -68,6 +70,7 @@ namespace Minigames.CatchingGame {
         }
 
         public void StartGame() {
+            minigameArea.SetActive(true);
             isGameStarted = true;
             timeSinceLastSpawn = 0f;
             timeLimit = startingTimeLimit;
@@ -81,7 +84,7 @@ namespace Minigames.CatchingGame {
         
         public void WinGame() {
             EndGame();
-            MinigamesManager.Instance.FailGame();
+            MinigamesManager.Instance.WinGame();
         }
 
         public void FailGame() {
@@ -91,13 +94,13 @@ namespace Minigames.CatchingGame {
 
         public void EndGame() {
             isGameStarted = false;
-
             Destroy(player);
 
             foreach (Transform item in itemsSpawnArea) {
                 Destroy(item.gameObject);
             }
 
+            minigameArea.SetActive(false);
             MinigamesManager.Instance.HideGameArea();
         }
     }

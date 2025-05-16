@@ -99,13 +99,24 @@ public class GameManager : MonoBehaviour {
             articleSpawner.ToggleVisibility(isArticleVisible);
             stampSpawner.gameObject.SetActive(isArticleVisible);
         }
-        else if (Input.GetKeyDown(KeyCode.Alpha1)) {
+        #region Debug
+        else if (Input.GetKeyDown(KeyCode.Alpha0)) {
             StartRandomMinigame();
         }
-        else if (Input.GetKeyDown(KeyCode.F)) {
-            MinigamesManager.Instance.EndMinigame();
+        else if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            MinigamesManager.Instance.StartMinigame(0, budgetPenalty, satisfactionPenalty, 
+                infrastructurePenalty, orderPenalty, environmentPenalty);
         }
-
+        else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            MinigamesManager.Instance.StartMinigame(1, budgetPenalty, satisfactionPenalty, 
+                infrastructurePenalty, orderPenalty, environmentPenalty);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3)) {
+            MinigamesManager.Instance.StartMinigame(2, budgetPenalty, satisfactionPenalty, 
+                infrastructurePenalty, orderPenalty, environmentPenalty);
+        }
+        #endregion 
+        
         if (!isPaused) {
             HandleAutoDecision();
             HandleMinigamesCycles();

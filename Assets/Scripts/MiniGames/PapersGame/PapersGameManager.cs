@@ -12,6 +12,8 @@ namespace Minigames.PapersGame {
             Other
         }
 
+        [Tooltip("Parent of all graphic features of the minigame")]
+        [SerializeField] private GameObject minigameArea;
         [Tooltip("References to the papers types")]
         [SerializeField] private GameObject[] papersPrefabs;
         [Tooltip("References to the targets types")]

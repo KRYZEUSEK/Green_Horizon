@@ -12,6 +12,8 @@ namespace Minigames.TypingGame {
         [SerializeField] private float timeLimit = 10f;
 
         [Header("UI Elements")]
+        [Tooltip("Parent of all graphic features of the minigame")]
+        [SerializeField] private GameObject minigameArea;
         [Tooltip("TextMeshPro component to display the word to type")]
         [SerializeField] private TMP_Text wordToTypeDisplay;
         [Tooltip("TextMeshPro component to type the word")]
@@ -20,6 +22,7 @@ namespace Minigames.TypingGame {
         private List<string> availableWords = new List<string>();
         private string wordToType;
         private string currentWord = "";
+        private float timer = 0;
 
         private void Start() {
             availableWords = new List<string>(words);
@@ -47,6 +50,10 @@ namespace Minigames.TypingGame {
 
         private void Update() {
             if (isGameStarted == false) { return; }
+
+            timer += Time.deltaTime;
+
+            if (timer >= timeLimit) { FailGame();}
 
             if (Input.anyKeyDown) {
                 char character = Input.inputString[0];
@@ -78,8 +85,12 @@ namespace Minigames.TypingGame {
 
         public void StartGame() {
             isGameStarted = true;
+            timer = 0;
+            currentWord = "";
+            wordToTypeDisplay.text = "";
             typedWordDisplay.text = "";
 
+            minigameArea.SetActive(true);
             DisplayNextWord();
         }
 
@@ -95,8 +106,7 @@ namespace Minigames.TypingGame {
         
         public void EndGame() {
             isGameStarted = false;
-            wordToTypeDisplay.text = "";
-            typedWordDisplay.text = "";
+            minigameArea.SetActive(false);
             MinigamesManager.Instance.HideGameArea();
         }
     }
