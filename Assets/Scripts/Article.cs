@@ -26,7 +26,7 @@ public class Article : MonoBehaviour {
         decisions[1].text = CardsManager.Instance.CurrentCard.card.Decisions[1].Description;
         decisions[2].text = CardsManager.Instance.CurrentCard.card.Decisions[2].Description;
 
-        DrawArticle();
+        //DrawArticle();
     }
 
     public void ChooseDecision(int i) {
