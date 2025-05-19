@@ -15,6 +15,14 @@ namespace Cards {
 
         public int ChosenDecision { get; private set; }
 
+        [ContextMenu("Invoke event")]
+        private void InvokeEvent()
+        {
+            if (onAppearEvent != null)
+            {
+                onAppearEvent.Invoke();
+            }
+        }
         public void DrawCard() {
             onAppearEvent?.Invoke();
         }
