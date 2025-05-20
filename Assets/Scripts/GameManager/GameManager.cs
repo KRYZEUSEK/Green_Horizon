@@ -17,11 +17,11 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    [SerializeField] private float riskFactor = 1f;
-    
+    private int currentCardNumber;
     private List<int> drawnCards = new List<int>();
     private List<int> availableCards = new List<int>();
     private Dictionary<int, int> cardsMagnitudes = new Dictionary<int, int>();
+    private Dictionary<int, int> cardEffectsWatch = new Dictionary<int, int>();
 
     public int Budget { get; private set; } = 50;
     public int Satisfaction { get; private set; } = 50;
@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour {
     public int Environment { get; private set; } = 50;
 
     [Header("Game Settings")]
+    [Tooltip("Risk factor for drawing cards.")]
+    [SerializeField] private float riskFactor = 1f;
     [Tooltip("Number of cards to win the game.")]
     [SerializeField] private int cardsToWin = 10;
     [Tooltip("Delay before spawning the article.")]
@@ -162,6 +164,18 @@ public class GameManager : MonoBehaviour {
     }
 
     public void DrawNextCard() {
+        if (cardEffectsWatch.Count > 0) {
+            for (int i = 0; i < cardEffectsWatch.Count; i++) {
+                cardEffectsWatch[cardEffectsWatch.ElementAt(i).Key] -= 1;
+
+                if (cardEffectsWatch.ElementAt(i).Value <= 0) {
+                    Debug.Log($"Ending effect of card {cardEffectsWatch.ElementAt(i).Key}");
+                    CardsManager.Instance.EndDecisionEffect(cardEffectsWatch.ElementAt(i).Key);
+                    cardEffectsWatch.Remove(cardEffectsWatch.ElementAt(i).Key);
+                }
+            }
+        }
+
         // Tymczasowe rozwi¹zanie - reset kart po wyczerpaniu
         if (availableCards.Count == 0) {
             availableCards.AddRange(drawnCards);
@@ -169,16 +183,15 @@ public class GameManager : MonoBehaviour {
         }
 
         bool isInDanger = StatsMagnitude() <= (int) (125 * riskFactor);
-        int cardNumber;
 
         if (isInDanger) {
-            cardNumber = GetRandomCard(0, (int) (60 * riskFactor));
+            currentCardNumber = GetRandomCard(0, (int) (60 * riskFactor));
         }
         else {
-            cardNumber = GetRandomCard((int) (61 * riskFactor), int.MaxValue);
+            currentCardNumber = GetRandomCard((int) (61 * riskFactor), int.MaxValue);
         }
-        
-        CardsManager.Instance.DrawCard(cardNumber);
+
+        CardsManager.Instance.DrawCard(currentCardNumber);
 
         // Zastanowiæ siê nad elegancj¹ poni¿szych.
         articleSpawner.SpawnArticle(articleSpawnDelay);
@@ -188,6 +201,9 @@ public class GameManager : MonoBehaviour {
     }
 
     public void ChooseDecision(int decisionNumber) {
+        int effectsDuration = CardsManager.Instance.CurrentCard.card.Decisions[decisionNumber].EffectsDuration;
+        cardEffectsWatch.Add(currentCardNumber, effectsDuration);
+
         CardsManager.Instance.ChooseDecision(decisionNumber);
         UpdateStats(decisionNumber);
 

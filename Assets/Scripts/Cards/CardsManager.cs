@@ -142,6 +142,7 @@ namespace Cards {
             CurrentCard.DrawCard();
         }
 
+        // Niezaimplementowane
         public void EndCardEffect(int cardNumber) {
             cardsLinks[cardNumber].EndCardEffect();
         }
