@@ -76,6 +76,11 @@ namespace Minigames.CatchingGame {
             timeLimit = startingTimeLimit;
             lostItems = 0;
             SpawnPlayer();
+
+            if (isFirstTime) {
+                isFirstTime = false;
+                MinigamesManager.Instance.PauseForTutorial();
+            }
         }
 
         private void SpawnPlayer() {

@@ -1,7 +1,6 @@
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
-using System.Data;
-using System.Linq;
 using UnityEngine;
 
 namespace Minigames {
@@ -26,6 +25,11 @@ namespace Minigames {
             }
         }
 
+        [Tooltip("UI panel used to highlight the minigame instructions.")]
+        [SerializeField] private GameObject minigamePause;
+        [Tooltip("Time it takes to animate the game area in and out.")]
+        [SerializeField] private float gameAreaAnimationTime = 0.25f;
+
         private List<IMinigame> minigameManagers = new List<IMinigame>();
         public int MinigamesCount { private set; get; }
         private IMinigame currentMinigame;
@@ -37,10 +41,41 @@ namespace Minigames {
         private int orderPenalty;
         private int environmentPenalty;
 
+        public bool IsPaused { get; private set; } = false;
+
         private void Start() {
             minigameManagers = FindObjectsOfType<MonoBehaviour>(true).OfType<IMinigame>().ToList();
             MinigamesCount = minigameManagers.Count;
             animator = GetComponent<Animator>();
+        }
+
+        private void Update() {
+            if (IsPaused) {
+                if (Input.GetKeyDown(KeyCode.Mouse0) || Input.anyKeyDown) {
+                    ResumeFromTutorial();
+                }
+            }
+        }
+
+        internal void PauseForTutorial() {
+            if (minigamePause == null) { return; }
+
+            IsPaused = true;
+            GameManager.Instance.ToggleVisibility(false);
+            Invoke(nameof(Pause), gameAreaAnimationTime);
+        }
+
+        private void Pause() {
+            minigamePause.SetActive(true);
+            Time.timeScale = 0f;
+        }
+
+        internal void ResumeFromTutorial() {
+            if (minigamePause == null) { return; }
+
+            IsPaused = false;
+            minigamePause.SetActive(false);
+            Time.timeScale = 1f;            
         }
 
         public void StartMinigame(int i, 

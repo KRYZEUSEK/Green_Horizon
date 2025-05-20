@@ -92,6 +92,11 @@ namespace Minigames.TypingGame {
             typedWordDisplay.text = "";
 
             DisplayNextWord();
+
+            if (isFirstTime) {
+                isFirstTime = false;
+                MinigamesManager.Instance.PauseForTutorial();
+            }
         }
 
         public void FailGame() {

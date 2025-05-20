@@ -97,9 +97,7 @@ public class GameManager : MonoBehaviour {
             PauseGame(!isPaused);
         }
         else if (Input.GetKeyDown(hideArticle)) {
-            isArticleVisible = !isArticleVisible;
-            articleSpawner.ToggleVisibility(isArticleVisible);
-            stampSpawner.gameObject.SetActive(isArticleVisible);
+            ToggleVisibility(!isArticleVisible);
         }
         #region Debug
         else if (Input.GetKeyDown(KeyCode.Alpha0)) {
@@ -123,6 +121,12 @@ public class GameManager : MonoBehaviour {
             HandleAutoDecision();
             HandleMinigamesCycles();
         }
+    }
+    
+    internal void ToggleVisibility(bool toggleOn) {
+        isArticleVisible = toggleOn;
+        articleSpawner.ToggleVisibility(isArticleVisible);
+        stampSpawner.gameObject.SetActive(isArticleVisible);
     }
 
     public void StartGame() {
@@ -287,6 +291,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public void PauseGame(bool pause) {
+        if (MinigamesManager.Instance.IsPaused) { return; }
+
         isPaused = pause;
         Time.timeScale = pause ? 0 : 1;
         stampSpawner.gameObject.SetActive(!isPaused && isArticleVisible);

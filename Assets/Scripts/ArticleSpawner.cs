@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class ArticleSpawner : MonoBehaviour {
     public GameObject articlePrefab;
+    public Transform spawnTransform;
+
     public Article currentArticle {
         get {
             return currentArticleInstance;
@@ -35,7 +37,7 @@ public class ArticleSpawner : MonoBehaviour {
     }
 
     private void InstantiateArticle() {
-        GameObject newArticle = Instantiate(articlePrefab, transform);
+        GameObject newArticle = Instantiate(articlePrefab, spawnTransform);
         currentArticleInstance = newArticle.GetComponent<Article>();
 
         foreach (Transform child in newArticle.transform) {

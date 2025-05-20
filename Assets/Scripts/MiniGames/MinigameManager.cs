@@ -22,5 +22,6 @@ namespace Minigames {
         }
 
         protected bool isGameStarted;
+        protected bool isFirstTime = true;
     }
 }

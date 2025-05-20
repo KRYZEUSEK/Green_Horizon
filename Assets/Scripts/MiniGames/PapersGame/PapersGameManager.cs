@@ -67,11 +67,16 @@ namespace Minigames.PapersGame {
             }
 
             SpawnTargets();
+
+            if (isFirstTime) {
+                isFirstTime = false;
+                MinigamesManager.Instance.PauseForTutorial();
+            }
         }
 
         private void Update() {
             if (!isGameStarted) { return; }
-            
+
             timeLimit -= Time.deltaTime;
 
             if (timeLimit <= 0) {
