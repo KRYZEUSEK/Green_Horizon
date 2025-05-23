@@ -70,6 +70,7 @@ public class GameManager : MonoBehaviour {
 
     private bool isPaused;
     private bool isArticleVisible = true;
+    private bool canChooseDecision = true;
 
     private float autoDecisionTimer = 0f;
     private float minigamesCycleTimer = 0f;
@@ -208,6 +209,8 @@ public class GameManager : MonoBehaviour {
         int effectsDuration = CardsManager.Instance.CurrentCard.card.Decisions[decisionNumber].EffectsDuration;
         cardEffectsWatch.Add(currentCardNumber, effectsDuration);
 
+        canChooseDecision = false;
+
         CardsManager.Instance.ChooseDecision(decisionNumber);
         UpdateStats(decisionNumber);
 
@@ -263,7 +266,7 @@ public class GameManager : MonoBehaviour {
 
         barsController.UpdateBars();
 
-        Debug.Log($"Stats after update");
+        Debug.Log($"Stats after card {currentCard.name}");
         Debug.Log($"Budget: {Budget}, Satisfaction: {Satisfaction}, Infrastructure: {Infrastructure}, Order: {Order}, Environment: {Environment}");
     }
 
@@ -297,5 +300,9 @@ public class GameManager : MonoBehaviour {
         Time.timeScale = pause ? 0 : 1;
         stampSpawner.gameObject.SetActive(!isPaused && isArticleVisible);
         pauseMenu.SetActive(pause);
+    }
+
+    public void EnableChoice() {
+        canChooseDecision = true;
     }
 }
