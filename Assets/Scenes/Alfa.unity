@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45022845, g: 0.49786085, b: 0.5624553, a: 1}
+  m_IndirectSpecularColor: {r: 0.45022804, g: 0.49785984, b: 0.5624542, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -171633,6 +171633,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 493038, guid: dab5db0c0226560499e1021898aafb64, type: 3}
   m_PrefabInstance: {fileID: 806389615}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &807294501
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4216587018601017715, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
+      propertyPath: m_Name
+      value: KoncertGwiazdy
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101927958416467521, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -150.9569
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101927958416467521, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 70.96164
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101927958416467521, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 70.24421
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101927958416467521, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101927958416467521, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101927958416467521, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101927958416467521, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101927958416467521, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101927958416467521, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9101927958416467521, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
 --- !u!1 &807453866
 GameObject:
   m_ObjectHideFlags: 0
@@ -325398,6 +325455,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 493038, guid: dab5db0c0226560499e1021898aafb64, type: 3}
   m_PrefabInstance: {fileID: 1554371114}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1554878597
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5124348901692759533, guid: 0c7a1b4b62b5ef44788ef0aab49cd895, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -82.20278
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124348901692759533, guid: 0c7a1b4b62b5ef44788ef0aab49cd895, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 58.33743
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124348901692759533, guid: 0c7a1b4b62b5ef44788ef0aab49cd895, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 9.306377
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124348901692759533, guid: 0c7a1b4b62b5ef44788ef0aab49cd895, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071076
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124348901692759533, guid: 0c7a1b4b62b5ef44788ef0aab49cd895, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124348901692759533, guid: 0c7a1b4b62b5ef44788ef0aab49cd895, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.707106
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124348901692759533, guid: 0c7a1b4b62b5ef44788ef0aab49cd895, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124348901692759533, guid: 0c7a1b4b62b5ef44788ef0aab49cd895, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124348901692759533, guid: 0c7a1b4b62b5ef44788ef0aab49cd895, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5124348901692759533, guid: 0c7a1b4b62b5ef44788ef0aab49cd895, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8692831908646880348, guid: 0c7a1b4b62b5ef44788ef0aab49cd895, type: 3}
+      propertyPath: m_Name
+      value: ZasmieconyPark
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c7a1b4b62b5ef44788ef0aab49cd895, type: 3}
 --- !u!1001 &1554954238
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -454743,3 +454857,5 @@ SceneRoots:
   - {fileID: 775736998}
   - {fileID: 1814030941}
   - {fileID: 518993905}
+  - {fileID: 807294501}
+  - {fileID: 1554878597}
