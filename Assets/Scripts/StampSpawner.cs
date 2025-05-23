@@ -11,7 +11,7 @@ public class StampSpawner : MonoBehaviour {
     }
 
     private void ResetStamp() {
-        Stamp stamp = FindObjectOfType<Stamp>();
+        Stamp stamp = FindObjectOfType<Stamp>(true);
 
         if (stamp != null) {
             stamp.ResetStamp();
@@ -19,5 +19,7 @@ public class StampSpawner : MonoBehaviour {
         else {
             Instantiate(stampPrefab, transform);
         }
+
+        GameManager.Instance.EnableChoice();
     }
 }
