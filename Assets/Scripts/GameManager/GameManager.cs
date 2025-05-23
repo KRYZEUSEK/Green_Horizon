@@ -206,6 +206,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public void ChooseDecision(int decisionNumber) {
+        if (canChooseDecision == false) { return; }
+
         int effectsDuration = CardsManager.Instance.CurrentCard.card.Decisions[decisionNumber].EffectsDuration;
         cardEffectsWatch.Add(currentCardNumber, effectsDuration);
 

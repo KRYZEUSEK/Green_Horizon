@@ -39,9 +39,11 @@ public class Stamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     }
 
     public void OnEndDrag(PointerEventData eventData) {
+        if (CanBeMoved == false || isMovingBack) { return; }
+
         IsDragged = false;
         GameObject[] dropAreas = GameObject.FindGameObjectsWithTag("DropArea");
-        
+
         if (dropAreas.Length == 0) { return; }
 
         GameObject closestDropArea = dropAreas[0];
@@ -52,16 +54,17 @@ public class Stamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 
             if (distance < closestDistance) {
                 closestDropArea = dropArea;
+                closestDistance = distance;
             }
         }
 
-        bool isWithinBounds = RectTransformUtility.RectangleContainsScreenPoint(
-            closestDropArea.GetComponent<RectTransform>(),
-            Input.mousePosition
-        );
+        //bool isWithinBounds = RectTransformUtility.RectangleContainsScreenPoint(
+        //    closestDropArea.GetComponent<RectTransform>(),
+        //    Input.mousePosition
+        //);
 
-        if (isWithinBounds == false) { return; }
-        
+        //if (isWithinBounds == false) { return; }
+
         transform.position = closestDropArea.transform.position;
 
         if (closestDropArea.TryGetComponent(out DropArea da)) {
@@ -69,13 +72,13 @@ public class Stamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
         }
 
         ChangeSprite(stampedSprite);
+        CanBeMoved = false;
     }
 
     public void ResetStamp() {
         isMovingBack = true;
-
+        CanBeMoved = false;
         IsDragged = false;
-        CanBeMoved = true;
 
         ChangeSprite(defaultSprite);
     }
