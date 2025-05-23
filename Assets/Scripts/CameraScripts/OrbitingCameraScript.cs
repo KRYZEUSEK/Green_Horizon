@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class OrbitingCameraScript : MonoBehaviour
 {
+    public CameraManager cameraManager;
     [Header("Camera Settings")]
     public CinemachineVirtualCamera orbitingCamera;
     public float orbitSpeed = 30f; // Degrees per second
@@ -18,10 +19,12 @@ public class OrbitingCameraScript : MonoBehaviour
     private float currentAngle = 0f;
     private float orbitTimer = 0f;
     private bool isOrbiting = false;
+    private IEnumerator cameraCycle;
 
     private void Start()
     {
         orbital = orbitingCamera.GetCinemachineComponent<CinemachineOrbitalTransposer>();
+        cameraCycle = cameraManager.CameraCycleCoroutine();
         StartCoroutine(WaitForTargetAndOrbit());
     }
 
@@ -32,6 +35,7 @@ public class OrbitingCameraScript : MonoBehaviour
             FocusOnNewTarget(orbitingTarget.transform);
 
             orbitingCamera.gameObject.SetActive(true);
+            StopCoroutine(cameraCycle);
             isOrbiting = true;
             orbitTimer = orbitDuration;
 
@@ -42,6 +46,7 @@ public class OrbitingCameraScript : MonoBehaviour
                 yield return null;
             }
 
+            StartCoroutine(cameraCycle);
             orbitingCamera.gameObject.SetActive(false);
             isOrbiting = false;
         }
