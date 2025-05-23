@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _id: 34
   _title: Opony w piecu
-  _description: "Wieczorami id\u0105c osiedlem, z paru komink\xF3w mo\u017Cna zauwa\u017Cy\u0107
+  _description: "Wieczorami, id\u0105c osiedlem, z paru komink\xF3w mo\u017Cna zauwa\u017Cy\u0107
     g\u0119sty, czarny dym. Podejrzewa si\u0119, \u017Ce w tych domostwach ludzie
     pal\u0105 opony w piecach."
   _image: {fileID: 0}
@@ -25,7 +25,7 @@ MonoBehaviour:
     _infrastructure: 0
     _order: -5
     _environment: 10
-    _effectsDuration: 0
+    _effectsDuration: 1
   - _description: "Pare opon jeszcze nikogo nie zabi\u0142o, ale lepiej zagrozi\u0107,
       \u017Ce je\u017Celi sytuacja b\u0119dzie si\u0119 powtarza\u0107 to pojawi\u0105
       si\u0119 mandaty."
@@ -42,4 +42,4 @@ MonoBehaviour:
     _infrastructure: 0
     _order: 5
     _environment: -10
-    _effectsDuration: 0
+    _effectsDuration: 1
