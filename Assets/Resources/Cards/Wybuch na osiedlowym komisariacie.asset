@@ -24,7 +24,7 @@ MonoBehaviour:
     _infrastructure: 0
     _order: 10
     _environment: 0
-    _effectsDuration: 0
+    _effectsDuration: 3
   - _description: "Pono\u0107 dosz\u0142o do wybuchu g\u0142o\u015Bnika, nie sprawdzaj
       wydaj takie o\u015Bwiadczenie."
     _budget: 5
@@ -32,11 +32,11 @@ MonoBehaviour:
     _infrastructure: 0
     _order: -10
     _environment: 0
-    _effectsDuration: 0
+    _effectsDuration: 3
   - _description: "Nie wydawaj o\u015Bwiadczenia odno\u015Bnie tej sytuacji."
     _budget: 10
     _satisfaction: -10
     _infrastructure: 0
     _order: 0
     _environment: 0
-    _effectsDuration: 0
+    _effectsDuration: 3
