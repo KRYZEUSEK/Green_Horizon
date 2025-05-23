@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Cinemachine;
 using UnityEngine;
@@ -6,65 +7,35 @@ public class CombinedCameraController : MonoBehaviour
 {
     public CameraManager cameraManager;
     public OrbitingCameraScript orbitingCameraScript;
-
-    private Coroutine monitorCoroutine;
+    public IEnumerator cameraCycle;
+    
     private bool isOrbitingActive = false;
 
     private void Start()
     {
-        if (cameraManager != null && orbitingCameraScript != null)
-        {
-            monitorCoroutine = StartCoroutine(ManageCameraCycleWithOrbit());
-        }
+        cameraCycle = cameraManager.CameraCycleCoroutine();
     }
 
-    private IEnumerator ManageCameraCycleWithOrbit()
+    private void Update()
     {
-        while (true)
+        if (orbitingCameraScript.orbitingTarget.activeSelf &&
+            !isOrbitingActive)
         {
-            if (orbitingCameraScript.orbitingTarget != null &&
-                orbitingCameraScript.orbitingTarget.activeInHierarchy &&
-                !isOrbitingActive)
-            {
-                // Pause camera cycling by stopping its coroutine
-                StopCoroutine(cameraManager.StartCoroutine("CameraCycleCoroutine"));
+            // Pause camera cycling by stopping its coroutine
+            StopCoroutine(cameraCycle);
 
-                // Start orbiting behavior
-                isOrbitingActive = true;
-                yield return StartCoroutine(StartOrbitThenResume());
-            }
-
-            yield return null;
+            // Start orbiting behavior
+            isOrbitingActive = true;
+            StartCoroutine(StartOrbitThenResume());
         }
     }
-
     private IEnumerator StartOrbitThenResume()
     {
         // Manually invoke the orbiting behavior
-        yield return StartCoroutine(orbitingCameraScriptWaiter());
+        yield return StartCoroutine(orbitingCameraScript.WaitForTargetAndOrbit());
 
         // Resume camera cycling after orbit ends
-        cameraManager.StartCoroutine("CameraCycleCoroutine");
+        StartCoroutine(cameraCycle);
         isOrbitingActive = false;
-    }
-
-    private IEnumerator orbitingCameraScriptWaiter()
-    {
-        // Recreate logic from OrbitingCameraScript's coroutine
-        orbitingCameraScript.FocusOnNewTarget(orbitingCameraScript.orbitingTarget.transform);
-
-        orbitingCameraScript.orbitingCamera.gameObject.SetActive(true);
-
-        float orbitTimer = orbitingCameraScript.orbitDuration;
-        var orbital = orbitingCameraScript.orbitingCamera.GetCinemachineComponent<CinemachineOrbitalTransposer>();
-
-        while (orbitTimer > 0f)
-        {
-            orbitingCameraScript.Orbit(); // orbit logic runs
-            orbitTimer -= Time.deltaTime;
-            yield return null;
-        }
-
-        orbitingCameraScript.orbitingCamera.gameObject.SetActive(false);
     }
 }

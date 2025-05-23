@@ -1,5 +1,6 @@
 using System.Collections;
 using Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class OrbitingCameraScript : MonoBehaviour
@@ -21,29 +22,29 @@ public class OrbitingCameraScript : MonoBehaviour
     private void Start()
     {
         orbital = orbitingCamera.GetCinemachineComponent<CinemachineOrbitalTransposer>();
-        orbitingCamera.gameObject.SetActive(false);
         StartCoroutine(WaitForTargetAndOrbit());
     }
 
-    private IEnumerator WaitForTargetAndOrbit()
+    public IEnumerator WaitForTargetAndOrbit()
     {
-        yield return new WaitUntil(() => orbitingTarget != null && orbitingTarget.activeInHierarchy);
-
-        FocusOnNewTarget(orbitingTarget.transform);
-
-        orbitingCamera.gameObject.SetActive(true);
-        isOrbiting = true;
-        orbitTimer = orbitDuration;
-
-        while (orbitTimer > 0f)
+        if (orbitingTarget.activeSelf)
         {
-            Orbit();
-            orbitTimer -= Time.deltaTime;
-            yield return null;
-        }
+            FocusOnNewTarget(orbitingTarget.transform);
 
-        orbitingCamera.gameObject.SetActive(false);
-        isOrbiting = false;
+            orbitingCamera.gameObject.SetActive(true);
+            isOrbiting = true;
+            orbitTimer = orbitDuration;
+
+            while (orbitTimer > 0f)
+            {
+                Orbit();
+                orbitTimer -= Time.deltaTime;
+                yield return null;
+            }
+
+            orbitingCamera.gameObject.SetActive(false);
+            isOrbiting = false;
+        }
     }
 
     public void Orbit()
