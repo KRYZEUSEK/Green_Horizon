@@ -42083,7 +42083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 0}
+  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
   orbitDuration: 6
@@ -66801,6 +66801,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4044660082908320, guid: 579d9a9e94f90b64c8d5cda150af4ead, type: 3}
   m_PrefabInstance: {fileID: 261366268}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &261412864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3590644802100769056, guid: 2afb7fe7b71aa0449b1634534633e61b, type: 3}
+  m_PrefabInstance: {fileID: 1480462825}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &262111896
 PrefabInstance:
@@ -212724,7 +212729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 0}
+  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
   orbitDuration: 6
@@ -387611,11 +387616,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 0}
+  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
   orbitDuration: 6
-  orbitingTarget: {fileID: 1694245100}
+  orbitingTarget: {fileID: 261412864}
   cameraOffset: {x: 0, y: 5, z: -10}
 --- !u!1 &1905312473
 GameObject:
