@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45022845, g: 0.49786085, b: 0.5624553, a: 1}
+  m_IndirectSpecularColor: {r: 0.45022804, g: 0.49785984, b: 0.5624542, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -441550,7 +441550,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4599304147467557171, guid: 974c5b615a204a5489da6be5c9e23c13, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5370663469629604821, guid: 974c5b615a204a5489da6be5c9e23c13, type: 3}
       propertyPath: m_LocalScale.x
@@ -441615,13 +441615,34 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8972850062047059864, guid: 974c5b615a204a5489da6be5c9e23c13, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5281532505066277702}
   m_SourcePrefab: {fileID: 100100000, guid: 974c5b615a204a5489da6be5c9e23c13, type: 3}
 --- !u!1 &5281532505066277701 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8972850062047059864, guid: 974c5b615a204a5489da6be5c9e23c13, type: 3}
   m_PrefabInstance: {fileID: 5281532505066277700}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5281532505066277702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5281532505066277701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraManager: {fileID: 736730733}
+  orbitingCamera: {fileID: 729581604}
+  orbitSpeed: 30
+  orbitDuration: 6
+  orbitingTarget: {fileID: 5281532505066277701}
+  cameraOffset: {x: 0, y: 5, z: -10}
 --- !u!4 &5282875017160442294
 Transform:
   m_ObjectHideFlags: 0
