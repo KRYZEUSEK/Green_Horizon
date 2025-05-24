@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour {
     public int Environment { get; private set; } = 50;
 
     [Header("Game Settings")]
+    [Tooltip("Leave empty for random cards. Id is the number order of a child in the CardsManager.")]
+    [SerializeField] private List<int> cardsToDraw = new List<int>();
     [Tooltip("Risk factor for drawing cards.")]
     [SerializeField] private float riskFactor = 1f;
     [Tooltip("Number of cards to win the game.")]
@@ -38,7 +40,7 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private float articleSpawnDelay = 1f;
     [Tooltip("Delay before spawning the stamp.")]
     [SerializeField] private float stampSpawnDelay = 1.5f;
-    [Tooltip("Time limit to take a decision")]
+    [Tooltip("Time limit to take a decision.")]
     [SerializeField] private float autoDecisionTime = 30f;
     [Tooltip("Time between minigames.")]
     [SerializeField] private float minigameCycleTime = 5f;
@@ -84,11 +86,16 @@ public class GameManager : MonoBehaviour {
 
         barsController.UpdateBars();
 
-        availableCards.AddRange(Enumerable.Range(0, CardsManager.Instance.transform.childCount));
+        if (cardsToDraw.Count == 0) {
+            availableCards.AddRange(Enumerable.Range(0, CardsManager.Instance.transform.childCount));
+        }
+        else {
+            availableCards.AddRange(cardsToDraw);
+        }
 
         foreach (int availableCard in availableCards) {
-            cardsMagnitudes.Add(availableCard, CardsManager.Instance.GetEffectsMagnitude(availableCard));
-        }
+                cardsMagnitudes.Add(availableCard, CardsManager.Instance.GetEffectsMagnitude(availableCard));
+            }
 
         StartGame();
     }
