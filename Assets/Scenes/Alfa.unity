@@ -90169,6 +90169,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4216587018601017715, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
   m_PrefabInstance: {fileID: 807294501}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &352530435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352530433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraManager: {fileID: 736730733}
+  orbitingCamera: {fileID: 729581604}
+  orbitSpeed: 30
+  orbitDuration: 6
+  orbitingTarget: {fileID: 1163721574}
+  cameraOffset: {x: 0, y: 5, z: -10}
 --- !u!1001 &352896694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -167047,7 +167065,10 @@ PrefabInstance:
     - {fileID: 821889760606738316, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4216587018601017715, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 352530435}
   m_SourcePrefab: {fileID: 100100000, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
 --- !u!1 &807453866
 GameObject:
@@ -236553,6 +236574,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 418220, guid: 283736ea9955d7141bd3a4b0a155ddb7, type: 3}
   m_PrefabInstance: {fileID: 1163021911}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1163721574 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7390851997414419506, guid: d921fd1a0938ea141b6f6734ecb9f2b7, type: 3}
+  m_PrefabInstance: {fileID: 807294501}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1164270676
 PrefabInstance:
