@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour {
 
         foreach (int availableCard in availableCards) {
                 cardsMagnitudes.Add(availableCard, CardsManager.Instance.GetEffectsMagnitude(availableCard));
-            }
+        }
 
         StartGame();
         ToggleVisibility(false);
@@ -144,6 +144,7 @@ public class GameManager : MonoBehaviour {
 
     public void StartGame() {
         CardsManager.Instance.DrawCard(0);
+        availableCards.Remove(0);
         articleSpawner.SpawnArticle(0f);
         stampSpawner.SpawnStamp(0f);
         isPaused = true;
