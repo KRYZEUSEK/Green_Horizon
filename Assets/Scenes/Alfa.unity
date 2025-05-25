@@ -239047,7 +239047,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3830018530884367781, guid: 3a5bc72430f5a314799a799f2adf5050, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 800
+      value: 850
       objectReference: {fileID: 0}
     - target: {fileID: 3830018530884367781, guid: 3a5bc72430f5a314799a799f2adf5050, type: 3}
       propertyPath: m_LocalPosition.x
@@ -239099,18 +239099,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3872789982278932274, guid: 3a5bc72430f5a314799a799f2adf5050, type: 3}
       propertyPath: m_text
-      value: "Na ka\u017Cdej karcie decyzji znajduj\u0105 si\u0119 trzy pola na piecz\u0105tk\u0119
-        z odpowiednimi opisami. Wybieraj decyzje poprzez przeci\u0105gni\u0119ci\u0119
+      value: "Na ka\u017Cdej karcie wydarzenia znajduj\u0105 si\u0119 trzy pola na
+        piecz\u0105tk\u0119 z odpowiednimi opisami. Wybieraj decyzje poprzez przeci\u0105gni\u0119ci\u0119
         piecz\u0105tki nad pole obok wybranej decyzji. Wybrana decyzja b\u0119dzie
         mia\u0142a wp\u0142yw na wska\u017Aniki oraz czasami na wygl\u0105d osiedla.
         \n\nNa podj\u0119cie decyzji masz 60 sekund, inaczej zostanie ona podj\u0119ta
         losowo.\n\nW czasie gry z prawej strony ekranu wysuwa\u0107 si\u0119 b\u0119dzie
-        panel z aktywno\u015Bciami dodatkowymi (opisanymi w dalszej cz\u0119\u015Bci).\n\nPrzeci\u0105gnij
-        piecz\u0105tk\u0119, \u017Ceby rozpocz\u0105\u0107 rozgrywk\u0119."
+        panel z aktywno\u015Bciami dodatkowymi, kt\xF3rych niewykonanie b\u0119dzie
+        skutkowa\u0142o obni\u017Ceniem wska\u017Anik\xF3w.\n\nPrzeci\u0105gnij piecz\u0105tk\u0119,
+        \u017Ceby rozpocz\u0105\u0107 rozgrywk\u0119."
       objectReference: {fileID: 0}
     - target: {fileID: 6940907406230638033, guid: 3a5bc72430f5a314799a799f2adf5050, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 750
+      value: 775
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -245469,7 +245470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c310252e12bd72d47892ea0923d3ec7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardsToDraw: 
+  cardsToDraw: 1000000011000000
   riskFactor: 1
   cardsToWin: 10
   drawNextCardDelay: 5
@@ -291718,7 +291719,19 @@ MonoBehaviour:
   cardId: 20
   onAppearEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1883402346}
+        m_TargetAssemblyTypeName: FogController, Assembly-CSharp
+        m_MethodName: FadeInFog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   EndCardEffectEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -291731,9 +291744,33 @@ MonoBehaviour:
       m_Calls: []
   onEndDecisionEvent:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1883402346}
+        m_TargetAssemblyTypeName: FogController, Assembly-CSharp
+        m_MethodName: FadeOutFog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1883402346}
+        m_TargetAssemblyTypeName: FogController, Assembly-CSharp
+        m_MethodName: FadeOutFog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   - m_PersistentCalls:
       m_Calls: []
 --- !u!1001 &1440257513
@@ -347659,7 +347696,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -12.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 750, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1746588383
@@ -375373,6 +375410,52 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 227062182}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1883402345
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1883402347}
+  - component: {fileID: 1883402346}
+  m_Layer: 0
+  m_Name: FogController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1883402346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883402345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e22ac45f5aafb641be5d62f2e391b3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetFogDensity: 0.01
+  fadeDuration: 3
+--- !u!4 &1883402347
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883402345}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1884000247
 PrefabInstance:
@@ -439781,6 +439864,7 @@ SceneRoots:
   - {fileID: 1856640598}
   - {fileID: 1850212529}
   - {fileID: 1651470107}
+  - {fileID: 1883402347}
   - {fileID: 1686346889}
   - {fileID: 423393446644085016}
   - {fileID: 2106350335}
