@@ -36,7 +36,9 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private float riskFactor = 1f;
     [Tooltip("Number of cards to win the game.")]
     [SerializeField] private int cardsToWin = 10;
-    [Tooltip("Delay before spawning the article.")]
+    [Tooltip("Delay before drawing the next card.")]
+    [SerializeField] private float drawNextCardDelay = 10f;
+    [Tooltip("Delay before spawning the article card.")]
     [SerializeField] private float articleSpawnDelay = 1f;
     [Tooltip("Delay before spawning the stamp.")]
     [SerializeField] private float stampSpawnDelay = 1.5f;
@@ -98,31 +100,34 @@ public class GameManager : MonoBehaviour {
             }
 
         StartGame();
+        ToggleVisibility(false);
     }
 
     private void Update() {
         if (Input.GetKeyDown(pauseKey)) {
             PauseGame(!isPaused);
         }
-        else if (Input.GetKeyDown(hideArticle)) {
-            ToggleVisibility(!isArticleVisible);
-        }
+        // TODO: Na pozniej :)
+        //else if (Input.GetKeyDown(hideArticle)) {
+        //    ToggleVisibility(!isArticleVisible);
+        //}
+
         #region Debug
-        else if (Input.GetKeyDown(KeyCode.Alpha0)) {
-            StartRandomMinigame();
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha1)) {
-            MinigamesManager.Instance.StartMinigame(0, budgetPenalty, satisfactionPenalty, 
-                infrastructurePenalty, orderPenalty, environmentPenalty);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2)) {
-            MinigamesManager.Instance.StartMinigame(1, budgetPenalty, satisfactionPenalty, 
-                infrastructurePenalty, orderPenalty, environmentPenalty);
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3)) {
-            MinigamesManager.Instance.StartMinigame(2, budgetPenalty, satisfactionPenalty, 
-                infrastructurePenalty, orderPenalty, environmentPenalty);
-        }
+        //else if (Input.GetKeyDown(KeyCode.Alpha0)) {
+        //    StartRandomMinigame();
+        //}
+        //else if (Input.GetKeyDown(KeyCode.Alpha1)) {
+        //    MinigamesManager.Instance.StartMinigame(0, budgetPenalty, satisfactionPenalty, 
+        //        infrastructurePenalty, orderPenalty, environmentPenalty);
+        //}
+        //else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+        //    MinigamesManager.Instance.StartMinigame(1, budgetPenalty, satisfactionPenalty, 
+        //        infrastructurePenalty, orderPenalty, environmentPenalty);
+        //}
+        //else if (Input.GetKeyDown(KeyCode.Alpha3)) {
+        //    MinigamesManager.Instance.StartMinigame(2, budgetPenalty, satisfactionPenalty, 
+        //        infrastructurePenalty, orderPenalty, environmentPenalty);
+        //}
         #endregion 
         
         if (!isPaused) {
@@ -131,7 +136,7 @@ public class GameManager : MonoBehaviour {
         }
     }
     
-    internal void ToggleVisibility(bool toggleOn) {
+    public void ToggleVisibility(bool toggleOn) {
         isArticleVisible = toggleOn;
         articleSpawner.ToggleVisibility(isArticleVisible);
         stampSpawner.gameObject.SetActive(isArticleVisible);
@@ -139,8 +144,8 @@ public class GameManager : MonoBehaviour {
 
     public void StartGame() {
         CardsManager.Instance.DrawCard(0);
-        articleSpawner.SpawnArticle(articleSpawnDelay);
-        stampSpawner.SpawnStamp(stampSpawnDelay);
+        articleSpawner.SpawnArticle(0f);
+        stampSpawner.SpawnStamp(0f);
         isPaused = true;
     }
 
@@ -176,6 +181,8 @@ public class GameManager : MonoBehaviour {
     }
 
     public void DrawNextCard() {
+        ToggleVisibility(true);
+
         if (cardEffectsWatch.Count > 0) {
             for (int i = 0; i < cardEffectsWatch.Count; i++) {
                 cardEffectsWatch[cardEffectsWatch.ElementAt(i).Key] -= 1;
@@ -205,10 +212,7 @@ public class GameManager : MonoBehaviour {
 
         CardsManager.Instance.DrawCard(currentCardNumber);
 
-        // Zastanowiæ siê nad elegancj¹ poni¿szych.
         articleSpawner.SpawnArticle(articleSpawnDelay);
-        stampSpawner.SpawnStamp(stampSpawnDelay);
-
         autoDecisionTimer = 0f;
     }
 
@@ -231,7 +235,8 @@ public class GameManager : MonoBehaviour {
             SceneManager.LoadScene(winScene);
         }
 
-        DrawNextCard();
+        stampSpawner.SpawnStamp(stampSpawnDelay);
+        Invoke(nameof(DrawNextCard), drawNextCardDelay);
     }
 
     private int GetRandomCard(int minMagnitude, int maxMagnitude) {

@@ -61,7 +61,6 @@ namespace Minigames {
             if (minigamePause == null) { return; }
 
             IsPaused = true;
-            GameManager.Instance.ToggleVisibility(false);
             Invoke(nameof(Pause), gameAreaAnimationTime);
         }
 

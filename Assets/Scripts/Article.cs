@@ -44,6 +44,7 @@ public class Article : MonoBehaviour {
     }
 
     public void DestroyAfterHide() {
+        GameManager.Instance.ToggleVisibility(false);
         Destroy(gameObject);
     }
 }

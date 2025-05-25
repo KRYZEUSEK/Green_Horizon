@@ -25,7 +25,7 @@ MonoBehaviour:
     _infrastructure: 0
     _order: -10
     _environment: -5
-    _effectsDuration: 2
+    _effectsDuration: 1
   - _description: "Zorganizuj koncert, jednak oddaj cz\u0119\u015B\u0107 pieni\u0119dzy
       muzykowi."
     _budget: 5
@@ -33,11 +33,11 @@ MonoBehaviour:
     _infrastructure: 0
     _order: 0
     _environment: -5
-    _effectsDuration: 2
+    _effectsDuration: 1
   - _description: "Odm\xF3w koncertu, nie potrzebujemy takich wydarze\u0144."
     _budget: 0
     _satisfaction: -10
     _infrastructure: 0
     _order: 5
     _environment: 5
-    _effectsDuration: 2
+    _effectsDuration: 1
