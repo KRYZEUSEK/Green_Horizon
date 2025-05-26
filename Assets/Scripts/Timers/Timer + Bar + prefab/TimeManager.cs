@@ -13,6 +13,8 @@ public class TimeManager : MonoBehaviour
     private float currentTime;
     private float countdownRate; // Time lost per second
 
+    private bool isActive = false; // Controls if time should flow
+
     public float GetNormalizedTime() => currentTime / maxTime;
 
     private void Awake()
@@ -20,6 +22,18 @@ public class TimeManager : MonoBehaviour
         Instance = this;
         currentTime = maxTime;
         CalculateCountdownRate();
+    }
+
+    private void OnEnable()
+    {
+        currentTime = maxTime; // Resetuj czas przy aktywacji
+        isActive = true;
+    }
+
+    private void OnDisable()
+    {
+        isActive = false;
+        currentTime = maxTime; // Resetuj czas przy dezaktywacji
     }
 
     private void CalculateCountdownRate()
@@ -40,6 +54,8 @@ public class TimeManager : MonoBehaviour
 
     private void Update()
     {
+        if (!isActive) return;
+
         if (currentTime > 0f)
         {
             currentTime -= countdownRate * Time.deltaTime;
@@ -52,3 +68,5 @@ public class TimeManager : MonoBehaviour
     public float GetCurrentTime() => currentTime;
     public void ResetTime() => currentTime = maxTime;
 }
+
+
