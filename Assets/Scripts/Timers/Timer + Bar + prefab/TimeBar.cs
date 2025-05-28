@@ -8,6 +8,7 @@ public class TimeBar : MonoBehaviour
     [SerializeField] private TimeManager timeManager;
     [SerializeField] private Image totalTimeBar;
     [SerializeField] private Image currentTimeBar;
+    [SerializeField] private GameObject timeBarWhole;
 
     private void Start()
     {
@@ -28,6 +29,11 @@ public class TimeBar : MonoBehaviour
 
         // Update the current time bar to match the remaining time
         currentTimeBar.fillAmount = timeManager.GetNormalizedTime();
+        if (timeManager.IsTimeUp())
+        {
+            timeBarWhole.SetActive(false);
+        }
+
     }
 }
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TimeManager : MonoBehaviour
@@ -8,7 +9,7 @@ public class TimeManager : MonoBehaviour
 
     [Header("Time Settings")]
     [SerializeField] private float maxTime = 10f;
-    [SerializeField] private float countdownDuration = 10f; // Time in seconds to fully count down
+    private float countdownDuration = 10f; 
 
     private float currentTime;
     private float countdownRate; // Time lost per second
@@ -63,7 +64,7 @@ public class TimeManager : MonoBehaviour
         }
     }
 
-    // Additional helper methods
+    
     public bool IsTimeUp() => currentTime <= 0f;
     public float GetCurrentTime() => currentTime;
     public void ResetTime() => currentTime = maxTime;
