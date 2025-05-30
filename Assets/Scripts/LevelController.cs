@@ -9,6 +9,14 @@ public class LevelController : MonoBehaviour
     {
         Invoke("StartScene", 16f);
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartScene();
+        }
+    }
     private void StartScene()
     {
         SceneManager.LoadScene("Alfa");
