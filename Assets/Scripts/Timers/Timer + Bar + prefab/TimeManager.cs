@@ -68,6 +68,14 @@ public class TimeManager : MonoBehaviour
     public bool IsTimeUp() => currentTime <= 0f;
     public float GetCurrentTime() => currentTime;
     public void ResetTime() => currentTime = maxTime;
+    public void StopTime()
+    {
+        isActive = false;
+    }
+    public void StartTime()
+    {
+        isActive = true;
+    }
 }
 
 
