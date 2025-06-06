@@ -10,31 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
-  m_Name: Dziura w chodniku
+  m_Name: Zniszczony paczkomat
   m_EditorClassIdentifier: 
-  _id: 31
-  _title: Dziura w chodniku
-  _description: "W jednym z bardziej ucz\u0119szczanych chodnik\xF3w pojawi\u0142a
-    si\u0119 dziura."
+  _id: 36
+  _title: Zniszczony paczkomat
+  _description: "Stoj\u0105cy na osiedlu paczkomat, zosta\u0142 zdewastowany. Jakie
+    dzia\u0142ania podj\u0105\u0107?"
   _image: {fileID: 0}
   _decisions:
-  - _description: "Zle\u0107 ca\u0142kowit\u0105 wymian\u0119 cz\u0119\u015Bci chodnika."
+  - _description: "I tak by\u0142 to stary paczkomat, wybuduj nowy."
     _budget: -10
-    _satisfaction: 0
-    _infrastructure: 10
-    _order: 0
-    _environment: 0
-    _effectsDuration: 1
-  - _description: "Zle\u0107 zalanie dziury betonem."
-    _budget: -5
-    _satisfaction: 0
+    _satisfaction: 5
     _infrastructure: 5
     _order: 0
     _environment: 0
     _effectsDuration: 1
-  - _description: "Zle\u0107 postawienie tabliczki ostrzegawczej."
-    _budget: 0
+  - _description: "Przejrze\u0107 nagrania z kamer, znale\u017A\u0107 wandala i sprawi\u0107,
+      \u017Ceby zap\u0142aci\u0142 za zniszczenia paczkomatu."
+    _budget: -5
     _satisfaction: 0
+    _infrastructure: 5
+    _order: 5
+    _environment: 0
+    _effectsDuration: 1
+  - _description: "W sumie to nie zosta\u0142 w pe\u0142ni zniszczony, po co co\u015B
+      z tym robi\u0107?"
+    _budget: 5
+    _satisfaction: -5
     _infrastructure: -5
     _order: 0
     _environment: 0

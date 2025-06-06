@@ -10,32 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
-  m_Name: Nielegalne parkowanie
+  m_Name: "Tworzymy histori\u0119"
   m_EditorClassIdentifier: 
-  _id: 29
-  _title: Nielegalne parkowanie
-  _description: "W ostatnim czasie na osiedlu pojawia si\u0119 problem parkowania
-    w miejscach niedozwolonych."
+  _id: 7
+  _title: "Tworzymy histori\u0119"
+  _description: "Pewien znany influencer zaproponowa\u0142 zorganizowanie loterii
+    w kt\xF3rej mo\u017Cna wygra\u0107 samoch\xF3d, na waszym osiedlu"
   _image: {fileID: 0}
   _decisions:
-  - _description: "Zle\u0107 wystawianie wi\u0119kszej ilo\u015Bci mandat\xF3w."
+  - _description: "Brzmi zbyt dobrze,\u017Ceby bylo prawdziwe. Lepiej dmucha\u0107
+      na zimne i odm\xF3wi\u0107"
     _budget: 0
     _satisfaction: -10
     _infrastructure: 0
-    _order: 5
-    _environment: 5
-    _effectsDuration: 1
-  - _description: "Wybuduj wi\u0119cej miejsc parkingowych."
-    _budget: -10
-    _satisfaction: 0
-    _infrastructure: 10
-    _order: 0
+    _order: 10
     _environment: 0
     _effectsDuration: 1
-  - _description: "Zostaw ludzi w spokoju, niech parkuj\u0105 gdzie chc\u0105."
-    _budget: 0
-    _satisfaction: 5
+  - _description: "Brzmi jak genialny pomys\u0142!"
+    _budget: 10
+    _satisfaction: 0
+    _infrastructure: 0
+    _order: -10
+    _environment: 0
+    _effectsDuration: 1
+  - _description: "Zorganizujmy, jednak na mniejsz\u0105 skal\u0119"
+    _budget: 5
+    _satisfaction: -10
     _infrastructure: 0
     _order: 0
-    _environment: 10
+    _environment: 0
     _effectsDuration: 1

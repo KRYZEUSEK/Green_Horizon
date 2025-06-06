@@ -10,32 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
-  m_Name: Wybuch na osiedlowym komisariacie
+  m_Name: Zaborczy rabarbar
   m_EditorClassIdentifier: 
-  _id: 16
-  _title: Wybuch na osiedlowym komisariacie
-  _description: "Na osiedlowym komisariacie policji dosz\u0142o do niezidentyfikowanej
-    eksplozji."
+  _id: 18
+  _title: Zaborczy rabarbar
+  _description: "Jeden z mieszka\u0144c\xF3w jest o krok od uko\u0144czenia procedury
+    zasiedzenia kawa\u0142ka miejskiej ziemi poprzez zasiew rabarbaru."
   _image: {fileID: 0}
   _decisions:
-  - _description: "Zbadaj spraw\u0119, przecie\u017C to powa\u017Cna rzecz!"
-    _budget: -10
+  - _description: "Jak mogli\u015Bmy by\u0107 a\u017C tacy \u015Blepi?"
+    _budget: 0
     _satisfaction: 0
+    _infrastructure: -5
+    _order: 0
+    _environment: 0
+    _effectsDuration: 1
+  - _description: "Wytoczmy przeciwko temu zaborcy pot\u0119\u017Cne prawne armaty!"
+    _budget: -5
+    _satisfaction: -5
     _infrastructure: 0
     _order: 10
     _environment: 0
     _effectsDuration: 1
-  - _description: "Pono\u0107 dosz\u0142o do wybuchu g\u0142o\u015Bnika, nie sprawdzaj
-      wydaj takie o\u015Bwiadczenie."
-    _budget: 5
-    _satisfaction: 0
-    _infrastructure: 0
-    _order: -10
-    _environment: 0
-    _effectsDuration: 1
-  - _description: "Nie wydawaj o\u015Bwiadczenia odno\u015Bnie tej sytuacji."
-    _budget: 10
-    _satisfaction: -10
+  - _description: "Mo\u017Ce jako\u015B si\u0119 dogadamy?"
+    _budget: -5
+    _satisfaction: 5
     _infrastructure: 0
     _order: 0
     _environment: 0

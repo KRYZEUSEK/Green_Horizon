@@ -25,7 +25,7 @@ MonoBehaviour:
     _infrastructure: 0
     _order: 0
     _environment: 0
-    _effectsDuration: 0
+    _effectsDuration: 1
   - _description: "W takich sytuacjach skarb jest w\u0142asno\u015Bcia osiedla, a
       osobie kt\xF3ra znalaz\u0142a przypada 10% warto\u015Bci."
     _budget: 15
@@ -33,7 +33,7 @@ MonoBehaviour:
     _infrastructure: 0
     _order: -7
     _environment: 0
-    _effectsDuration: 0
+    _effectsDuration: 1
   - _description: "Skarb znaleziony by\u0142 na terenie osiedla ale mimo wszystko
       po\u0142owa nale\u017Cy si\u0119 osobie, kt\xF3ra go znalaz\u0142a."
     _budget: 10
@@ -41,4 +41,4 @@ MonoBehaviour:
     _infrastructure: 0
     _order: -3
     _environment: 0
-    _effectsDuration: 0
+    _effectsDuration: 1

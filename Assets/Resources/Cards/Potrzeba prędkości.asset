@@ -10,32 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
-  m_Name: Osiedlowe Zielone Pustki
+  m_Name: "Potrzeba pr\u0119dko\u015Bci"
   m_EditorClassIdentifier: 
-  _id: 48
-  _title: Osiedlowe Zielone Pustki
-  _description: "Mieszka\u0144cy skar\u017C\u0105 si\u0119, \u017Ce na osiedlu mamy
-    za ma\u0142o zielonej przestrzeni."
+  _id: 19
+  _title: "Potrzeba pr\u0119dko\u015Bci"
+  _description: "Po osiedlu w godzinach nocnych szaleje pirat drogowy, stanowi\u0105cy
+    niebezpiecze\u0144stwo dla pieszych."
   _image: {fileID: 0}
   _decisions:
-  - _description: "Posad\u017Amy drzewa przy drodze."
-    _budget: -5
-    _satisfaction: 2
+  - _description: "W nocy to si\u0119 \u015Bpi."
+    _budget: 0
+    _satisfaction: -10
     _infrastructure: 0
     _order: 0
-    _environment: 5
+    _environment: 0
     _effectsDuration: 1
-  - _description: " Za\u0142\xF3\u017Cmy osiedlowy ogr\xF3d kwiatowy."
+  - _description: "Nale\u017Cy przekierowa\u0107 patrole policji oraz zamontowa\u0107
+      dodatkowe kamery."
     _budget: -5
-    _satisfaction: 5
+    _satisfaction: 10
     _infrastructure: 0
-    _order: 0
-    _environment: 2
+    _order: -5
+    _environment: 0
     _effectsDuration: 1
-  - _description: Rozbudujmy park.
+  - _description: "Pora na powa\u017Cn\u0105 inwestycj\u0119 w progi zwalniaj\u0105ce."
     _budget: -10
     _satisfaction: 5
     _infrastructure: 0
-    _order: 0
-    _environment: 7
+    _order: 5
+    _environment: 0
     _effectsDuration: 1

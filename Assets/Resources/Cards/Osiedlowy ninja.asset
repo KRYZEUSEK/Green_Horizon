@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
+  m_Name: Osiedlowy ninja
+  m_EditorClassIdentifier: 
+  _id: 38
+  _title: Osiedlowy ninja
+  _description: "Mieszka\u0144cy zg\u0142aszaj\u0105, \u017Ce kto\u015B w czarnej
+    kominiarce skacze po dachach budynk\xF3w. Okazuje si\u0119, i\u017C jest to nastolatek
+    \u0107wicz\u0105cy parkour. Gdy mieszka\u0144cy pr\xF3buj\u0105 go z\u0142apa\u0107
+    robi efektowny skok przez p\u0142ot i znika w ciemno\u015Bci. Zaniepokojeni mieszka\u0144cy
+    prosz\u0105 rad\u0119 osiedla o interwencje."
+  _image: {fileID: 0}
+  _decisions:
+  - _description: "WOW! Ch\u0142opak jest niez\u0142y, co gdyby tak zasponsorowa\u0107
+      mu treningi?"
+    _budget: -5
+    _satisfaction: 5
+    _infrastructure: 0
+    _order: 5
+    _environment: 0
+    _effectsDuration: 1
+  - _description: "Ignoruj - mo\u017Ce ch\u0142opak zrozumie, \u017Ce to niebezpieczne
+      albo si\u0119 znudzi? W sumie nie robi nic z\u0142ego."
+    _budget: 0
+    _satisfaction: 5
+    _infrastructure: 0
+    _order: -5
+    _environment: 0
+    _effectsDuration: 1
+  - _description: "To BARDZO niebezpieczne! Trzeba nakaza\u0107 policji zatrzymanie
+      ch\u0142opaka."
+    _budget: 0
+    _satisfaction: -10
+    _infrastructure: 0
+    _order: 5
+    _environment: 0
+    _effectsDuration: 1

@@ -10,33 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
-  m_Name: "Znikaj\u0105ce pieni\u0105dze z bud\u017Cetu osiedla"
+  m_Name: Alarm minowy
   m_EditorClassIdentifier: 
-  _id: 22
-  _title: "Znikaj\u0105ce pieni\u0105dze z bud\u017Cetu osiedla"
-  _description: "Zauwa\u017Cono, \u017Ce z bud\u017Cetu co miesi\u0105c w niewyja\u015Bnionych
-    okoliczno\u015Bciach znikaj\u0105 pieni\u0105dze."
+  _id: 12
+  _title: Alarm minowy
+  _description: "W pobliskim parku, podczas spaceru mieszkaniec trafi\u0142 na co\u015B
+    co mo\u017Ce by\u0107 post-sowieck\u0105 min\u0105"
   _image: {fileID: 0}
   _decisions:
-  - _description: "Wynajmij znanego detektywa, kt\xF3ry rozwi\u0105\u017Ce spraw\u0119."
+  - _description: "Stra\u017C miejska teoretycznie zosta\u0142a przeszkolona na wypadek
+      takiej sytuacji, zadzwo\u0144 po nich."
+    _budget: -5
+    _satisfaction: 0
+    _infrastructure: 0
+    _order: 5
+    _environment: 0
+    _effectsDuration: 1
+  - _description: "Jaka jest szansa, \u017Ce to mina? Nic nie r\xF3b"
+    _budget: 0
+    _satisfaction: 0
+    _infrastructure: 0
+    _order: -30
+    _environment: 0
+    _effectsDuration: 1
+  - _description: "Dzwoni\u0107 po saper\xF3w!"
     _budget: -5
     _satisfaction: 0
     _infrastructure: 0
     _order: 10
-    _environment: 0
-    _effectsDuration: 1
-  - _description: "Pewnie jest to zwi\u0105zane z b\u0142\u0119dami ksi\u0119gowych,
-      zwolnij ich i zatrudnij nowych."
-    _budget: 0
-    _satisfaction: -10
-    _infrastructure: 0
-    _order: -10
-    _environment: 0
-    _effectsDuration: 1
-  - _description: "Damy rad\u0119 rozwi\u0105za\u0107 to samemu."
-    _budget: 0
-    _satisfaction: 0
-    _infrastructure: 0
-    _order: -10
     _environment: 0
     _effectsDuration: 1
