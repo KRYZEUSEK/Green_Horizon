@@ -1,11 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Minigames.CatchingGame {
     [RequireComponent(typeof(Collider2D))]
     [RequireComponent(typeof(Rigidbody2D))]
     internal class FallingItem : MonoBehaviour {
+        [SerializeField] private AudioClip catchClip;
+
         private Rigidbody2D rb;
 
         private void Start() {
@@ -18,6 +18,7 @@ namespace Minigames.CatchingGame {
                 CatchingGameManager.Instance.LostItem();
             }
 
+            GamesSoundsManager.Instance.PlayClip(catchClip);
             Destroy(gameObject);
         }
     }

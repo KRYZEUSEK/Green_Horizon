@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -8,16 +7,14 @@ namespace Minigames.TypingGame {
         [Header("Game Settings")]
         [Tooltip("Words to be typed")]
         [SerializeField] private string[] words;
-        [Tooltip("Time limit for the game in seconds")]
-        [SerializeField] private float timeLimit = 10f;
 
         [Header("UI Elements")]
-        [Tooltip("Parent of all graphic features of the minigame")]
-        [SerializeField] private GameObject minigameArea;
         [Tooltip("TextMeshPro component to display the word to type")]
         [SerializeField] private TMP_Text wordToTypeDisplay;
         [Tooltip("TextMeshPro component to type the word")]
         [SerializeField] private TMP_Text typedWordDisplay;
+
+        [SerializeField] private AudioClip typingSound;
 
         private List<string> availableWords = new List<string>();
         private string wordToType;
@@ -53,7 +50,7 @@ namespace Minigames.TypingGame {
 
             timer += Time.deltaTime;
 
-            if (timer >= timeLimit) { FailGame();}
+            if (timer >= startingTimeLimit) { FailGame();}
 
             if (Input.anyKeyDown) {
                 char character = Input.inputString[0];
@@ -66,6 +63,8 @@ namespace Minigames.TypingGame {
         }
 
         internal void TypeCharacter(string character) {
+            GamesSoundsManager.Instance.PlayClip(typingSound);
+
             currentWord += character;
             typedWordDisplay.text = currentWord;
 
@@ -83,9 +82,9 @@ namespace Minigames.TypingGame {
             }
         }
 
-        public void StartGame() {
-            minigameArea.SetActive(true);
-            isGameStarted = true;
+        public override void StartGame() {
+            base.StartGame();
+
             timer = 0;
             currentWord = "";
             wordToTypeDisplay.text = "";
@@ -97,22 +96,6 @@ namespace Minigames.TypingGame {
                 isFirstTime = false;
                 MinigamesManager.Instance.PauseForTutorial();
             }
-        }
-
-        public void FailGame() {
-            EndGame();
-            MinigamesManager.Instance.FailGame();
-        }
-
-        public void WinGame() {
-            EndGame();
-            MinigamesManager.Instance.WinGame();
-        }
-        
-        public void EndGame() {
-            isGameStarted = false;         
-            MinigamesManager.Instance.HideGameArea();
-            minigameArea.SetActive(false);
         }
     }
 }

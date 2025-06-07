@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -12,6 +10,7 @@ public class Stamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
     [SerializeField] private float returnSpeed = 10f;
     [Tooltip("Cooldown time before the stamp can be moved again")]
     [SerializeField] private float cooldownTime = 1f;
+    [SerializeField] private AudioClip stampSound;
 
     public bool IsDragged { private set; get; } = false;
     public bool CanBeMoved { private set; get; } = true;
@@ -72,13 +71,14 @@ public class Stamp : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHan
 
         //if (isWithinBounds == false) { return; }
 
-        Debug.Log($"Closest Drop Area: {closestDropArea.name} - Distance: {closestDistance}");
+        //Debug.Log($"Closest Drop Area: {closestDropArea.name} - Distance: {closestDistance}");
         if (closestDistance > stampAttractionDistance) { return; }
 
         transform.position = closestDropArea.transform.position;
 
         if (closestDropArea.TryGetComponent(out DropArea da)) {
             da.onDropEvent?.Invoke();
+            MainSoundsManager.Instance.PlayClip(stampSound);
         }
 
         ChangeSprite(stampedSprite);

@@ -89,4 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stampAttractionDistance: 150
+  returnSpeed: 10
+  cooldownTime: 1
+  stampSound: {fileID: 8300000, guid: 2a1c0c55fb48b2f469d5c359899c7b9e, type: 3}
   stampedSprite: {fileID: 21300000, guid: c6d9db83acbb7ab4d8ae7b026b36b855, type: 3}

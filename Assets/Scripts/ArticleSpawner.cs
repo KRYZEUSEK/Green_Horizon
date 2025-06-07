@@ -1,11 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ArticleSpawner : MonoBehaviour {
-    public GameObject articlePrefab;
-    public Transform spawnTransform;
+    [SerializeField] private GameObject articlePrefab;
+    [SerializeField] private GameObject articleTimer;
+    [SerializeField] private TimeManager articleTimeManager;
+    [SerializeField] private Transform spawnTransform;
+    [SerializeField] private AudioClip spawnClip;
 
     public Article currentArticle {
         get {
@@ -13,11 +14,13 @@ public class ArticleSpawner : MonoBehaviour {
         }
     }
 
+    private float autoDecisionTime;
     private bool isVisible = true;
     private Article currentArticleInstance;
 
     public void ToggleVisibility(bool turnOn) {
         isVisible = turnOn;
+        articleTimer.SetActive(turnOn);
 
         foreach (Article article in GetComponentsInChildren<Article>()) {
             foreach (Transform child in article.transform) {
@@ -37,11 +40,22 @@ public class ArticleSpawner : MonoBehaviour {
     }
 
     private void InstantiateArticle() {
+        articleTimeManager.SetCountdownDuration(autoDecisionTime);
+        articleTimer.SetActive(isVisible);
+
+        if (isVisible) { 
+            MainSoundsManager.Instance.PlayClip(spawnClip);
+        }
+
         GameObject newArticle = Instantiate(articlePrefab, spawnTransform);
         currentArticleInstance = newArticle.GetComponent<Article>();
 
         foreach (Transform child in newArticle.transform) {
             child.gameObject.SetActive(isVisible);
         }
+    }
+
+    public void SetAutoDecisionTime(float time) {
+        autoDecisionTime = time;
     }
 }

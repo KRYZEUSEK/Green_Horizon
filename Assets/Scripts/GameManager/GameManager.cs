@@ -1,7 +1,6 @@
 using Cards;
 using Minigames;
 using System.Linq;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -86,7 +85,7 @@ public class GameManager : MonoBehaviour {
         articleSpawner = FindObjectOfType<ArticleSpawner>();
         stampSpawner = FindObjectOfType<StampSpawner>();
 
-        barsController.UpdateBars();
+        barsController.UpdateBars(false);
 
         if (cardsToDraw.Count == 0) {
             availableCards.AddRange(Enumerable.Range(0, CardsManager.Instance.transform.childCount));
@@ -96,7 +95,7 @@ public class GameManager : MonoBehaviour {
         }
 
         foreach (int availableCard in availableCards) {
-                cardsMagnitudes.Add(availableCard, CardsManager.Instance.GetEffectsMagnitude(availableCard));
+            cardsMagnitudes.Add(availableCard, CardsManager.Instance.GetEffectsMagnitude(availableCard));
         }
 
         StartGame();
@@ -113,23 +112,23 @@ public class GameManager : MonoBehaviour {
         //}
 
         #region Debug
-        //else if (Input.GetKeyDown(KeyCode.Alpha0)) {
-        //    StartRandomMinigame();
-        //}
-        //else if (Input.GetKeyDown(KeyCode.Alpha1)) {
-        //    MinigamesManager.Instance.StartMinigame(0, budgetPenalty, satisfactionPenalty, 
-        //        infrastructurePenalty, orderPenalty, environmentPenalty);
-        //}
-        //else if (Input.GetKeyDown(KeyCode.Alpha2)) {
-        //    MinigamesManager.Instance.StartMinigame(1, budgetPenalty, satisfactionPenalty, 
-        //        infrastructurePenalty, orderPenalty, environmentPenalty);
-        //}
-        //else if (Input.GetKeyDown(KeyCode.Alpha3)) {
-        //    MinigamesManager.Instance.StartMinigame(2, budgetPenalty, satisfactionPenalty, 
-        //        infrastructurePenalty, orderPenalty, environmentPenalty);
-        //}
-        #endregion 
-        
+        else if (Input.GetKeyDown(KeyCode.Alpha0)) {
+            StartRandomMinigame();
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha1)) {
+            MinigamesManager.Instance.StartMinigame(0, budgetPenalty, satisfactionPenalty,
+                infrastructurePenalty, orderPenalty, environmentPenalty);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2)) {
+            MinigamesManager.Instance.StartMinigame(1, budgetPenalty, satisfactionPenalty,
+                infrastructurePenalty, orderPenalty, environmentPenalty);
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3)) {
+            MinigamesManager.Instance.StartMinigame(2, budgetPenalty, satisfactionPenalty,
+                infrastructurePenalty, orderPenalty, environmentPenalty);
+        }
+        #endregion
+
         if (!isPaused) {
             HandleAutoDecision();
             HandleMinigamesCycles();
@@ -145,6 +144,7 @@ public class GameManager : MonoBehaviour {
     public void StartGame() {
         CardsManager.Instance.DrawCard(0);
         availableCards.Remove(0);
+        articleSpawner.SetAutoDecisionTime(autoDecisionTime);
         articleSpawner.SpawnArticle(0f);
         stampSpawner.SpawnStamp(0f);
         isPaused = true;
@@ -283,6 +283,11 @@ public class GameManager : MonoBehaviour {
 
         Debug.Log($"Stats after card {currentCard.name}");
         Debug.Log($"Budget: {Budget}, Satisfaction: {Satisfaction}, Infrastructure: {Infrastructure}, Order: {Order}, Environment: {Environment}");
+
+        if (IsGameOver()) {
+            Debug.Log("Game over!");
+            SceneManager.LoadScene("EndScene");
+        }
     }
 
     public void UpdateStats(int budget, int satisfaction, 
@@ -302,6 +307,12 @@ public class GameManager : MonoBehaviour {
             Debug.Log("Game over!");
             SceneManager.LoadScene("EndScene");
         }
+    }
+
+    private void DisplayStatsChange(int budget, int satisfaction,
+        int infrastructure, int order, int environment) {
+
+
     }
 
     private bool IsGameOver() {

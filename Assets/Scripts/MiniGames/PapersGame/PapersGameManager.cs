@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,8 +11,6 @@ namespace Minigames.PapersGame {
             Other
         }
 
-        [Tooltip("Parent of all graphic features of the minigame")]
-        [SerializeField] private GameObject minigameArea;
         [Tooltip("References to the papers types")]
         [SerializeField] private GameObject[] papersPrefabs;
         [Tooltip("References to the targets types")]
@@ -24,8 +21,6 @@ namespace Minigames.PapersGame {
         [SerializeField] private int maxPieces = 50;
         [Tooltip("Progression rate for the pieces number")]
         [SerializeField] private float progression = 1.5f;
-        [Tooltip("Starting time limit for the game in seconds (will increase with the given progression)")]
-        [SerializeField] private float startingTimeLimit = 7.5f;
         [Tooltip("Area where the papers will be spawned")]
         [SerializeField] private RectTransform papersSpawnArea;
         [Tooltip("Areas where the targets will be spawned")]
@@ -35,12 +30,9 @@ namespace Minigames.PapersGame {
         private int numberOfPapers;
         private float timeLimit;
 
-        public void StartGame() {
-            if (isGameStarted) { return; }
-            
-            minigameArea.SetActive(true);
-            isGameStarted = true;
-            
+        public override void StartGame() {
+            base.StartGame();
+
             round++;
             timeLimit = startingTimeLimit * round;
 
@@ -138,20 +130,8 @@ namespace Minigames.PapersGame {
                 targets.Add(target.GetComponent<RectTransform>());
             }
         }
-
-        public void FailGame() {
-            EndGame();
-            MinigamesManager.Instance.FailGame();
-        }
-
-        public void WinGame() {
-            EndGame();
-            MinigamesManager.Instance.WinGame();
-        }
         
-        public void EndGame() {
-            isGameStarted = false;
-
+        public override void EndGame() {
             // Destroy all the papers and targets
             foreach (RectTransform paperTransform in papersSpawnArea.transform) {
                 Destroy(paperTransform.gameObject);
@@ -163,8 +143,7 @@ namespace Minigames.PapersGame {
                 }
             }
 
-            MinigamesManager.Instance.HideGameArea();
-            minigameArea.SetActive(false);
+            base.EndGame();
         }
     }
 }

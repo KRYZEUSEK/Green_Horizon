@@ -1,11 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace Minigames.CatchingGame {
-    internal class CatchingGameManager : MinigameManager<CatchingGameManager>, IMinigame {
-        [Tooltip("Parent of all graphic features of the minigame")]
-        [SerializeField] private GameObject minigameArea;
+    internal class CatchingGameManager : MinigameManager<CatchingGameManager> {
         [Tooltip("Prefab of the player")]
         [SerializeField] private GameObject playerPrefab;
         [Tooltip("Area where the player will be spawned")]
@@ -20,8 +16,6 @@ namespace Minigames.CatchingGame {
         [SerializeField] internal float itemSpeed = 1f;
         [Tooltip("How quickly should the game be prolonged")]
         [SerializeField] private float progression = 1.25f;
-        [Tooltip("Starting time limit for the game in seconds (will increase with the given progression)")]
-        [SerializeField] private float startingTimeLimit = 7.5f;
         [Tooltip("How many items can be lost before failing the game")]
         [SerializeField] private int maxLostItems = 3;
 
@@ -46,6 +40,8 @@ namespace Minigames.CatchingGame {
             void HandleSpawning() {
                 timeSinceLastSpawn += Time.deltaTime;
 
+                if (timeLimit <= 1f) { return; }
+
                 if (timeSinceLastSpawn >= timeBetweenSpawns) {
                     SpawnItem();
                     timeSinceLastSpawn = 0f;
@@ -69,9 +65,9 @@ namespace Minigames.CatchingGame {
             }
         }
 
-        public void StartGame() {
-            minigameArea.SetActive(true);
-            isGameStarted = true;
+        public override void StartGame() {
+            base.StartGame();
+
             timeSinceLastSpawn = 0f;
             timeLimit = startingTimeLimit;
             lostItems = 0;
@@ -86,18 +82,8 @@ namespace Minigames.CatchingGame {
         private void SpawnPlayer() {
             player = Instantiate(playerPrefab, playerSpawnArea);
         }
-        
-        public void WinGame() {
-            EndGame();
-            MinigamesManager.Instance.WinGame();
-        }
 
-        public void FailGame() {
-            EndGame();
-            MinigamesManager.Instance.FailGame();
-        }
-
-        public void EndGame() {
+        public override void EndGame() {
             isGameStarted = false;
             Destroy(player);
 
