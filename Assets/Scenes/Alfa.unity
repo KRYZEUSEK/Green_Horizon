@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 756877774}
-  m_IndirectSpecularColor: {r: 0.28534767, g: 0.8066525, b: 0.99860793, a: 1}
+  m_IndirectSpecularColor: {r: 0.28532407, g: 0.80665445, b: 0.9985623, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -627,7 +627,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (2)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1901,7 +1901,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (9)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2328,7 +2328,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (3)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14864,7 +14864,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (4)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16153,7 +16153,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (32)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19624,7 +19624,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (9)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21672,7 +21672,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (3)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -24510,6 +24510,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5398445083756910558, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398445083756910558, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -24536,6 +24540,10 @@ PrefabInstance:
     - target: {fileID: 5544316991747068539, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550239512747210054, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 5550239512747210054, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -24604,6 +24612,10 @@ PrefabInstance:
     - target: {fileID: 6080223064057483688, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125495543060763698, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 6125495543060763698, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -24766,6 +24778,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7912792623758703324, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7912792623758703324, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -24900,6 +24916,10 @@ PrefabInstance:
     - target: {fileID: 8855558556875687363, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862309113486724421, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 8862309113486724421, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -33077,7 +33097,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (16)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -36958,7 +36978,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (14)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -39473,7 +39493,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (23)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -43233,7 +43253,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (4)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -46956,7 +46976,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -47754,7 +47774,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (22)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -48228,7 +48248,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (10)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -55092,7 +55112,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (33)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -57714,7 +57734,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -64567,7 +64587,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (16)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -64847,7 +64867,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (29)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -68268,7 +68288,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (8)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -79368,7 +79388,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_IsActive
@@ -84971,7 +84991,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (8)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -85270,7 +85290,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (12)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -93457,7 +93477,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (2)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -96526,7 +96546,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (5)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -99971,7 +99991,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (34)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -103095,7 +103115,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (15)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -103883,7 +103903,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (5)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -109772,6 +109792,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 887386013030730837}
   - {fileID: 1111863303}
   - {fileID: 83518041}
   - {fileID: 879120487}
@@ -110678,7 +110699,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (8)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -114964,7 +114985,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (3)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -117804,7 +117825,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (40)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -118456,7 +118477,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (2)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_IsActive
@@ -119001,7 +119022,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (10)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -120704,7 +120725,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (13)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -122673,7 +122694,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (26)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -124267,7 +124288,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (13)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -128617,7 +128638,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (21)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -129755,7 +129776,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (4)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_IsActive
@@ -133865,7 +133886,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (11)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -137071,7 +137092,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (10)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -141375,7 +141396,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (6)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -141634,7 +141655,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (3)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_IsActive
@@ -145382,7 +145403,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (23)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -152046,7 +152067,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (7)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_IsActive
@@ -152837,7 +152858,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (7)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -154680,7 +154701,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (28)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -158633,64 +158654,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4473464284870252, guid: 2fff673d81e939d499674d6b2c822fb5, type: 3}
   m_PrefabInstance: {fileID: 735418871}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &735972101
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 961391793}
-    m_Modifications:
-    - target: {fileID: 131094, guid: d93817f79a1e01242b20f7081cbfa384, type: 3}
-      propertyPath: m_Name
-      value: tree_misc_changed
-      objectReference: {fileID: 0}
-    - target: {fileID: 131094, guid: d93817f79a1e01242b20f7081cbfa384, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 423272, guid: d93817f79a1e01242b20f7081cbfa384, type: 3}
-      propertyPath: m_RootOrder
-      value: 2832
-      objectReference: {fileID: 0}
-    - target: {fileID: 423272, guid: d93817f79a1e01242b20f7081cbfa384, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.661766
-      objectReference: {fileID: 0}
-    - target: {fileID: 423272, guid: d93817f79a1e01242b20f7081cbfa384, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6.7086945
-      objectReference: {fileID: 0}
-    - target: {fileID: 423272, guid: d93817f79a1e01242b20f7081cbfa384, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 10.214482
-      objectReference: {fileID: 0}
-    - target: {fileID: 423272, guid: d93817f79a1e01242b20f7081cbfa384, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.15840533
-      objectReference: {fileID: 0}
-    - target: {fileID: 423272, guid: d93817f79a1e01242b20f7081cbfa384, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 423272, guid: d93817f79a1e01242b20f7081cbfa384, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.9873742
-      objectReference: {fileID: 0}
-    - target: {fileID: 423272, guid: d93817f79a1e01242b20f7081cbfa384, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d93817f79a1e01242b20f7081cbfa384, type: 3}
---- !u!4 &735972102 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 423272, guid: d93817f79a1e01242b20f7081cbfa384, type: 3}
-  m_PrefabInstance: {fileID: 735972101}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &736730731
 GameObject:
   m_ObjectHideFlags: 0
@@ -162530,7 +162493,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (18)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -165416,7 +165379,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (7)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -165680,7 +165643,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (1)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_IsActive
@@ -166669,7 +166632,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (17)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -169531,7 +169494,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (17)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -170355,7 +170318,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (18)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -177469,7 +177432,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (15)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -179175,7 +179138,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -180778,7 +180741,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (15)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -182532,7 +182495,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (20)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -183721,7 +183684,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (7)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -186234,6 +186197,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5398445083756910558, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5398445083756910558, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -186308,6 +186275,10 @@ PrefabInstance:
     - target: {fileID: 5544316991747068539, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5550239512747210054, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 5550239512747210054, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -186392,6 +186363,10 @@ PrefabInstance:
     - target: {fileID: 6080223064057483688, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6125495543060763698, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 6125495543060763698, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -186590,6 +186565,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7912792623758703324, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7912792623758703324, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -186720,6 +186699,10 @@ PrefabInstance:
     - target: {fileID: 8855558556875687363, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8862309113486724421, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 8862309113486724421, guid: 8a05ad966848fc645abf8b36c16a392b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -192183,7 +192166,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (18)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -193362,7 +193345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 423272, guid: d93817f79a1e01242b20f7081cbfa384, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.0144835
+      value: 3.49
       objectReference: {fileID: 0}
     - target: {fileID: 423272, guid: d93817f79a1e01242b20f7081cbfa384, type: 3}
       propertyPath: m_LocalRotation.w
@@ -200557,7 +200540,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (8)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -202124,7 +202107,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (3)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_IsActive
@@ -205589,7 +205572,6 @@ Transform:
   - {fileID: 63628556}
   - {fileID: 1622667011}
   - {fileID: 760104127}
-  - {fileID: 2025886868}
   - {fileID: 597501383}
   - {fileID: 1955990262}
   - {fileID: 2074625564}
@@ -205598,7 +205580,6 @@ Transform:
   - {fileID: 1698467389}
   - {fileID: 891104741}
   - {fileID: 1936041772}
-  - {fileID: 735972102}
   - {fileID: 902074326}
   - {fileID: 1596139678}
   - {fileID: 1964289200}
@@ -205914,7 +205895,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (13)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -210531,7 +210512,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (20)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -210919,7 +210900,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (43)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -214269,7 +214250,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (1)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -220126,7 +220107,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (19)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -220730,7 +220711,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (2)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -221437,7 +221418,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (38)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -223180,7 +223161,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (8)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -224063,7 +224044,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -226181,7 +226162,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (6)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_IsActive
@@ -226316,7 +226297,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (7)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -226495,7 +226476,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_IsActive
@@ -228443,7 +228424,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (1)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_IsActive
@@ -231504,6 +231485,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5339564826462355914, guid: c919b2c6601a09b49aed4618fd5ca0c8, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339564826462355914, guid: c919b2c6601a09b49aed4618fd5ca0c8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -231532,6 +231517,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5766749494940350759, guid: c919b2c6601a09b49aed4618fd5ca0c8, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766749494940350759, guid: c919b2c6601a09b49aed4618fd5ca0c8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -231542,6 +231531,10 @@ PrefabInstance:
     - target: {fileID: 5858679979457057786, guid: c919b2c6601a09b49aed4618fd5ca0c8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5920316241089118322, guid: c919b2c6601a09b49aed4618fd5ca0c8, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 5920316241089118322, guid: c919b2c6601a09b49aed4618fd5ca0c8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -231678,6 +231671,10 @@ PrefabInstance:
     - target: {fileID: 6655265999054626563, guid: c919b2c6601a09b49aed4618fd5ca0c8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6672817433874831572, guid: c919b2c6601a09b49aed4618fd5ca0c8, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 6672817433874831572, guid: c919b2c6601a09b49aed4618fd5ca0c8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -231950,6 +231947,10 @@ PrefabInstance:
     - target: {fileID: 9034019926327830266, guid: c919b2c6601a09b49aed4618fd5ca0c8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9118106705758473640, guid: c919b2c6601a09b49aed4618fd5ca0c8, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 9118106705758473640, guid: c919b2c6601a09b49aed4618fd5ca0c8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -233365,7 +233366,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (3)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_IsActive
@@ -234893,7 +234894,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (2)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_IsActive
@@ -235784,7 +235785,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (12)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -238864,7 +238865,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (35)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -238934,7 +238935,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (6)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -244286,7 +244287,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (12)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -249674,7 +249675,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (17)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -250032,7 +250033,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (5)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -253331,7 +253332,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (4)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -266442,7 +266443,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (11)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -268494,7 +268495,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (5)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_IsActive
@@ -269086,7 +269087,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (41)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -269222,7 +269223,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (14)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -271211,7 +271212,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (10)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -273796,7 +273797,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (15)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -278789,7 +278790,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (19)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -279810,7 +279811,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (1)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -282199,7 +282200,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (21)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -289664,6 +289665,10 @@ PrefabInstance:
       value: 0.415
       objectReference: {fileID: 0}
     - target: {fileID: 5339564826462355914, guid: c919b2c6601a09b49aed4618fd5ca0c8, type: 3}
+      propertyPath: m_Name
+      value: flowers_red_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5339564826462355914, guid: c919b2c6601a09b49aed4618fd5ca0c8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -290563,7 +290568,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (12)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -298376,7 +298381,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (16)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -298512,7 +298517,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (2)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_IsActive
@@ -312633,7 +312638,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (9)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -314154,7 +314159,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (42)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -317110,7 +317115,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (27)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -317733,7 +317738,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (4)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -318236,7 +318241,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (1)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_IsActive
@@ -322836,7 +322841,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (11)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -323532,7 +323537,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (39)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -325410,7 +325415,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (12)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -332533,7 +332538,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (25)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -332739,7 +332744,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_IsActive
@@ -333301,7 +333306,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_01
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_IsActive
@@ -334827,7 +334832,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (4)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_IsActive
@@ -341597,7 +341602,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (37)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -352803,7 +352808,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (30)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -352978,7 +352983,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (7)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -353453,7 +353458,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (13)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -360459,7 +360464,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (44)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -365352,7 +365357,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (14)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -369868,7 +369873,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (11)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -371282,7 +371287,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (36)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -372025,7 +372030,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (17)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -381624,7 +381629,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (5)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_IsActive
@@ -386973,7 +386978,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (9)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -393812,7 +393817,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (11)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -398248,7 +398253,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (5)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -399783,7 +399788,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (6)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -402527,7 +402532,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (31)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -404149,7 +404154,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (9)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -412750,7 +412755,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_Name
-      value: SM_Env_Flower_37 (24)
+      value: flower_yellow
       objectReference: {fileID: 0}
     - target: {fileID: 161484, guid: a0f542ba0461f8c4cbb89acbe6331cf5, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -414397,64 +414402,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4094615122549604, guid: 9a995bc05b4d0d247bd436edad63d2f0, type: 3}
   m_PrefabInstance: {fileID: 2024739195}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &2025886867
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 961391793}
-    m_Modifications:
-    - target: {fileID: 189882, guid: ee6af68a3d2c1864ebc6cfc3be82d851, type: 3}
-      propertyPath: m_Name
-      value: tree_misc_changed
-      objectReference: {fileID: 0}
-    - target: {fileID: 189882, guid: ee6af68a3d2c1864ebc6cfc3be82d851, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 419742, guid: ee6af68a3d2c1864ebc6cfc3be82d851, type: 3}
-      propertyPath: m_RootOrder
-      value: 2836
-      objectReference: {fileID: 0}
-    - target: {fileID: 419742, guid: ee6af68a3d2c1864ebc6cfc3be82d851, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.201782
-      objectReference: {fileID: 0}
-    - target: {fileID: 419742, guid: ee6af68a3d2c1864ebc6cfc3be82d851, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -6.7086945
-      objectReference: {fileID: 0}
-    - target: {fileID: 419742, guid: ee6af68a3d2c1864ebc6cfc3be82d851, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 15.404485
-      objectReference: {fileID: 0}
-    - target: {fileID: 419742, guid: ee6af68a3d2c1864ebc6cfc3be82d851, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.039640307
-      objectReference: {fileID: 0}
-    - target: {fileID: 419742, guid: ee6af68a3d2c1864ebc6cfc3be82d851, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 419742, guid: ee6af68a3d2c1864ebc6cfc3be82d851, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.99921405
-      objectReference: {fileID: 0}
-    - target: {fileID: 419742, guid: ee6af68a3d2c1864ebc6cfc3be82d851, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ee6af68a3d2c1864ebc6cfc3be82d851, type: 3}
---- !u!4 &2025886868 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 419742, guid: ee6af68a3d2c1864ebc6cfc3be82d851, type: 3}
-  m_PrefabInstance: {fileID: 2025886867}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2025920798
 PrefabInstance:
@@ -419405,7 +419352,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (14)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -425303,7 +425250,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (16)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -430255,7 +430202,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (22)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -431135,7 +431082,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_03 (6)
+      value: flowers_red_3
       objectReference: {fileID: 0}
     - target: {fileID: 1084380885780676, guid: 2e49fc3d15ba6e04ab402479272033c4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -432296,7 +432243,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_02 (10)
+      value: flowers_red_2
       objectReference: {fileID: 0}
     - target: {fileID: 1996863512760798, guid: a523d434137ca2242a860ccff6e2fdde, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -433389,7 +433336,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_Name
-      value: SM_Env_FlowerPatch_01 (1)
+      value: flowers_red_1
       objectReference: {fileID: 0}
     - target: {fileID: 1373125855285568, guid: c2ecf54db1567a04f95823d9f9a8a3d4, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -443426,35 +443373,35 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 470861406}
     m_Modifications:
     - target: {fileID: 1314688474642117196, guid: 1d9cb5c68d59c974cb7ccee391f35396, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -194.002
+      value: -95.33185
       objectReference: {fileID: 0}
     - target: {fileID: 1314688474642117196, guid: 1d9cb5c68d59c974cb7ccee391f35396, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 58.433
+      value: -41.848625
       objectReference: {fileID: 0}
     - target: {fileID: 1314688474642117196, guid: 1d9cb5c68d59c974cb7ccee391f35396, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 114.677
+      value: 9.039459
       objectReference: {fileID: 0}
     - target: {fileID: 1314688474642117196, guid: 1d9cb5c68d59c974cb7ccee391f35396, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.98233634
+      value: 0.9823363
       objectReference: {fileID: 0}
     - target: {fileID: 1314688474642117196, guid: 1d9cb5c68d59c974cb7ccee391f35396, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.000000044703487
       objectReference: {fileID: 0}
     - target: {fileID: 1314688474642117196, guid: 1d9cb5c68d59c974cb7ccee391f35396, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.18712418
+      value: -0.18712424
       objectReference: {fileID: 0}
     - target: {fileID: 1314688474642117196, guid: 1d9cb5c68d59c974cb7ccee391f35396, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: 0.000000014901163
       objectReference: {fileID: 0}
     - target: {fileID: 1314688474642117196, guid: 1d9cb5c68d59c974cb7ccee391f35396, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -443477,6 +443424,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d9cb5c68d59c974cb7ccee391f35396, type: 3}
+--- !u!4 &887386013030730837 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1314688474642117196, guid: 1d9cb5c68d59c974cb7ccee391f35396, type: 3}
+  m_PrefabInstance: {fileID: 887386013030730836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &940881072678898939
 GameObject:
   m_ObjectHideFlags: 0
@@ -455038,5 +454990,4 @@ SceneRoots:
   - {fileID: 362469880}
   - {fileID: 1256849225}
   - {fileID: 308369374}
-  - {fileID: 887386013030730836}
   - {fileID: 408593976}
