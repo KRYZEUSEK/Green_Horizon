@@ -1231,7 +1231,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1940992545781120, guid: 41910bb046e6cc340aeb452248a82522, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_FruitBowl_01
+      value: fruit_bowl_green
       objectReference: {fileID: 0}
     - target: {fileID: 4995534990936172, guid: 41910bb046e6cc340aeb452248a82522, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3149,7 +3149,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412702, guid: 7b30b5ba44201104fba4e71a527b6905, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.000019
+      value: -9.999616
       objectReference: {fileID: 0}
     - target: {fileID: 412702, guid: 7b30b5ba44201104fba4e71a527b6905, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3157,11 +3157,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412702, guid: 7b30b5ba44201104fba4e71a527b6905, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.999978
+      value: -10.000384
       objectReference: {fileID: 0}
     - target: {fileID: 412702, guid: 7b30b5ba44201104fba4e71a527b6905, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071076
+      value: -0.000083327286
       objectReference: {fileID: 0}
     - target: {fileID: 412702, guid: 7b30b5ba44201104fba4e71a527b6905, type: 3}
       propertyPath: m_LocalRotation.x
@@ -3169,11 +3169,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412702, guid: 7b30b5ba44201104fba4e71a527b6905, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.707106
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 412702, guid: 7b30b5ba44201104fba4e71a527b6905, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 412702, guid: 7b30b5ba44201104fba4e71a527b6905, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3181,7 +3181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 412702, guid: 7b30b5ba44201104fba4e71a527b6905, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -180.01
       objectReference: {fileID: 0}
     - target: {fileID: 412702, guid: 7b30b5ba44201104fba4e71a527b6905, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -7891,47 +7891,47 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1707396613910626, guid: 199ebfef174370c4283b1bb7e4b2e98b, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Snack_06
+      value: snack_6
       objectReference: {fileID: 0}
     - target: {fileID: 4916066730613978, guid: 199ebfef174370c4283b1bb7e4b2e98b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.117573
+      value: 11.112835
       objectReference: {fileID: 0}
     - target: {fileID: 4916066730613978, guid: 199ebfef174370c4283b1bb7e4b2e98b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.183
+      value: 0.21719742
       objectReference: {fileID: 0}
     - target: {fileID: 4916066730613978, guid: 199ebfef174370c4283b1bb7e4b2e98b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -8.838785
+      value: -8.840265
       objectReference: {fileID: 0}
     - target: {fileID: 4916066730613978, guid: 199ebfef174370c4283b1bb7e4b2e98b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.70487833
+      value: 0.793619
       objectReference: {fileID: 0}
     - target: {fileID: 4916066730613978, guid: 199ebfef174370c4283b1bb7e4b2e98b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.05609406
+      value: 0.0024181623
       objectReference: {fileID: 0}
     - target: {fileID: 4916066730613978, guid: 199ebfef174370c4283b1bb7e4b2e98b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.70487833
+      value: -0.6076677
       objectReference: {fileID: 0}
     - target: {fileID: 4916066730613978, guid: 199ebfef174370c4283b1bb7e4b2e98b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.05609406
+      value: 0.030053414
       objectReference: {fileID: 0}
     - target: {fileID: 4916066730613978, guid: 199ebfef174370c4283b1bb7e4b2e98b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 9.1
+      value: 2.313
       objectReference: {fileID: 0}
     - target: {fileID: 4916066730613978, guid: 199ebfef174370c4283b1bb7e4b2e98b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -90
+      value: -74.83
       objectReference: {fileID: 0}
     - target: {fileID: 4916066730613978, guid: 199ebfef174370c4283b1bb7e4b2e98b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: 2.568
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9221,7 +9221,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1475469422585618, guid: 10839a884277b9a4489465ab8fe96e52, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Snack_02
+      value: snack_2
       objectReference: {fileID: 0}
     - target: {fileID: 4945079338511918, guid: 10839a884277b9a4489465ab8fe96e52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15115,7 +15115,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1583950153498884, guid: ff97a3305dcafdd4c840d28431162b35, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Cup_Red_01 (3)
+      value: red_cup
       objectReference: {fileID: 0}
     - target: {fileID: 4872061820615926, guid: ff97a3305dcafdd4c840d28431162b35, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18034,7 +18034,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1609440562125818, guid: 1b84e10a8c8ba3342b47cce169e80a07, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Snack_03
+      value: snack_3
       objectReference: {fileID: 0}
     - target: {fileID: 4994317110273504, guid: 1b84e10a8c8ba3342b47cce169e80a07, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22117,7 +22117,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1583950153498884, guid: ff97a3305dcafdd4c840d28431162b35, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Cup_Red_01 (1)
+      value: red_cup
       objectReference: {fileID: 0}
     - target: {fileID: 4872061820615926, guid: ff97a3305dcafdd4c840d28431162b35, type: 3}
       propertyPath: m_LocalPosition.x
@@ -23695,7 +23695,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1583950153498884, guid: ff97a3305dcafdd4c840d28431162b35, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Cup_Red_01
+      value: red_cup
       objectReference: {fileID: 0}
     - target: {fileID: 4872061820615926, guid: ff97a3305dcafdd4c840d28431162b35, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30307,7 +30307,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1583950153498884, guid: ff97a3305dcafdd4c840d28431162b35, type: 3}
       propertyPath: m_Name
-      value: SM_Prop_Cup_Red_01 (2)
+      value: red_cup
       objectReference: {fileID: 0}
     - target: {fileID: 4872061820615926, guid: ff97a3305dcafdd4c840d28431162b35, type: 3}
       propertyPath: m_LocalPosition.x
