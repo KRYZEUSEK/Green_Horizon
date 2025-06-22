@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 756877774}
-  m_IndirectSpecularColor: {r: 0.28532407, g: 0.80665445, b: 0.9985623, a: 1}
+  m_IndirectSpecularColor: {r: 0.28534767, g: 0.8066525, b: 0.99860793, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -255476,7 +255476,7 @@ GameObject:
   - component: {fileID: 1234782371}
   - component: {fileID: 1234782370}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: GameManager [DO NOT PARENT]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255494,7 +255494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c310252e12bd72d47892ea0923d3ec7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardsToDraw: 15000000160000001700000018000000190000001b0000001d00000014000000
+  cardsToDraw: 
   riskFactor: 1
   cardsToWin: 10
   drawNextCardDelay: 5
@@ -255522,11 +255522,11 @@ Transform:
   m_GameObject: {fileID: 1234782369}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: -90}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1651470107}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1235115233
 GameObject:
@@ -256567,10 +256567,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1850212529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1940, y: 1120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1241455339
 GameObject:
@@ -326105,10 +326105,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1850212529}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 1940, y: 1120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1548777338
 MonoBehaviour:
@@ -343860,7 +343860,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 349358448}
-  - {fileID: 1234782371}
   - {fileID: 2007391337}
   - {fileID: 1072035168}
   m_Father: {fileID: 0}
@@ -455559,6 +455558,7 @@ SceneRoots:
   - {fileID: 702531172}
   - {fileID: 1856640598}
   - {fileID: 1850212529}
+  - {fileID: 1234782371}
   - {fileID: 1651470107}
   - {fileID: 1883402347}
   - {fileID: 362469880}
