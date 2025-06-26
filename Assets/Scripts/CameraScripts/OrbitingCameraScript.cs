@@ -1,31 +1,37 @@
 using System.Collections;
 using Cinemachine;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class OrbitingCameraScript : MonoBehaviour
 {
-    public CameraManager cameraManager;
     [Header("Camera Settings")]
     public CinemachineVirtualCamera orbitingCamera;
     public float orbitSpeed = 30f; // Degrees per second
-    public float orbitDuration = 6f;
+    public bool waitForDecision = false; // Orbit until a decision is made
+    public float orbitDuration = 6f; // Duration to orbit before stopping, if not waiting for a decision
 
     [Header("Target Settings")]
     public GameObject orbitingTarget;
     public Vector3 cameraOffset = new Vector3(0, 5f, -10f); // Default offset if none given
 
+    private CameraManager cameraManager;
     private CinemachineOrbitalTransposer orbital;
     private float currentAngle = 0f;
     private float orbitTimer = 0f;
+
     private bool isOrbiting = false;
-    private IEnumerator cameraCycle;
+    private bool wasDecisionChosen = false;
 
     private void Start()
     {
+        cameraManager = FindObjectOfType<CameraManager>();
         orbital = orbitingCamera.GetCinemachineComponent<CinemachineOrbitalTransposer>();
-        cameraCycle = cameraManager.CameraCycleCoroutine();
         StartCoroutine(WaitForTargetAndOrbit());
+        GameManager.Instance.onDecisionChoice.AddListener(StopOrbiting);
+    }
+
+    private void StopOrbiting() {
+        wasDecisionChosen = true;
     }
 
     public IEnumerator WaitForTargetAndOrbit()
@@ -35,21 +41,37 @@ public class OrbitingCameraScript : MonoBehaviour
             FocusOnNewTarget(orbitingTarget.transform);
 
             orbitingCamera.gameObject.SetActive(true);
-            StopCoroutine(cameraCycle);
+            DisruptCameraCycle();
             isOrbiting = true;
             orbitTimer = orbitDuration;
 
-            while (orbitTimer > 0f)
+            while (CanOrbit())
             {
                 Orbit();
                 orbitTimer -= Time.deltaTime;
                 yield return null;
             }
 
-            StartCoroutine(cameraCycle);
+            ContinueCameraCycle();
             orbitingCamera.gameObject.SetActive(false);
             isOrbiting = false;
         }
+    }
+
+    private bool CanOrbit() {
+        if (waitForDecision) {
+            return wasDecisionChosen == false;
+        }
+
+        return orbitTimer > 0f;
+    }
+
+    private void DisruptCameraCycle() {
+        cameraManager.DisruptCameraCycle();
+    }
+
+    private void ContinueCameraCycle() {
+        cameraManager.ContinueCameraCycle();
     }
 
     public void Orbit()

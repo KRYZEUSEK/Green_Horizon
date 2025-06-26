@@ -12,6 +12,7 @@ public class CameraManager : MonoBehaviour
     public CinemachineDollyCart[] dollyCarts;
 
     private int currentCameraIndex = 0;
+    private Coroutine cameraCycleCoroutine;
 
     private void Start()
     {
@@ -20,7 +21,7 @@ public class CameraManager : MonoBehaviour
 
         virtualCameraFade.gameObject.SetActive(false);
         virtualCameras[currentCameraIndex].gameObject.SetActive(true);
-        StartCoroutine(CameraCycleCoroutine());
+        cameraCycleCoroutine = StartCoroutine(CameraCycleCoroutine());
         ActivateDolly(currentCameraIndex);
     }
 
@@ -43,8 +44,10 @@ public class CameraManager : MonoBehaviour
     {
         DeactivateDolly(currentCameraIndex);
 
-        if (currentCameraIndex >= 0 && currentCameraIndex < virtualCameras.Length)
+        if (currentCameraIndex >= 0 && currentCameraIndex < virtualCameras.Length) 
+        {
             virtualCameras[currentCameraIndex].gameObject.SetActive(false);
+        }   
 
         virtualCameraFade.gameObject.SetActive(false);
 
@@ -67,15 +70,29 @@ public class CameraManager : MonoBehaviour
 
     public IEnumerator CameraCycleCoroutine()
     {
+        SwitchToNextCamera((currentCameraIndex + 1) % virtualCameras.Length);
+
         while (true)
         {
             yield return new WaitForSeconds(8f);
+
             SwitchToBlack();
 
             yield return new WaitForSeconds(2f);
-
+            
             int nextIndex = (currentCameraIndex + 1) % virtualCameras.Length;
             SwitchToNextCamera(nextIndex);
         }
+    }
+
+    public void DisruptCameraCycle() {
+        if (cameraCycleCoroutine != null) {
+            StopCoroutine(cameraCycleCoroutine);
+        }
+    }
+
+    public void ContinueCameraCycle() {
+        StopCoroutine(cameraCycleCoroutine);
+        cameraCycleCoroutine = StartCoroutine(CameraCycleCoroutine());
     }
 }

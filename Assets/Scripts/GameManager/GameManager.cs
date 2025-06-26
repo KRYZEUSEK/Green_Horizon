@@ -4,6 +4,7 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour {
     private static GameManager _instance;
@@ -66,6 +67,8 @@ public class GameManager : MonoBehaviour {
     [SerializeField] private KeyCode pauseKey = KeyCode.Escape;
     [Tooltip("Key to hide the article.")]
     [SerializeField] private KeyCode hideArticle = KeyCode.H;
+
+    public UnityEvent onDecisionChoice = new UnityEvent();
 
     private BarsController barsController;
     private ArticleSpawner articleSpawner;
@@ -205,7 +208,7 @@ public class GameManager : MonoBehaviour {
                 cardEffectsWatch[cardEffectsWatch.ElementAt(i).Key] -= 1;
 
                 if (cardEffectsWatch.ElementAt(i).Value <= 0) {
-                    Debug.Log($"Ending effect of card {cardEffectsWatch.ElementAt(i).Key}");
+                    // Debug.Log($"Ending effect of card {cardEffectsWatch.ElementAt(i).Key}");
                     CardsManager.Instance.EndDecisionEffect(cardEffectsWatch.ElementAt(i).Key);
                     cardEffectsWatch.Remove(cardEffectsWatch.ElementAt(i).Key);
                 }
@@ -235,11 +238,12 @@ public class GameManager : MonoBehaviour {
 
     public void ChooseDecision(int decisionNumber) {
         if (canChooseDecision == false) { return; }
+        
+        canChooseDecision = false;
+        onDecisionChoice.Invoke();
 
         int effectsDuration = CardsManager.Instance.CurrentCard.card.Decisions[decisionNumber].EffectsDuration;
         cardEffectsWatch.Add(currentCardNumber, effectsDuration);
-
-        canChooseDecision = false;
 
         CardsManager.Instance.ChooseDecision(decisionNumber);
         UpdateStats(decisionNumber);
@@ -276,9 +280,9 @@ public class GameManager : MonoBehaviour {
         availableCards.Remove(randomCard);
         drawnCards.Add(randomCard);
 
-        Debug.Log($"Drawn card: {randomCard}");
-        Debug.Log($"Its effects magnitude: {cardsMagnitudes[randomCard]}");
-        Debug.Log($"AvailableCards count: {availableCards.Count}");
+        // Debug.Log($"Drawn card: {randomCard}");
+        // Debug.Log($"Its effects magnitude: {cardsMagnitudes[randomCard]}");
+        // Debug.Log($"AvailableCards count: {availableCards.Count}");
 
         return randomCard;
     }
@@ -298,8 +302,8 @@ public class GameManager : MonoBehaviour {
 
         barsController.UpdateBars();
 
-        Debug.Log($"Stats after card {currentCard.name}");
-        Debug.Log($"Budget: {Budget}, Satisfaction: {Satisfaction}, Infrastructure: {Infrastructure}, Order: {Order}, Environment: {Environment}");
+        // Debug.Log($"Stats after card {currentCard.name}");
+        // Debug.Log($"Budget: {Budget}, Satisfaction: {Satisfaction}, Infrastructure: {Infrastructure}, Order: {Order}, Environment: {Environment}");
 
         if (IsGameFailed()) {
             Debug.Log("Game over!");
@@ -317,8 +321,8 @@ public class GameManager : MonoBehaviour {
 
         barsController.UpdateBars();
 
-        Debug.Log($"Stats after update");
-        Debug.Log($"Budget: {Budget}, Satisfaction: {Satisfaction}, Infrastructure: {Infrastructure}, Order: {Order}, Environment: {Environment}");
+        // Debug.Log($"Stats after update");
+        // Debug.Log($"Budget: {Budget}, Satisfaction: {Satisfaction}, Infrastructure: {Infrastructure}, Order: {Order}, Environment: {Environment}");
 
         if (IsGameFailed()) {
             Debug.Log("Game over!");

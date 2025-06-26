@@ -12893,9 +12893,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 23225898}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -17177,19 +17177,31 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1256849225}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -175.3689
+      value: -108.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 58.4311
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.001169
+      value: -24
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17197,15 +17209,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -17219,14 +17231,62 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6344899553136173760, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0958934
+      objectReference: {fileID: 0}
+    - target: {fileID: -4674612720962917873, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.094772
+      objectReference: {fileID: 0}
+    - target: {fileID: -3805046023420550222, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.095509
+      objectReference: {fileID: 0}
+    - target: {fileID: -2833904886839775686, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.09663
+      objectReference: {fileID: 0}
+    - target: {fileID: 65702495048144492, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 884364721157360936, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0951395
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
       propertyPath: m_Name
       value: Festiwal_up
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2794524143261851858, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0944026
+      objectReference: {fileID: 0}
+    - target: {fileID: 4020358074051736529, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.097
+      objectReference: {fileID: 0}
+    - target: {fileID: 7751297905913167452, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.096263
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 65702495048144492, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1618219104}
   m_SourcePrefab: {fileID: 100100000, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
 --- !u!1 &45275092
 GameObject:
@@ -18609,19 +18669,7 @@ MonoBehaviour:
       m_Calls: []
   EndCardEffectEvent:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1444382110}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   onDecisionEvent:
   - m_PersistentCalls:
       m_Calls:
@@ -25557,7 +25605,6 @@ GameObject:
   - component: {fileID: 85572265}
   - component: {fileID: 85572267}
   - component: {fileID: 85572266}
-  - component: {fileID: 85572268}
   m_Layer: 0
   m_Name: smoke (1)
   m_TagString: Untagged
@@ -30375,24 +30422,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!114 &85572268
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 85572264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cameraManager: {fileID: 0}
-  orbitingCamera: {fileID: 729581604}
-  orbitSpeed: 30
-  orbitDuration: 10
-  orbitingTarget: {fileID: 85572264}
-  cameraOffset: {x: 0, y: 5, z: -10}
 --- !u!1001 &85618304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43391,9 +43420,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 144758392}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -64507,9 +64536,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 238324203}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -92164,9 +92193,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 1500854763}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -107633,9 +107662,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 1718870836}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -117761,9 +117790,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 0
   orbitDuration: 6
   orbitingTarget: {fileID: 196459041}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -119747,9 +119776,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 518993900}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -121228,9 +121257,9 @@ Transform:
   m_GameObject: {fileID: 530121320}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -43.114548, y: 6.106251, z: 106.3112}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -43.114548, y: 6.106251, z: 105.3112}
+  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1534250276}
   - {fileID: 1621347212}
@@ -121249,9 +121278,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 2100067126}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -125843,9 +125872,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 1207101930}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -136729,9 +136758,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 867206375}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -163665,9 +163694,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 868068590}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -171898,9 +171927,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 813025083}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -179910,7 +179939,19 @@ MonoBehaviour:
   - m_PersistentCalls:
       m_Calls: []
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1618219102}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   - m_PersistentCalls:
       m_Calls: []
   onEndDecisionEvent:
@@ -180267,9 +180308,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 6
   orbitingTarget: {fileID: 852668309}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -191967,9 +192008,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 880823242}
   cameraOffset: {x: 10, y: 20, z: -10}
@@ -218302,9 +218343,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 1039943337}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -222270,9 +222311,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 0
   orbitDuration: 6
   orbitingTarget: {fileID: 1058929718}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -227866,9 +227907,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 29982036}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -234740,9 +234781,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 1124225999}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -242804,9 +242845,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 1159414453}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -249765,9 +249806,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 0
   orbitDuration: 6
   orbitingTarget: {fileID: 1814254801}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -255554,7 +255595,7 @@ MonoBehaviour:
   cardsToDraw: 
   riskFactor: 1
   cardsToWin: 10
-  drawNextCardDelay: 5
+  drawNextCardDelay: 10
   articleSpawnDelay: 0
   stampSpawnDelay: 2
   autoDecisionTime: 60
@@ -255570,6 +255611,9 @@ MonoBehaviour:
   pauseMenu: {fileID: 171845056}
   pauseKey: 27
   hideArticle: 104
+  onDecisionChoice:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1234782371
 Transform:
   m_ObjectHideFlags: 0
@@ -264028,6 +264072,7 @@ Transform:
   - {fileID: 508543385}
   - {fileID: 1667952871}
   - {fileID: 1444382111}
+  - {fileID: 1618219103}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1258235380
@@ -301077,9 +301122,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 6
   orbitingTarget: {fileID: 841180756}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -304182,9 +304227,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 0
   orbitDuration: 6
   orbitingTarget: {fileID: 255301979}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -324359,9 +324404,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 0
   orbitDuration: 6
   orbitingTarget: {fileID: 649076635}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -337165,9 +337210,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 1614818515}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -337887,6 +337932,34 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1618219102 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+  m_PrefabInstance: {fileID: 45097280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1618219103 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a56c7ad64537c294a9b4fd7cf87c81f6, type: 3}
+  m_PrefabInstance: {fileID: 45097280}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1618219104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618219102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbitingCamera: {fileID: 729581604}
+  orbitSpeed: 30
+  waitForDecision: 0
+  orbitDuration: 10
+  orbitingTarget: {fileID: 1618219102}
+  cameraOffset: {x: 0, y: 5, z: -10}
 --- !u!1001 &1618848277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -372389,9 +372462,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 1814030936}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -381009,9 +381082,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 649216529}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -389426,9 +389499,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 2124900243}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -394320,9 +394393,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 261412864}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -407656,9 +407729,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 6
   orbitingTarget: {fileID: 1987833190}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -433122,9 +433195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 2062169225}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -435017,15 +435090,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 60d45ec978031104a9fd0c8eedf2c80e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.25
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60d45ec978031104a9fd0c8eedf2c80e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.25
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60d45ec978031104a9fd0c8eedf2c80e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.25
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 60d45ec978031104a9fd0c8eedf2c80e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -435117,9 +435190,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 6
   orbitingTarget: {fileID: 2133454980}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -447177,6 +447250,10 @@ PrefabInstance:
       propertyPath: orbitingCamera
       value: 
       objectReference: {fileID: 729581604}
+    - target: {fileID: 7070550552244184114, guid: 0a6cd3cbb6bf5ab44a9b9622d49a7b27, type: 3}
+      propertyPath: waitForDecision
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8165191797041419913, guid: 0a6cd3cbb6bf5ab44a9b9622d49a7b27, type: 3}
       propertyPath: cameraManager
       value: 
@@ -449536,9 +449613,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 5281532505066277701}
   cameraOffset: {x: 0, y: 10, z: -10}
@@ -450662,6 +450739,10 @@ PrefabInstance:
       propertyPath: orbitingCamera
       value: 
       objectReference: {fileID: 729581604}
+    - target: {fileID: 6653971280385832897, guid: e9a1aea7e3736a6478c2206c3ad32365, type: 3}
+      propertyPath: waitForDecision
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -451418,9 +451499,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraManager: {fileID: 736730733}
   orbitingCamera: {fileID: 729581604}
   orbitSpeed: 30
+  waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 7670946272289898096}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -455622,4 +455703,3 @@ SceneRoots:
   - {fileID: 1256849225}
   - {fileID: 308369374}
   - {fileID: 408593976}
-  - {fileID: 45097280}
