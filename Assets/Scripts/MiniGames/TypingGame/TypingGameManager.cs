@@ -19,7 +19,7 @@ namespace Minigames.TypingGame {
         private List<string> availableWords = new List<string>();
         private string wordToType;
         private string currentWord = "";
-        private float timer = 0;
+        private float timeLimit = 0;
 
         private void Start() {
             availableWords = new List<string>(words);
@@ -48,9 +48,9 @@ namespace Minigames.TypingGame {
         private void Update() {
             if (isGameStarted == false) { return; }
 
-            timer += Time.deltaTime;
+            timeLimit += Time.deltaTime;
 
-            if (timer >= startingTimeLimit) { FailGame();}
+            if (timeLimit >= startingTimeLimit) { FailGame();}
 
             if (Input.anyKeyDown) {
                 char character = Input.inputString[0];
@@ -85,7 +85,7 @@ namespace Minigames.TypingGame {
         public override void StartGame() {
             base.StartGame();
 
-            timer = 0;
+            timeLimit = 0;
             currentWord = "";
             wordToTypeDisplay.text = "";
             typedWordDisplay.text = "";

@@ -40,6 +40,7 @@ public class ArticleSpawner : MonoBehaviour {
     }
 
     private void InstantiateArticle() {
+        Debug.Log($"Instantiating article with {autoDecisionTime} seconds...");
         articleTimeManager.SetCountdownDuration(autoDecisionTime);
         articleTimer.SetActive(isVisible);
 
@@ -56,6 +57,7 @@ public class ArticleSpawner : MonoBehaviour {
     }
 
     public void SetAutoDecisionTime(float time) {
+        Debug.Log($"Setting auto decision time to {time} seconds.");
         autoDecisionTime = time;
     }
 }

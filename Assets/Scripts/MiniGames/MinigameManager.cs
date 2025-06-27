@@ -26,6 +26,7 @@ namespace Minigames {
         [Tooltip("Parent of all graphic features of the minigame")]
         [SerializeField] protected GameObject minigameArea;
         [SerializeField] protected TimeManager timeManager;
+        [SerializeField] protected GameObject timer;
         [SerializeField] protected float startingTimeLimit = 10f;
 
         [Header("Victory and failure UI Elements")]
@@ -42,6 +43,7 @@ namespace Minigames {
         public virtual void StartGame() {
             if (isGameStarted) { return; }
 
+            timer.SetActive(true);
             timeManager.SetCountdownDuration(startingTimeLimit);
 
             minigameArea.SetActive(true);

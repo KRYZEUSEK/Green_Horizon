@@ -6,6 +6,7 @@ public class OrbitingCameraScript : MonoBehaviour
 {
     [Header("Camera Settings")]
     public CinemachineVirtualCamera orbitingCamera;
+    public bool shouldOrbit = true;
     public float orbitSpeed = 30f; // Degrees per second
     public bool waitForDecision = false; // Orbit until a decision is made
     public float orbitDuration = 6f; // Duration to orbit before stopping, if not waiting for a decision
@@ -42,7 +43,7 @@ public class OrbitingCameraScript : MonoBehaviour
 
             orbitingCamera.gameObject.SetActive(true);
             DisruptCameraCycle();
-            isOrbiting = true;
+            isOrbiting = shouldOrbit;
             orbitTimer = orbitDuration;
 
             while (CanOrbit())

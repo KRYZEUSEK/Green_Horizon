@@ -9777,6 +9777,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7641855224031098356, guid: f0c8173e7285f9d4e9cce6566b2711ba, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641855224031098356, guid: f0c8173e7285f9d4e9cce6566b2711ba, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -12894,6 +12898,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 10
@@ -43304,6 +43309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 10
@@ -43874,7 +43880,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1190219113573093869, guid: 8a68643fca7aac74691253914690e4ce, type: 3}
       propertyPath: m_Name
-      value: Timer 1 (1)
+      value: CatchingGameTimer
       objectReference: {fileID: 0}
     - target: {fileID: 1190219113573093869, guid: 8a68643fca7aac74691253914690e4ce, type: 3}
       propertyPath: m_IsActive
@@ -49373,6 +49379,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minigameArea: {fileID: 837498240}
   timeManager: {fileID: 571590513}
+  timer: {fileID: 2117631381}
   startingTimeLimit: 7.5
   gameWonUI: {fileID: 42323618}
   gameLostUI: {fileID: 683235703}
@@ -64420,6 +64427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 10
@@ -92077,6 +92085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 10
@@ -107546,6 +107555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 10
@@ -117674,6 +117684,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 6
@@ -119660,6 +119671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 0
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 10
@@ -121162,6 +121174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 10
@@ -125756,6 +125769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 10
@@ -136642,6 +136656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 10
@@ -154803,6 +154818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 6
@@ -163726,6 +163742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 10
@@ -171959,6 +171976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 10
@@ -180352,6 +180370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 6
@@ -192052,6 +192071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 10
@@ -192098,7 +192118,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1190219113573093869, guid: 8a68643fca7aac74691253914690e4ce, type: 3}
       propertyPath: m_Name
-      value: Timer 1 (1)
+      value: TypingGameTimer
       objectReference: {fileID: 0}
     - target: {fileID: 1190219113573093869, guid: 8a68643fca7aac74691253914690e4ce, type: 3}
       propertyPath: m_IsActive
@@ -209523,7 +209543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1190219113573093869, guid: 8a68643fca7aac74691253914690e4ce, type: 3}
       propertyPath: m_Name
-      value: Timer 1
+      value: ArticleTimer
       objectReference: {fileID: 0}
     - target: {fileID: 1190219113573093869, guid: 8a68643fca7aac74691253914690e4ce, type: 3}
       propertyPath: m_IsActive
@@ -218387,6 +218407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 10
@@ -222355,6 +222376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 6
@@ -227951,6 +227973,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 10
@@ -234825,6 +234848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 10
@@ -235418,7 +235442,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1190219113573093869, guid: 8a68643fca7aac74691253914690e4ce, type: 3}
       propertyPath: m_Name
-      value: Timer 1
+      value: PapersDraggingGameTimer
       objectReference: {fileID: 0}
     - target: {fileID: 1190219113573093869, guid: 8a68643fca7aac74691253914690e4ce, type: 3}
       propertyPath: m_IsActive
@@ -242889,6 +242913,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 10
@@ -249850,6 +249875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 6
@@ -271519,6 +271545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minigameArea: {fileID: 1774344389}
   timeManager: {fileID: 1647589256}
+  timer: {fileID: 868403877}
   startingTimeLimit: 10
   gameWonUI: {fileID: 42323618}
   gameLostUI: {fileID: 683235703}
@@ -301166,6 +301193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 6
@@ -304271,6 +304299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 6
@@ -324448,6 +324477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 6
@@ -337254,6 +337284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 10
@@ -372478,6 +372509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 0
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 10
@@ -381098,6 +381130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 10
@@ -389515,6 +389548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 10
@@ -393805,6 +393839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minigameArea: {fileID: 764221796}
   timeManager: {fileID: 609818929}
+  timer: {fileID: 1453581070}
   startingTimeLimit: 10
   gameWonUI: {fileID: 42323618}
   gameLostUI: {fileID: 683235703}
@@ -394409,6 +394444,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 10
@@ -404316,7 +404352,7 @@ MonoBehaviour:
         m_MethodName: PlayOneShot
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 352be2a025343b54b9d58b879ffbff74, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 4bf9e7062e10cb448858dd50ce3439a2, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -407745,6 +407781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 6
@@ -433211,6 +433248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 10
@@ -435206,6 +435244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 6
@@ -449629,6 +449668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 1
   orbitDuration: 10
@@ -451515,6 +451555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
   orbitSpeed: 30
   waitForDecision: 0
   orbitDuration: 10

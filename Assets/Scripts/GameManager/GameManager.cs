@@ -177,10 +177,14 @@ public class GameManager : MonoBehaviour {
     }
 
     private void HandleAutoDecision() {
+        if (canChooseDecision == false) { return; }
+
         autoDecisionTimer += Time.deltaTime;
 
         if (autoDecisionTimer >= autoDecisionTime) {
-            ChooseDecision(0);
+            Debug.Log($"Auto decision timer: {autoDecisionTimer}");
+            autoDecisionTimer = 0f;
+            articleSpawner.currentArticle.ChooseDecision(Random.Range(0, 3));
         }
     }
 
@@ -233,7 +237,6 @@ public class GameManager : MonoBehaviour {
         CardsManager.Instance.DrawCard(currentCardNumber);
 
         articleSpawner.SpawnArticle(articleSpawnDelay);
-        autoDecisionTimer = 0f;
     }
 
     public void ChooseDecision(int decisionNumber) {
@@ -249,16 +252,19 @@ public class GameManager : MonoBehaviour {
         UpdateStats(decisionNumber);
 
         if (IsGameFailed()) {
+            isPaused = true;
             SceneManager.LoadScene(failScene);
             return;
         }
         else if (IsGameWon()) {
+            isPaused = true;
             SceneManager.LoadScene(winScene);
             return;
         }
 
         stampSpawner.SpawnStamp(stampSpawnDelay);
         Invoke(nameof(DrawNextCard), drawNextCardDelay);
+        autoDecisionTimer = 0f;
     }
 
     private int GetRandomCard(int minMagnitude, int maxMagnitude) {
@@ -307,7 +313,8 @@ public class GameManager : MonoBehaviour {
 
         if (IsGameFailed()) {
             Debug.Log("Game over!");
-            SceneManager.LoadScene("EndScene");
+            isPaused = true;
+            SceneManager.LoadScene(failScene);
         }
     }
 
@@ -326,7 +333,8 @@ public class GameManager : MonoBehaviour {
 
         if (IsGameFailed()) {
             Debug.Log("Game over!");
-            SceneManager.LoadScene("EndScene");
+            isPaused = true;
+            SceneManager.LoadScene(failScene);
         }
     }
 
