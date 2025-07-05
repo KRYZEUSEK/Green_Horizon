@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3972367820005874eb02eb8085833845, type: 3}
+  m_Name: "Plaga dzik\xF3w na osiedlu"
+  m_EditorClassIdentifier: 
+  _id: 8
+  _title: "Plaga dzik\xF3w na osiedlu"
+  _description: "Dziki zacz\u0119\u0142y regularnie odwiedza\u0107 osiedle, przeszukuj\u0105c
+    \u015Bmietniki i niszcz\u0105c ziele\u0144. Mieszka\u0144cy s\u0105 zaniepokojeni"
+  _image: {fileID: 0}
+  _decisions:
+  - _description: "Wezwij stra\u017C miejsk\u0105, aby monitorowa\u0142a sytuacj\u0119"
+    _budget: 0
+    _satisfaction: -5
+    _infrastructure: 0
+    _order: 5
+    _environment: 0
+    _effectsDuration: 0
+  - _description: "Zainstaluj tablice informacyjne, ostrzegaj\u0105ce przed dzikami"
+    _budget: 0
+    _satisfaction: 5
+    _infrastructure: 0
+    _order: 0
+    _environment: -5
+    _effectsDuration: 0
+  - _description: "Ignoruj - za jaki\u015B czas dziki pewnie przestan\u0105 przychodzi\u0107"
+    _budget: 0
+    _satisfaction: -5
+    _infrastructure: 0
+    _order: 0
+    _environment: -5
+    _effectsDuration: 0
