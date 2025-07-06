@@ -16,6 +16,12 @@ public class MainSoundsManager : MonoBehaviour {
     private AudioSource audioSource;
 
     private void Awake() {
+        AudioSource[] audioSources = FindObjectsOfType<AudioSource>();
+
+        foreach (AudioSource source in audioSources) {
+            source.volume = PlayerPrefs.GetFloat("SFXVolume", 1f);
+        }
+
         audioSource = GetComponent<AudioSource>();
     }
 

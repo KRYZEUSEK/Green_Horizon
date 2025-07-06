@@ -11553,18 +11553,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 23225898}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 4
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 23225903}
         m_TargetAssemblyTypeName: ObjectMover, Assembly-CSharp
         m_MethodName: MoveTo
@@ -12836,7 +12824,6 @@ GameObject:
   - component: {fileID: 23225901}
   - component: {fileID: 23225900}
   - component: {fileID: 23225899}
-  - component: {fileID: 23225902}
   - component: {fileID: 23225903}
   m_Layer: 0
   m_Name: Zalane
@@ -12844,7 +12831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &23225899
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12910,27 +12897,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1243076162}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &23225902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 23225898}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orbitingCamera: {fileID: 729581604}
-  shouldOrbit: 1
-  orbitSpeed: 30
-  minAngle: 0
-  maxAngle: 360
-  waitForDecision: 1
-  orbitDuration: 10
-  orbitingTarget: {fileID: 23225898}
-  cameraOffset: {x: 0, y: 5, z: -10}
 --- !u!114 &23225903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93286,7 +93252,7 @@ MonoBehaviour:
   orbitSpeed: 30
   minAngle: 0
   maxAngle: 360
-  waitForDecision: 0
+  waitForDecision: 1
   orbitDuration: 6
   orbitingTarget: {fileID: 337746838}
   cameraOffset: {x: 0, y: 5, z: -10}
@@ -165426,6 +165392,7 @@ GameObject:
   - component: {fileID: 686135044}
   - component: {fileID: 686135046}
   - component: {fileID: 686135045}
+  - component: {fileID: 686135047}
   m_Layer: 0
   m_Name: smoke_v2 (1)
   m_TagString: Untagged
@@ -170243,6 +170210,27 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!114 &686135047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686135043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
+  orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
+  waitForDecision: 1
+  orbitDuration: 6
+  orbitingTarget: {fileID: 686135043}
+  cameraOffset: {x: 0, y: 10, z: -10}
 --- !u!1001 &686701379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -178941,6 +178929,7 @@ GameObject:
   - component: {fileID: 729581603}
   - component: {fileID: 729581604}
   - component: {fileID: 729581605}
+  - component: {fileID: 729581606}
   m_Layer: 0
   m_Name: Orbiting Camera
   m_TagString: Untagged
@@ -179033,6 +179022,14 @@ MonoBehaviour:
   m_Damping: 2
   m_DampingWhenOccluded: 2
   m_OptimalTargetDistance: 0
+--- !u!81 &729581606
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729581602}
+  m_Enabled: 1
 --- !u!1 &729856310
 GameObject:
   m_ObjectHideFlags: 0
@@ -193830,7 +193827,7 @@ Transform:
   m_GameObject: {fileID: 820720266}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -63.548203, y: -4.0649986, z: -50.80275}
+  m_LocalPosition: {x: -63.548203, y: -3.8, z: -50.80275}
   m_LocalScale: {x: 1000, y: 1, z: 1000}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -281279,7 +281276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1225802650
 Transform:
   m_ObjectHideFlags: 0
@@ -283748,7 +283745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1243076162
 Transform:
   m_ObjectHideFlags: 0
@@ -289606,33 +289603,9 @@ MonoBehaviour:
       m_Calls: []
   onDecisionEvent:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 337746838}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 337746838}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 598310427}
@@ -289646,18 +289619,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 337746838}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
   onEndDecisionEvent:
   - m_PersistentCalls:
@@ -289686,6 +289647,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 337746838}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1997515975}
@@ -289712,6 +289685,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 337746838}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1997515975}
@@ -289737,6 +289722,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 337746838}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
         m_CallState: 2
 --- !u!1 &1250542923
 GameObject:

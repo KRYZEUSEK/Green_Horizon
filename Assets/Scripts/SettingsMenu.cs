@@ -5,19 +5,31 @@ using UnityEngine.Audio;
 public class SettingsMenu : MonoBehaviour
 {
     public GameObject settingsPanel;
-    public AudioMixer audioMixer;
     public Slider sfxSlider;
 
     void Start()
     {
-        float sfxVol;
-        audioMixer.GetFloat("SFXVolume", out sfxVol);
-        sfxSlider.value = Mathf.Pow(10, sfxVol / 20);
+        float sfxVol = PlayerPrefs.GetFloat("SFXVolume", 1f);
+        sfxSlider.value = sfxVol;
+
+        AudioSource[] audioSources = FindObjectsOfType<AudioSource>();
+
+        foreach (AudioSource source in audioSources) {
+            source.volume = sfxVol;
+        }
+
+        sfxSlider.onValueChanged.AddListener(SetSFXVolume);
     }
 
     public void SetSFXVolume(float volume)
     {
-        audioMixer.SetFloat("SFXVolume", Mathf.Log10(volume) * 20);
+        PlayerPrefs.SetFloat("SFXVolume", volume);
+
+        AudioSource[] audioSources = FindObjectsOfType<AudioSource>();
+
+        foreach (AudioSource source in audioSources) {
+            source.volume = volume;
+        }
     }
 
     public void OpenSettings()

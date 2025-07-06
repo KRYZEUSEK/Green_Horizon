@@ -153,7 +153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 1593219254}
-  audioMixer: {fileID: 0}
   sfxSlider: {fileID: 333948756}
 --- !u!4 &103070093
 Transform:
@@ -543,6 +542,62 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Settings_Panel '
       objectReference: {fileID: 0}
+    - target: {fileID: 1352066914872714892, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220185029123040337, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_Value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220185029123040337, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220185029123040337, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220185029123040337, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 103070092}
+    - target: {fileID: 2220185029123040337, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220185029123040337, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetSFXVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220185029123040337, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SettingsMenu, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2220185029123040337, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228708133188154109, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228708133188154109, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228708133188154109, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827732860921427440, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6827732860921427440, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7850611209916680283, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -638,6 +693,22 @@ PrefabInstance:
     - target: {fileID: 8283955636400490029, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8623287402964784931, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8838658847164898530, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_text
+      value: "G\u0142o\u015Bno\u015B\u0107"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220815630288295286, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 129.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9220815630288295286, guid: edc2179bcfce9d54188aef0e87c4f5d3, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -67.09999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
