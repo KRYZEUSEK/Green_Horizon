@@ -24,7 +24,7 @@ namespace Minigames.PapersGame {
         [Tooltip("Area where the papers will be spawned")]
         [SerializeField] private RectTransform papersSpawnArea;
         [Tooltip("Areas where the targets will be spawned")]
-        [SerializeField] private RectTransform[] targetsSpawnArea;
+        [SerializeField] private RectTransform[] targetsSpawns;
 
         private int round;
         private int numberOfPapers;
@@ -101,32 +101,19 @@ namespace Minigames.PapersGame {
 
         private void SpawnTargets() {
             List<RectTransform> targets = new List<RectTransform>();
+            List<int> usedSpawns = new List<int>();
 
             foreach (GameObject targetPrefab in targetsPrefabs) {
-                int chosenArea = Random.Range(0, targetsSpawnArea.Length);
-                GameObject target = Instantiate(targetPrefab, targetsSpawnArea[chosenArea]);
-                
-                bool isOverlapping = true;
-                Vector3 position = Vector3.zero;
+                int chosenArea = Random.Range(0, targetsSpawns.Length);
 
-                while (isOverlapping) {
-                    isOverlapping = false;
-
-                    position = new Vector3(
-                        Random.Range(targetsSpawnArea[chosenArea].rect.xMin, targetsSpawnArea[chosenArea].rect.xMax),
-                        Random.Range(targetsSpawnArea[chosenArea].rect.yMin, targetsSpawnArea[chosenArea].rect.yMax),
-                        0
-                    );
-
-                    foreach (RectTransform otherTarget in targets) {
-                        if (RectTransformUtility.RectangleContainsScreenPoint(otherTarget, position)) {
-                            isOverlapping = true;
-                            break;
-                        }
-                    }
+                while (usedSpawns.Contains(chosenArea)) {
+                    chosenArea = Random.Range(0, targetsSpawns.Length);
                 }
 
-                target.transform.localPosition = position;
+                usedSpawns.Add(chosenArea);
+                GameObject target = Instantiate(targetPrefab, targetsSpawns[chosenArea]);
+                
+                target.transform.localPosition = Vector3.zero;
                 targets.Add(target.GetComponent<RectTransform>());
             }
         }
@@ -137,8 +124,8 @@ namespace Minigames.PapersGame {
                 Destroy(paperTransform.gameObject);
             }
 
-            foreach (RectTransform target in targetsSpawnArea) {
-                foreach (RectTransform child in target.transform) {
+            foreach (RectTransform target in targetsSpawns) {
+                foreach (RectTransform child in target) {
                     Destroy(child.gameObject);
                 }
             }
