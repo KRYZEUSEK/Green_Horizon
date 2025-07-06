@@ -241,12 +241,11 @@ public class GameManager : MonoBehaviour {
 
     public void ChooseDecision(int decisionNumber) {
         if (canChooseDecision == false) { return; }
-        
-        canChooseDecision = false;
-        onDecisionChoice.Invoke();
 
-        int effectsDuration = CardsManager.Instance.CurrentCard.card.Decisions[decisionNumber].EffectsDuration;
-        cardEffectsWatch.Add(currentCardNumber, effectsDuration);
+        Debug.Log($"Choosing decision {decisionNumber} for card {CardsManager.Instance.CurrentCard.card.Title}");
+
+        canChooseDecision = false;
+        onDecisionChoice?.Invoke();
 
         CardsManager.Instance.ChooseDecision(decisionNumber);
         UpdateStats(decisionNumber);
@@ -261,6 +260,9 @@ public class GameManager : MonoBehaviour {
             SceneManager.LoadScene(winScene);
             return;
         }
+
+        int effectsDuration = CardsManager.Instance.CurrentCard.card.Decisions[decisionNumber].EffectsDuration;
+        cardEffectsWatch.Add(currentCardNumber, effectsDuration);
 
         stampSpawner.SpawnStamp(stampSpawnDelay);
         Invoke(nameof(DrawNextCard), drawNextCardDelay);
