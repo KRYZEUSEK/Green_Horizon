@@ -238,7 +238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 94ac62c3b3200c04b8585e6fa7b24646, type: 3}
       propertyPath: m_Name
-      value: woman_1_walking
+      value: woman_1_sitting
       objectReference: {fileID: 0}
     - target: {fileID: 1852576806548013000, guid: 94ac62c3b3200c04b8585e6fa7b24646, type: 3}
       propertyPath: m_LocalPosition.x
@@ -280,6 +280,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -18.023
       objectReference: {fileID: 0}
+    - target: {fileID: 2364304448542807572, guid: 94ac62c3b3200c04b8585e6fa7b24646, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 1280446133571650962, guid: 447e3e177546ceb418ec190ac4f86a5d, type: 3}
+    - target: {fileID: 2364304448542807572, guid: 94ac62c3b3200c04b8585e6fa7b24646, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 4362962105363994262, guid: cc61cf6ef5a4c5745b1bc23a7f8d2985, type: 3}
     - target: {fileID: 2364304448542807572, guid: 94ac62c3b3200c04b8585e6fa7b24646, type: 3}
       propertyPath: m_Materials.Array.data[5]
       value: 

@@ -26,44 +26,44 @@ public class OrbitingCameraScript : MonoBehaviour
     private bool isOrbiting = false;
     private bool wasDecisionChosen = false;
 
-    private void Start()
+    private void OnEnable()
     {
         cameraManager = FindObjectOfType<CameraManager>();
         orbital = orbitingCamera.GetCinemachineComponent<CinemachineOrbitalTransposer>();
-        StartCoroutine(WaitForTargetAndOrbit());
         GameManager.Instance.onDecisionChoice.AddListener(StopOrbiting);
+
+        DisruptCameraCycle();
+        StartCoroutine(WaitForTargetAndOrbit());
     }
 
     private void StopOrbiting() {
         wasDecisionChosen = true;
     }
 
-    public IEnumerator WaitForTargetAndOrbit()
+    private IEnumerator WaitForTargetAndOrbit()
     {
-        if (orbitingTarget.activeSelf)
+        FocusOnNewTarget(orbitingTarget.transform);
+
+        orbitingCamera.gameObject.SetActive(true);
+        DisruptCameraCycle();
+        isOrbiting = shouldOrbit;
+        orbitTimer = orbitDuration;
+
+        isRotatingInOtherDirection = false;
+        currentAngle = minAngle;
+        orbital.m_Heading.m_Bias = currentAngle;
+
+        while (CanOrbit())
         {
-            FocusOnNewTarget(orbitingTarget.transform);
-
-            orbitingCamera.gameObject.SetActive(true);
-            DisruptCameraCycle();
-            isOrbiting = shouldOrbit;
-            orbitTimer = orbitDuration;
-
-            isRotatingInOtherDirection = false;
-            currentAngle = minAngle;
-            orbital.m_Heading.m_Bias = currentAngle;
-
-            while (CanOrbit())
-            {
-                Orbit();
-                orbitTimer -= Time.deltaTime;
-                yield return null;
-            }
-
-            ContinueCameraCycle();
-            orbitingCamera.gameObject.SetActive(false);
-            isOrbiting = false;
+            Orbit();
+            orbitTimer -= Time.deltaTime;
+            yield return null;
         }
+
+        isOrbiting = false;
+        orbitingCamera.gameObject.SetActive(false);
+        ContinueCameraCycle();
+        this.enabled = false;
     }
 
     private bool CanOrbit() {
@@ -82,7 +82,7 @@ public class OrbitingCameraScript : MonoBehaviour
         cameraManager.ContinueCameraCycle();
     }
 
-    public void Orbit()
+    private void Orbit()
     {
         if (!isOrbiting || orbital == null) return;
 
@@ -102,7 +102,7 @@ public class OrbitingCameraScript : MonoBehaviour
         orbital.m_Heading.m_Bias = currentAngle;
     }
 
-    public void FocusOnNewTarget(Transform newTarget)
+    private void FocusOnNewTarget(Transform newTarget)
     {
         if (orbitingCamera == null || orbital == null) return;
 
