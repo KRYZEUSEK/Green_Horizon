@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 756877774}
-  m_IndirectSpecularColor: {r: 0.28532407, g: 0.80665445, b: 0.9985623, a: 1}
+  m_IndirectSpecularColor: {r: 0.28534767, g: 0.8066525, b: 0.99860793, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12894,6 +12894,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 23225898}
@@ -38613,7 +38615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &117273445
 Transform:
   m_ObjectHideFlags: 0
@@ -43203,6 +43205,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 144758392}
@@ -64387,6 +64391,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 238324203}
@@ -92776,6 +92782,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 6
   orbitingTarget: {fileID: 337746838}
@@ -96891,6 +96899,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 1500854763}
@@ -112361,6 +112371,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 1718870836}
@@ -122406,6 +122418,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 6
   orbitingTarget: {fileID: 196459041}
@@ -124353,11 +124367,11 @@ PrefabInstance:
       objectReference: {fileID: 1035542352}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6339621524446600610, guid: a0b76db9064931447a73a9ebe321370a, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3411898150732567119, guid: a0b76db9064931447a73a9ebe321370a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 627998600}
+      addedObject: {fileID: 1168380964}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0b76db9064931447a73a9ebe321370a, type: 3}
 --- !u!1 &518993900
 GameObject:
@@ -124393,6 +124407,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 0
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 518993900}
@@ -125896,6 +125912,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 2100067126}
@@ -130491,6 +130509,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 1207101930}
@@ -151143,25 +151163,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6339621524446600610, guid: a0b76db9064931447a73a9ebe321370a, type: 3}
   m_PrefabInstance: {fileID: 518271633}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &627998600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 627998599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orbitingCamera: {fileID: 729581604}
-  shouldOrbit: 1
-  orbitSpeed: 30
-  waitForDecision: 1
-  orbitDuration: 10
-  orbitingTarget: {fileID: 867206375}
-  cameraOffset: {x: 0, y: 5, z: -10}
 --- !u!4 &627998601 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3411898150732567119, guid: a0b76db9064931447a73a9ebe321370a, type: 3}
@@ -174119,6 +174120,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 6
   orbitingTarget: {fileID: 714594470}
@@ -176934,7 +176937,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f7dd694ed6731d74ab63b934a69b13f9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1974281472}
   m_SourcePrefab: {fileID: 100100000, guid: f7dd694ed6731d74ab63b934a69b13f9, type: 3}
 --- !u!1001 &727618293
 PrefabInstance:
@@ -177318,6 +177324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 729581603}
   - component: {fileID: 729581604}
+  - component: {fileID: 729581605}
   m_Layer: 0
   m_Name: Orbiting Camera
   m_TagString: Untagged
@@ -177380,6 +177387,36 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 78901749}
+--- !u!114 &729581605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729581602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e501d18bb52cf8c40b1853ca4904654f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CollideAgainst:
+    serializedVersion: 2
+    m_Bits: 1
+  m_IgnoreTag: 
+  m_TransparentLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_MinimumDistanceFromTarget: 0.1
+  m_AvoidObstacles: 1
+  m_DistanceLimit: 0
+  m_MinimumOcclusionTime: 0
+  m_CameraRadius: 0.1
+  m_Strategy: 2
+  m_MaximumEffort: 6
+  m_SmoothingTime: 0
+  m_Damping: 2
+  m_DampingWhenOccluded: 2
+  m_OptimalTargetDistance: 0
 --- !u!1 &730840032
 GameObject:
   m_ObjectHideFlags: 0
@@ -182975,6 +183012,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 868068590}
@@ -191195,6 +191234,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 813025083}
@@ -199589,6 +199630,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 6
   orbitingTarget: {fileID: 852668309}
@@ -203350,11 +203393,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3218943429102809748, guid: b607da7fa2e72594183ca1746acb915e, type: 3}
   m_PrefabInstance: {fileID: 865745814}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &867206375 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5117998921153061482, guid: a0b76db9064931447a73a9ebe321370a, type: 3}
-  m_PrefabInstance: {fileID: 518271633}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &867591880
 PrefabInstance:
@@ -216187,6 +216225,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 880823242}
@@ -242607,6 +242647,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 1039943337}
@@ -246558,6 +246600,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 6
   orbitingTarget: {fileID: 1058929718}
@@ -252163,6 +252207,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 29982036}
@@ -253312,13 +253358,37 @@ MonoBehaviour:
   cardId: 8
   onAppearEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 117273444}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   EndCardEffectEvent:
     m_PersistentCalls:
       m_Calls: []
   onDecisionEvent:
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 117273444}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   - m_PersistentCalls:
       m_Calls: []
   - m_PersistentCalls:
@@ -259108,6 +259178,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 1124225999}
@@ -267173,6 +267245,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 1159414453}
@@ -268688,6 +268762,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5372735876525760754, guid: ee2166c6cc1f2234d9d724db162c1a22, type: 3}
   m_PrefabInstance: {fileID: 1167425487}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1168380963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1168380964}
+  - component: {fileID: 1168380965}
+  m_Layer: 0
+  m_Name: PivotPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1168380964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168380963}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.119887, y: 10.923832, z: 12.354651}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 627998601}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1168380965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168380963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
+  orbitSpeed: 30
+  minAngle: 30
+  maxAngle: 230
+  waitForDecision: 1
+  orbitDuration: 10
+  orbitingTarget: {fileID: 1168380963}
+  cameraOffset: {x: 0, y: 5, z: -10}
 --- !u!1001 &1168795243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -274135,6 +274262,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 6
   orbitingTarget: {fileID: 1814254801}
@@ -275809,7 +275938,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7668044249356244800, guid: b84fcae21da92d74282b61d385b62fb3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1675163656}
   m_SourcePrefab: {fileID: 100100000, guid: b84fcae21da92d74282b61d385b62fb3, type: 3}
 --- !u!4 &1206749435 stripped
 Transform:
@@ -330209,6 +330341,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 6
   orbitingTarget: {fileID: 841180756}
@@ -333317,6 +333451,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 6
   orbitingTarget: {fileID: 2129450018}
@@ -356444,6 +356580,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 412702, guid: 7b30b5ba44201104fba4e71a527b6905, type: 3}
   m_PrefabInstance: {fileID: 1523109416}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1523187288 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4985496788970472032, guid: 5358dbef7308e7248b897b02ef75279f, type: 3}
+  m_PrefabInstance: {fileID: 4344141219812470303}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1523828114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -358411,6 +358552,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 6
   orbitingTarget: {fileID: 649076635}
@@ -363361,6 +363504,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1563403036}
+  - component: {fileID: 1563403037}
   m_Layer: 0
   m_Name: Pivot_point
   m_TagString: Untagged
@@ -363383,6 +363527,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 117273445}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1563403037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563403035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1048032985c9918478db112f346a2e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbitingCamera: {fileID: 729581604}
+  shouldOrbit: 1
+  orbitSpeed: 30
+  minAngle: 115
+  maxAngle: 255
+  waitForDecision: 1
+  orbitDuration: 6
+  orbitingTarget: {fileID: 1563403035}
+  cameraOffset: {x: 0, y: 5, z: -10}
 --- !u!1001 &1563829128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -371213,6 +371378,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 1614818515}
@@ -382843,6 +383010,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1630810363}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1675163653 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7668044249356244800, guid: b84fcae21da92d74282b61d385b62fb3, type: 3}
+  m_PrefabInstance: {fileID: 1206749434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1675163656
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675163653}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4085542598650377539, guid: a72e5d4265f2e3b4b8572a84e9668236, type: 3}
 --- !u!1 &1675180090
 GameObject:
   m_ObjectHideFlags: 0
@@ -411088,6 +411282,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 0
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 1814030936}
@@ -412087,6 +412283,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4661321904486582, guid: 6feb631b9ce5ff940802dd0f457bf373, type: 3}
   m_PrefabInstance: {fileID: 1818804575}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1819223893 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f7dd694ed6731d74ab63b934a69b13f9, type: 3}
+  m_PrefabInstance: {fileID: 726928903}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1819575100
 GameObject:
@@ -419631,6 +419832,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 649216529}
@@ -422866,12 +423069,12 @@ RectTransform:
   - {fileID: 1548777337}
   - {fileID: 59424344}
   - {fileID: 1791702284}
-  - {fileID: 171845057}
   - {fileID: 1240896976}
   - {fileID: 958596450}
   - {fileID: 6302971690918476702}
   - {fileID: 1194010973}
   - {fileID: 1668746275}
+  - {fileID: 171845057}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -427968,6 +428171,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 2124900243}
@@ -432864,6 +433069,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 261412864}
@@ -444366,6 +444573,28 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f7dd694ed6731d74ab63b934a69b13f9, type: 3}
   m_PrefabInstance: {fileID: 726928903}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &1974281472
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1819223893}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8678823145569952518, guid: f7dd694ed6731d74ab63b934a69b13f9, type: 3}
 --- !u!1001 &1974439182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -446158,6 +446387,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 6
   orbitingTarget: {fileID: 1987833190}
@@ -471730,6 +471961,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 2062169225}
@@ -473757,6 +473990,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 6
   orbitingTarget: {fileID: 2133454980}
@@ -486635,13 +486870,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4985496788970472032, guid: 5358dbef7308e7248b897b02ef75279f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4344141219812470307}
   m_SourcePrefab: {fileID: 100100000, guid: 5358dbef7308e7248b897b02ef75279f, type: 3}
 --- !u!4 &4344141219812470304 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5655353754864572634, guid: 5358dbef7308e7248b897b02ef75279f, type: 3}
   m_PrefabInstance: {fileID: 4344141219812470303}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &4344141219812470307
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523187288}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2005616793447540369, guid: 10b14d7e9b9204a459656ec3dedb112d, type: 3}
 --- !u!23 &4345499979953152941
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -488181,6 +488441,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 1
   orbitDuration: 10
   orbitingTarget: {fileID: 5281532505066277701}
@@ -490068,6 +490330,8 @@ MonoBehaviour:
   orbitingCamera: {fileID: 729581604}
   shouldOrbit: 1
   orbitSpeed: 30
+  minAngle: 0
+  maxAngle: 360
   waitForDecision: 0
   orbitDuration: 10
   orbitingTarget: {fileID: 7670946272289898096}

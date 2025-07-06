@@ -8,6 +8,8 @@ public class OrbitingCameraScript : MonoBehaviour
     public CinemachineVirtualCamera orbitingCamera;
     public bool shouldOrbit = true;
     public float orbitSpeed = 30f; // Degrees per second
+    public float minAngle = 0f; // Minimum angle for orbiting
+    public float maxAngle = 360f; // Maximum angle for orbiting
     public bool waitForDecision = false; // Orbit until a decision is made
     public float orbitDuration = 6f; // Duration to orbit before stopping, if not waiting for a decision
 
@@ -18,6 +20,7 @@ public class OrbitingCameraScript : MonoBehaviour
     private CameraManager cameraManager;
     private CinemachineOrbitalTransposer orbital;
     private float currentAngle = 0f;
+    private bool isRotatingInOtherDirection = false;
     private float orbitTimer = 0f;
 
     private bool isOrbiting = false;
@@ -45,6 +48,10 @@ public class OrbitingCameraScript : MonoBehaviour
             DisruptCameraCycle();
             isOrbiting = shouldOrbit;
             orbitTimer = orbitDuration;
+
+            isRotatingInOtherDirection = false;
+            currentAngle = minAngle;
+            orbital.m_Heading.m_Bias = currentAngle;
 
             while (CanOrbit())
             {
@@ -79,8 +86,18 @@ public class OrbitingCameraScript : MonoBehaviour
     {
         if (!isOrbiting || orbital == null) return;
 
-        currentAngle += orbitSpeed * Time.deltaTime;
+        if (isRotatingInOtherDirection) {
+            currentAngle -= orbitSpeed * Time.deltaTime;
+        }
+        else {
+            currentAngle += orbitSpeed * Time.deltaTime;
+        }
+        
         currentAngle %= 360f;
+
+        if (currentAngle <= minAngle || currentAngle >= maxAngle) {
+            isRotatingInOtherDirection = !isRotatingInOtherDirection;
+        }
 
         orbital.m_Heading.m_Bias = currentAngle;
     }
